@@ -1,0 +1,223 @@
+The
+Recipes
+database stores all of your recipes. (
+Here’s how to find it in your template
+)
+Below you’ll find a reference guide for all database templates and properties in the Recipes database. Properties are in alphabetical order.
+Copy link to heading
+Database Templates
+These are the database templates that can be found in this database. Refer to our guide on
+working with database templates
+if you’d like to edit them or create new ones.
+Copy link to heading
+Recipe Template
+This simple template creates sections for Ingredients, Instructions, and Notes about the recipe.
+Copy link to heading
+Recipe w/ Shopping List
+This template adds all the sections from the Recipe Template, and also adds a filtered view of the
+Tasks
+database, showing only tasks with the “Shopping” Context.
+Note:
+I added this view for folks who really want to create grocery lists in Notion, but I personally find it better to reference my recipes in Notion and add grocery items to the stock Reminders app on iOS.
+Copy link to heading
+Properties
+Copy link to heading
+Chef Name
+Type:
+Rich Text
+The name of the chef/author of this Recipe.
+Copy link to heading
+Cook Time
+Type:
+Number
+The cook time for this recipe.
+Copy link to heading
+Created
+Type:
+Created Time
+The date when this Recipe was added/created.
+Copy link to heading
+Edited
+Type:
+Last Edited Time
+The date on which this Recipe was last edited.
+Copy link to heading
+Favorite
+Type:
+Checkbox
+Mark this Recipe as a Favorite to have it show up in your Favorite Recipes views.
+Copy link to heading
+Inbox
+Type:
+Checkbox
+When checked, this Recipe will only show in your Recipe Inbox.
+Copy link to heading
+Is Quick
+Type:
+Formula
+Will be checked if the total time for this recipe is at or below the threshold value.
+By default, the threshold for a Quick recipe is 45 minutes. You can unlock the Recipes database and edit this formula to change this value.
+prop(
+"Total Time"
+) <=
+45
+Code language:
+JavaScript
+(
+javascript
+)
+Copy link to heading
+Meal Time
+Type:
+Multi Select
+The meal time(s) for this recipe.
+Name
+Description
+Breakfast
+N/A
+Lunch
+N/A
+Dinner
+N/A
+Snack
+N/A
+Copy link to heading
+Name
+Type:
+Title
+The name of the recipe.
+Copy link to heading
+Prep Time
+Type:
+Number
+The prep time for this recipe.
+Copy link to heading
+Servings
+Type:
+Number
+The number of servings this recipe makes.
+Copy link to heading
+Tags
+Type:
+Relation
+The Tags attached to this Recipe.
+This Relation property connects to the Recipes relation property in the Recipe Tags database.
+Copy link to heading
+Time Card
+Type:
+Formula
+The total time for making this recipe (prep + cook time), formatted as a cute little card (string value).
+lets(
+totalTimeRaw,
+prop(
+"Cook Time"
+) + prop(
+"Prep Time"
+),
+hours,
+floor(totalTimeRaw /
+60
+),
+minutes,
+totalTimeRaw %
+60
+,
+hourPlurality,
+if
+(
+hours ==
+1
+,
+""
+,
+"s"
+),
+minutePlurality,
+if
+(
+minutes ==
+1
+,
+""
+,
+"s"
+),
+time,
+ifs(
+totalTimeRaw >
+60
+,
+hours +
+" hr"
++ hourPlurality +
+", "
++ minutes +
+" minute"
++ minutePlurality,
+totalTimeRaw ==
+60
+,
+hours +
+" hr"
+,
+minutes +
+" min"
++ minutePlurality
+),
+time.style(
+"c"
+,
+"b"
+,
+"green"
+,
+"green_background"
+)
+)
+Code language:
+JavaScript
+(
+javascript
+)
+Copy link to heading
+Total Time
+Type:
+Formula
+The total time for making this recipe (prep + cook time), formatted as a numeric value. Used for sorting in the Quick views.
+prop(
+"Cook Time"
+) + prop(
+"Prep Time"
+)
+Code language:
+JavaScript
+(
+javascript
+)
+Copy link to heading
+URL
+Type:
+Url
+The URL of this recipe, if it was found online.
+Copy link to heading
+URL Base
+Type:
+Formula
+The base domain of this note’s URL property.
+prop(
+"URL"
+)
+.replace(
+"[^]*//"
+,
+""
+)
+.split(
+"/"
+)
+.first()
+Code language:
+JavaScript
+(
+javascript
+)

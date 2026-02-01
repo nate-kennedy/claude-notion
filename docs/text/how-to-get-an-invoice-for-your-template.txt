@@ -1,0 +1,110 @@
+If you’ve purchased one of my premium Notion templates and need an invoice, here’s how to get one.
+First, determined whether you purchased the template through
+Lemon Squeezy
+, through
+Notion’s Marketplace
+, or through
+Gumroad
+.
+If you purchased from my website, you most likely bought through Lemon Squeezy. If you purchased through the Notion app, you would have used Notion’s Marketplace. Gumroad purchases only happen on the Gumroad marketplace.
+Copy link to accordion section
+Unsure about where you purchased your template?
+If you’re unsure about where you purchased your template, you can search your email to find out.
+Search for
+[email protected]
+, or for a subject line that
+contains
+the text
+Your Notion template purchase
+. Emails that turn up from these searches will be from Notion’s Marketplace.
+Alternatively, you can use the instructions in the Notion Marketplace Purchases section below to see a list of all your purchased templates in Notion’s Marketplace.
+Lemon Squeezy purchase confirmation emails come from
+[email protected]
+and have subject lines like
+Your Ultimate Brain for Notion receipt
+. You can search for that email address and “receipt” in order to find any purchase emails from Lemon Squeezy.
+Gumroad purchase confirmation emails come from
+[email protected]
+and have subject lines like
+You bought Ultimate Brain
+. You can search for that email address and “You bought” in order to find any purchase emails from Gumroad.
+If you’re still unsure, you can always
+reach out to my support team
+for additional help.
+Copy link to heading
+Lemon Squeezy Purchases
+To get your template invoice from Lemon Squeezy, head to the
+My Orders
+page in your Lemon Squeezy profile.
+If you clicked that link directly, and see a login screen, enter the email address you used to purchase your template.
+Next, check your email. If you used the correct email to generate the magic sign-in link, you’ll see an email with a
+Sign In To Lemon Squeezy
+button.
+Click the button to sign into your Lemon Squeezy account.
+The
+My Orders
+page will show you all of the products you’ve purchased through Lemon Squeezy using this email address. You may see products other than the ones we sell here.
+Find the template you purchased, then locate the
+Generate an Invoice
+link near the bottom of the purchase record.
+Fill out the
+Bill To:
+information, and add any relevant notes for your bookkeeper in the
+Notes
+field.
+Finally, click
+Generate Invoice.
+Your generated invoice will look similar to the one below.
+Note that while your bank statement line item may say
+LEMSQZY* THOMASFRANK
+, the invoice’s “Bill From” line will display
+Lemon Squeezy LLC
+and its address.
+For purchases made through Lemon Squeezy (which is owned by
+Stripe
+), Lemon Squeezy acts as our Merchant of Record. They entirely handle the purchase and any associated sales tax processing.
+Copy link to heading
+Notion Marketplace Purchases
+To get an invoice for purchases made through Notion’s Marketplace, sign into Notion either in the desktop app or a web browser. Make sure you’re signed into the workspace in which you purchased your template.
+Note:
+If you’re unsure of which workspace you used, check your email app for an email with a subject line containing:
+Your Notion template purchase
+. This email will have been sent to the email associated with the
+Notion account
+that purchased the template. It doesn’t list the workspace, but it’ll at least help you identify which account you used in case you have multiple.
+Next, scroll to the bottom of the sidebar (
+⌘/Ctrl + \
+if it’s not open) and click
+Marketplace.
+Near the top-right corner of the Marketplace page, click
+Purchased.
+Locate the template you purchased and click the
+•••
+button on the right-hand side of the row.
+Next, click
+Download Invoice.
+Your generated invoice will look similar to the one below.
+Note that the
+Bill To:
+name will match the Preferred Name you have set for your Notion account. You can change this by going to Notion’s Settings menu, clicking your name at the top of the sidebar, and changing the Preferred Name field – however, this change will only affect the
+Bill To
+field on future purchases.
+Additionally, note that the invoice will display the seller as
+Notion Labs, Inc.
+For purchases made through Notion’s Marketplace, Notion acts as our Merchant of Record. They entirely handle the purchase and any associated sales tax processing.
+Copy link to heading
+Gumroad Purchases
+If you purchased a template from Gumroad, you’ll find a
+Generate Invoice
+link directly in your email receipt, as shown in Gumroad’s own docs on
+how to generate an invoice
+:
+After clicking that link, follow the instructions on the invoice generation page to enter your data and download your invoice.
+Here are Gumroad’s exact instructions on how to do this:
+I need an invoice – Gumroad Help Center
+In this article: How to generate your invoice from the receipt VAT ID Don’t have your receipt? Older purchases No W9? How to generate your invoice from the rece
+gumroad.com
+If you can’t find your receipt, refer to Gumroad’s instructions on how to locate it:
+I never received a receipt – Gumroad Help Center
+If you can’t locate a receipt in your inbox, it is either: In your Spam folder. In another Inbox. You may have used a different email during checkout (emails li
+gumroad.com

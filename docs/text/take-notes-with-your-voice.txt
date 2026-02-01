@@ -1,0 +1,26 @@
+Ultimate Brain 3.0 provides full support for my Notion Voice Notes automation.
+You can upload voice memos, lecture recordings, and any other type of audio file, and quickly get a complete AI-generated transcript and summary in Notion.
+The video guides on this page are specific to Ultimate Brain. Use them in conjunction with the
+full blog post covering this automation
+, which is where you’ll find
+written instructions
+and a full reference.
+That post also contains the workflow template links, but I’ll share them here as well:
+Google Drive version
+Dropbox version
+Microsoft OneDrive version
+I’ve created two different video guides that will show you exactly how to set up this automation. First, here’s the
+short version,
+which walks through the setup as fast as possible:
+You can also watch the
+long version,
+which goes much more slowly and explains each step in detail.
+The long version will also show you a few advanced tricks you can do with this automation, including:
+Adding a
+custom prompt
+to your AI summary
+Translating the transcript to another language
+Skipping the Notion step altogether and saving the transcript to Google Drive
+If you need to locate and/or unlock your Notes database, please see the
+Unlocking Databases
+guide.

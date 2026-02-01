@@ -1,0 +1,290 @@
+The
+Tags
+database stores all of your tags. (
+Here’s how to find it in your template
+)
+Tags can have different types, with the primary types being
+Area
+and
+Resource.
+Tags of these types are used to enable
+PARA Method
+organization in Ultimate Brain.
+Below you’ll find a reference guide for all database templates and properties in the Tags database. Properties are in alphabetical order.
+Note:
+In versions of Ultimate Brain released prior to November 2024, this database is called
+Areas/Resources.
+Copy link to heading
+Automations
+Copy link to heading
+Create Ongoing Project for Areas
+Default Status:
+Disabled
+Description:
+When you change the create a new Tag page, apply the Area type, and give it a name, a corresponding Ongoing Project will be created for it. E.g. if you create a “Work” Area page, you’ll automatically get a “Work Ongoing” project, which will be related to it.
+Released:
+2025-01-21: Time Tracking, Daily Planning Updates, and More!
+Copy link to accordion section
+Create Ongoing Project for Areas (Build Guide)
+Name formula:
+context(
+"Trigger page"
+).format() +
+" Ongoing"
+Code language:
+JavaScript
+(
+javascript
+)
+Copy link to heading
+Database Templates
+These are the database templates that can be found in this database. Refer to our guide on
+working with database templates
+if you’d like to edit them or create new ones.
+Copy link to heading
+Area
+This template is used to create Areas when practicing the
+PARA method
+for life organization. Areas display many things, including:
+Projects & Tasks
+Notes
+Web Clips (notes with either a URL or the “Web Clip” Type)
+People
+Goals
+Sub-Tags (found in the Sub-Tags relation, displayed minimally under that the page title)
+Copy link to heading
+Resource
+This template is used to create Resources when practicing the
+PARA method
+for life organization. Resources display:
+Notes
+Web Clips (notes with either a URL or the “Web Clip” Type)
+Copy link to heading
+Entity
+This template is used to create Entities – Tag pages that are useful for organizing information by its
+type
+rather than
+topic
+– e.g. “Apps”, “Essays”, “Manuals”, etc. Its page content is funcitonally equivalent to Resources, displaying:
+Notes
+Web Clips (notes with either a URL or the “Web Clip” Type)
+Copy link to heading
+Properties
+Copy link to heading
+Archived
+Type:
+Checkbox
+If checked, this Tag will be archived. It will disappear from all main dashboards in Ultimate Brain and show up in the Archived Tags view in the Archive.
+Copy link to heading
+Favorite
+Type:
+Checkbox
+If checked, this Tag will display in the Favorites section within Tags views.
+Copy link to heading
+Goals
+Type:
+Relation
+Any goals associated with this Tag.
+This Relation property connects to the Tag Relation property in the Goals database.
+This property is best used on Tag pages with the Area type (with the Area database template applied).
+Copy link to heading
+Latest Activity
+Type:
+Formula
+Returns the date and time of the latest activity in the Tag – including edits to its directly as well as changes to notes, tasks, and projects.
+Used for allowing Tags to be sorted by Latest Activity in certain views.
+lets(
+projectActivity,
+prop(
+"Projects"
+).map(current.prop(
+"Latest Activity"
+)).sort().reverse(),
+noteActivity,
+prop(
+"Notes"
+).map(current.prop(
+"Updated"
+)).sort().reverse(),
+editedList,
+[prop(
+"Last Edited Time"
+)],
+concat(projectActivity, noteActivity, editedList).sort().reverse().first()
+)
+Code language:
+JavaScript
+(
+javascript
+)
+Copy link to heading
+Latest Note
+Type:
+Formula
+Fetches the note within this Tag that was most recently updated.
+prop(
+"Notes"
+)
+.filter(current.prop(
+"Archived"
+) ==
+false
+)
+.sort(current.prop(
+"Updated"
+))
+.reverse()
+.first()
+Code language:
+JavaScript
+(
+javascript
+)
+Copy link to heading
+Name
+Type:
+Title
+The name of the Tag.
+Copy link to heading
+Note Count
+Type:
+Formula
+Displays the number of non-archived notes associated with this Tag.
+lets(
+count,
+prop(
+"Notes"
+).filter(current.prop(
+"Archived"
+) ==
+false
+).length(),
+plural,
+count ==
+1
+?
+" "
+:
+"s"
+,
+count +
+" note"
++ plural
+).style(
+"c"
+,
+"b"
+,
+"blue"
+,
+"blue_background"
+)
+Code language:
+JavaScript
+(
+javascript
+)
+Copy link to heading
+Notes
+Type:
+Relation
+Any notes associated with this Tag. This Relation property connects to the Tag Relation property in the Notes database.
+Copy link to heading
+Parent Tag
+Type:
+Relation
+This Tag’s parent. This Relation property connects to the Sub-Tags Relation property in this database.
+Copy link to heading
+People
+Type:
+Relation
+Any People records associated with this Tag. Best used to associate People with Tags that have the Area type when practicing PARA organization.
+This Relation property connects to the Tags Relation property in the People database.
+Copy link to heading
+Projects
+Type:
+Relation
+Any projects associated with this Tag. This Relation property connects to the Tag Relation property in the Projects database.
+It’s best to use this relation with Tag pages that have the Area type and Area database template applied.
+Copy link to heading
+Pulls
+Type:
+Relation
+Projects that have pulled this Tag in order to display its notes within the project’s Pulled Notes section. This Relation property connects to the Pulled Tags Relation in the Projects database.
+Copy link to heading
+Sub-Tags
+Type:
+Relation
+Sub-Tags underneath this Tag. This Relation property connects to the Parent Tag Relation property in this database.
+Example use: Set Resource pages to be “within” an Area page.
+Copy link to heading
+Tag Projects
+Type:
+Formula
+Displays a label with the number of active projects within this Tag, if there are any.
+Best used with Tag pages that have the Area type.
+lets(
+count,
+prop(
+"Projects"
+).filter(current.prop(
+"Status"
+) ==
+"Doing"
+or current.prop(
+"Status"
+) ==
+"Ongoing"
+).length(),
+ifs(
+count >
+0
+,
+(
+count +
+" Active Project"
++ ifs(count !=
+1
+,
+"s"
+)
+).style(
+"b"
+,
+"c"
+,
+"green"
+,
+"green_background"
+)
+)
+)
+Code language:
+JavaScript
+(
+javascript
+)
+Copy link to heading
+Type
+Type:
+Status
+Allows you to give this page a specific tag type.
+If you practice PARA, you’ll usually want to choose Area or Resource. You can also use the Entity option to build meta-collections, such as “Essays”.
+You should also choose the corresponding page Template in the page body below.
+Name
+Description
+Group: To-do
+Group: In progress
+Entity
+“Entity” is useful for building meta-collections in your second brain, such as “Essays” or “Apps”. It’s not part of PARA.
+
+It’s often useful to apply both a Resource and an Entity tag to a page – e.g. “Programming” as a topical Resource and “App” as an Entity.
+Area
+In the PARA Method, an Area is an “ongoing sphere of responsibility”.
+
+Areas represent the main categories of your life – Home, Work, School, Health, etc. They may have Notes, Projects, Goals, and even sub-Tags (such as a Resource).
+Resource
+In the PARA Method, a Resource is a “topic or interest that may be useful in the future”.
+
+Resource is the default Type within the Tags database. Use Resources to organize Notes about a specific topic or subject.
+Group: Complete

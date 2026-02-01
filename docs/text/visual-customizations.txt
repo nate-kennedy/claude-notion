@@ -1,0 +1,44 @@
+On this page, you’ll find quick tips on making small visual customizations in Ultimate Brain.
+The sections on this page are typically created after we answer a similar question in our
+customer community
+, which you can access once you’ve
+purchased Ultimate Brain
+.
+Copy link to heading
+Show Page Icons on Tasks
+In every
+List view
+of the
+Tasks database
+in Ultimate Brain, page icons are hidden. This helps reduce visual clutter, as the
+Status checkbox
+is displayed at the left of the page title.
+If you’d like to show the page icons, do the following in a Task view:
+Click the
+•••
+menu.
+Go to Layout.
+Toggle
+Show Page Icon
+to the “on” position
+This setting only affects the view you’re currently using, so you’ll need to make this change on any List view where you want the icons to show.
+If you want them to show in List views that exist within database templates (such as the
+Project template
+), check out our page on
+editing database templates
+. You can make this change on the template itself, which will be reflected on all new pages created from that template.
+Copy link to heading
+Show, Hide, and Reorder Properties in a View
+Every view you see in Ultimate Brain, such as the Today or Inbox views in the Tasks section, is a view of an underlying source database.
+These views are customized to show and hide certain properties. For example, the
+Tasks database
+has more than 30 properties, but the Inbox view only shows 7 of them.
+If you’d like to show another property, which would also allow you to edit it directly from that view (without having to open the full page), here’s how:
+Click the
+•••
+menu on the view
+Go to
+Properties
+Find the property in the Hidden section and click the eye (👁️) icon to make it visible
+You can also drag visible properties to re-order them in the view.
+These changes are made per database view; there’s no way to make a change apply across all views of a database.

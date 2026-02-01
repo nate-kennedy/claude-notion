@@ -1,0 +1,35 @@
+Notion’s
+Home
+section can show tasks from one or more
+Task databases
+in a single view. It is currently the only area in Notion that can integrate pages from
+multiple
+databases in a single view.
+Pro-tip:
+Using Home, you can combine your personal Tasks from Ultimate Brain with tasks from a team tasks database. This can help you to sidestep Notion’s lack of
+granular database permissions
+.
+Ultimate Brain’s
+Tasks database
+is a Task database by default, meaning you don’t have to do anything to Ultimate Brain for your tasks to show up in Notion Home.
+However, the My Tasks section in Notion Home contains a filter by default that will only show tasks where you are the Assignee.
+Technically, the filter is
+Assignee is Me
+, where “Me” is a dynamic value for the current user.
+To see your tasks from Ultimate Brain, simply remove this filter:
+Click the
+filter icon
+in the My Tasks view.
+Click the
+Assignee: Me
+filter.
+Click the
+•••
+menu.
+Click
+Delete Filter
+.
+Here’s a quick video showing how to do this:
+Copy link to heading
+Learn More About Notion Home
+If you’d like to learn everything about Notion’s Home section, here’s a video I made:

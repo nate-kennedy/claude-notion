@@ -1,0 +1,66 @@
+Follow this quick guide to add a copy of Ultimate Brain to your Notion workspace!
+Ultimate Brain is a
+Notion template,
+which means you
+duplicate
+it into you workspace. When you do, you get a perfect, 1:1 copy of the template that you can then use and change to your liking.
+Depending on how you purchased your template, there’s one of two ways that you can use this duplication process to add it to your workspace. Choose the section that fits the method you used to buy the template.
+Note:
+Unlike a SaaS app, or traditional software, Notion templates are not attached in any way to the original versions. This means that there’s no way for us to send automatic updates to your copy – once you duplicate it, it’s yours. That said, we do publish how-to guide for upgrades when possible!
+Copy link to heading
+Notion Marketplace Purchases
+If you bought Ultimate Brain through Notion’s Marketplace, then you were likely prompted to choose a destination for the template right after you purchased.
+Templates purchased through Notion’s Marketplace can be installed in the workspace where they were purchased, and you’re given the choice of adding your template either to your
+Private
+section, or to a
+Teamspace
+.
+Keep in mind that adding your template to a Teamspace will automatically make it accessible to anyone in that Teamspace, based on the
+Teamspace’s permission settings
+.
+If you’d like to create a fresh, new copy of your template:
+Head to the
+Templates
+section near the bottom of your sidebar, either in Notion’s desktop app or in a desktop web browser.
+Click the
+Purchased
+link in the top-right corner of the page.
+Click on your purchased template to navigate to its Marketplace page.
+Since you’ve already purchased it, you’ll have the option of adding a new copy within your workspace.
+Copy link to heading
+Lemon Squeezy & Gumroad Purchases
+If you bought your template through Lemon Squeezy or Gumroad, you should have a direct link to your template that you can visit in a desktop web browser. You can also find this link in the the
+Getting Started post
+, which is in the Tutorials space in our customer community.
+Not sure if you purchased via one of these methods? If you didn’t buy your template directly from Notion’s Marketplace, then it’s almost certain that you went through one of them.
+When you visit this link in a desktop web browser, you’ll see a
+Start With This Template
+button at the top of the screen.
+Click this button, then choose a workspace (making sure you’re logged into the Notion account that contains the workspace you’d like to use).
+Important:
+If you have issues with duplication, please check to see if you have an active
+ad blocker
+in your browser. If you do, disable it – or at least whitelist the
+thomasfrank.notion.site
+and
+notion.so
+domains. Ad blockers have been known to cause issues with template duplication in certain cases.
+Note: Some versions of our templates – particularly legacy versions and beta versions – may have a small
+“double square”
+icon, or even a
+Duplicate
+link, rather than the Start With This Template button. This difference is due to these templates not being listed directly in Notion’s Marketplace.
+You can click whichever button/link you see, and then continue with the duplication process all the same.
+Copy link to heading
+Can’t Find Your Template?
+If you’ve duplicated your template into your workspace, but can’t find it, there are a few potential causes.
+First, if you have a lot of pages in your
+Private
+section or in a
+Teamspace
+(wherever you added the template), it may be tucked in the “More…” link at the bottom of that section/Teamspace.
+Also keep in in mind that Teamspaces themselves can be hidden in the Sidebar. If you have a lot of Teamspaces, check the “More…” link beneath the bottom Teamspace to see if the one you’re looking for has been hidden.
+Finally, you can always hit
+⌘
+/Ctrl + P
+to bring up the Search window, and then search for your template by name that way.

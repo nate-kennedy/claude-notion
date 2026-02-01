@@ -1,0 +1,58 @@
+On this page, you’ll find quick tips on making small, database-related customizations in Ultimate Brain.
+The sections on this page are typically created after we answer a similar question in our
+customer community
+, which you can access once you’ve
+purchased Ultimate Brain
+.
+Note:
+Before making a change to a database, you’ll always need to
+unlock that database
+first.
+Copy link to heading
+Change a Relation Property’s Page Limit
+Relation properties can link to an unlimited number of pages within their connected database by default.
+However, you can also change the
+Limit
+setting in a Relation property to
+1 Page
+. This creates a
+1-to-many relationship
+.
+Some Relation properties in Ultimate Brain already have this 1-page limit setting. The Project Relation in the Tasks database is a good example; in almost all cases, a task should only belong to one project. If you that certain Relation properties in Ultimate Brain only allow you to choose a single page, this is why.
+If you like, you can change this setting on any Relation property. Here’s an example video, where you’ll see me change this setting to allow multiple Tag pages to be related to a single Project:
+To do this yourself (for
+any
+Relation property), start by navigating to the database that contains the Relation property and
+unlocking it
+.
+Go to the Ultimate Brain homepage
+Scroll down to find the
+Databases & Components
+page
+Locate the
+Projects database
+Click the
+Locked
+button at the top of the page to unlock it
+Once the database is unlocked, modify the Relation property:
+Click on the property you want to change
+Select
+Edit property
+Look for the
+Limit
+option in the property settings
+Change the setting from
+1 Page
+to
+No Limit
+To test the change, open any page in the database. You’ll now see a
+New
+button instead of a
+Replace
+button next to your Relation property. Click
+New
+to create a
+brand-new
+page in the Relation’s connected database, or click the
+magnifying glass
+(🔎) to link another existing page.

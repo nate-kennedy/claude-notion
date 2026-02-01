@@ -1,0 +1,56 @@
+Watch the video below to see how to create a template in your
+Projects
+database that will have a pre-defined set of tasks automatically created each time the template is applied. Alternatively, read the AI-generated description below the video.
+Copy link to heading
+Creating Project Templates with Predefined Tasks in Notion
+In this tutorial, I’ll show you how to build a project template with a set of predefined tasks using Notion Automations. This is currently the best method for creating project templates that automatically generate standard tasks when you create a new project.
+Copy link to heading
+Method 1: Using Notion Database Automations (Paid Plan Required)
+This is the cleaner, more advanced approach that requires a Notion paid plan:
+Navigate to your Core Projects Database (found in Databases and Components in Ultimate Brain 3.0)
+Create a new automation by clicking on the Automations button
+Name your automation (e.g., “Filming Project Task Creation”)
+Set up the trigger:
+Select “Where name contains [Project Name]” or “Where name is set to [Project Name]”
+This will trigger when you create a project from your template
+Add actions to create tasks:
+Click “Add action” and select “Create a page” in your Tasks database
+Name your first task (e.g., “Filming Task 1 from automation”)
+Set the Project property to “Trigger page” (this links the task to your new project)
+Configure additional properties as needed:
+For due dates, you can use formulas like
+dateAdd(dateTrigger(), 30, "days")
+to set due dates relative to project creation
+Set status (e.g., “Doing” for the first task)
+Set assignee (e.g., “Person who triggered”)
+Duplicate the action for each additional task you want to create:
+Rename each task
+Adjust properties as needed (e.g., different due dates for subsequent tasks)
+Save your automation
+When you create a new project using your template, the automation will trigger and automatically generate all your predefined tasks with the properties you configured.
+Copy link to heading
+Method 2: Manual Template Method (Works on Free Plan)
+If you don’t have access to Notion’s Database Automations, you can use this alternative approach:
+Go to your Core Projects Database
+Unlock the database if it’s locked (click the lock button)
+Duplicate an existing project template
+Rename it (e.g., “Filmmaker Project”)
+Remove the filter options in the task view within the template
+Create your predefined tasks directly in the template:
+Add task names (e.g., “Filming Task 1”, “Filming Task 2”)
+Configure properties as needed (priority, labels, etc.)
+Note: Don’t set project or due date properties yet
+Drag these tasks out of the database view and drop them below the task view
+They will become standalone pages without database properties
+Rebuild the filter for the task view:
+Set it to filter for the current project
+When you create a new project from this template, you’ll need to manually drag those standalone task pages into the task view, and they’ll convert to database items with the properties you pre-configured.
+Copy link to heading
+Recommendation
+The automation method is significantly more powerful and efficient. While Ultimate Brain 3.0 works perfectly on Notion’s free plan, if you frequently create projects with standard tasks, upgrading to a paid Notion plan is worth considering for access to these automation features.
+The automation method allows you to:
+Automatically create tasks when a project is generated
+Set relative due dates based on project creation
+Pre-assign tasks to specific people
+Set default statuses and other properties
+For more information about Notion Database Automations, check out the detailed video on the Thomas Frank Explains channel.

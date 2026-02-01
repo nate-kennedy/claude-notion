@@ -1,0 +1,47 @@
+Here are quick answers to some frequently-asked questions about Ultimate Brain!
+Copy link to heading
+What’s the Difference Between UB 3.0 and Older Versions?
+Ultimate Brain 3.0 is a complete, ground-up redesign that focuses on speed and simplicity. It also contains many new features, including expanded Book Tracker and Recipe Tracker sections.
+You can see everything that’s changed in our
+What’s New
+overview. You can also learn more, and access docs for older versions, at the
+Previous Versions
+page.
+Copy link to heading
+Why are the Tags and Projects Databases Separate?
+In a perfect world,
+Tags
+and
+Projects
+would be a single database. This would be ideal for practicing the PARA method, as it would give us a single property on Tasks and Notes, allowing us to relate each task or note to a Project, Area, or Resource directly.
+Currently, though, Notion is missing one key feature that would make this change viable.
+It has to do with the Relation Picker – the dropdown menu that shows all the pages in a related database when you open a Relation property. While the Picker works well, we cannot
+sort
+or
+filter
+the options within it. Additionally, the default order of the pages within the Picker often makes no sense.
+For this reason, I keep Projects in their own database. If I didn’t do this, you’d have to scroll through potentially dozens of Resources and other tags while searching for a Project to apply to a task or note.
+Once Notion improves the Relation picker with filtering and sorting controls that can be given defaults on individual database views, I’ll likely want to merge the two databases. Until then, we keep them separate, and I create an Ongoing Project for each Area Tag in my system.
+Copy link to heading
+What Other Apps Should I Use with Ultimate Brain?
+Personally, I use Ultimate Brain for
+most
+of my personal productivity system. However, I do use a few other apps that I think are worth checking out:
+Notion Calendar
+– my calendar app of choice.
+Flylighter
+– a powerful Notion web clipper and idea-capture tool (my team and I built this!)
+Notion Voice Notes
+– this is more of a workflow than a single app, but it lets me record my voice and get perfect transcripts and a summary in Notion (I also built this).
+Hevy
+– an amazing workout tracker for iOS.
+Google Drive
+– I use this for file storage.
+Missive
+– the best team-focused email app I’ve found. If I didn’t need team collaboration features, I’d use
+Shortwave
+.
+1Password
+– easily the best password manager I’ve found.
+Raycast
+– a really slick “launcher” app for MacOS. I use it to do a ton of stuff with my keyboard, like controlling Spotify, doing window management, and storing clipboard history and snippets.

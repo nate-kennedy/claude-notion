@@ -1,0 +1,47 @@
+The current version of Ultimate Brain is
+Ultimate Brain 3.0
+, released officially on
+November 27, 2024.
+Version 3.0 is a complete, ground-up redesign of the template.
+On the pages in this section of our docs, you’ll find links to tutorials and documentation for the previous versions of Ultimate Brain.
+Note:
+Previous versions of Ultimate Brain are considered deprecated; so they are not always updated to include new Notion features. While we can still answer questions about these older versions in our customer community, only the latest version is fully supported.
+Copy link to heading
+Which Version Do I Have?
+You can tell if you’re using Ultimate Brain 3.0 easily – it’s the first version of the template that utilizes a
+single-column design
+for all dashboards. You’ll also notice that the home page contains views of your Tasks, Notes, Projects, and Tags.
+Finally, the home page of Ultimate Brain 3.0 lists the version at the bottom of the page:
+If you don’t have this version, you can
+migrate to it from an older version
+– or simply start using it from scratch. If you’ve purchased Ultimate Brain at any time in the past, you have access to the latest version from the
+Getting Started post in our community
+.
+Copy link to heading
+Ultimate Brain 2.0
+Ultimate Brain 2.0 was released on
+November 16, 2023.
+Version 2.0 was an incremental release, building upon the foundation of Ultimate Brain 1.0.
+Version 2.0 features a 3-column “home page” that simply contains links to all dashboards. It’s distinct from version 1.0, which is much more colorful and full of emojis.
+You can see everything that Version 2.0 changed and improved from 1.0 in this video:
+At a glance, these were the changes and upgrades:
+Minimalist design changes – while layouts didn’t change much, 2.0 removed the multi-colored backgrounds from all Heading blocks. It also swapped out the emoji page icons for unified icons from Notion’s then-new icon set.
+Ultimate Brain Lite – a simplified dashboard for newer Notion users, featuring views for Tasks, Notes, Resources, and Projects only.
+Redesigned Dashboard and Task Manager pages
+New Scratchpad page
+New global Navigation Bar
+Ultimate Brain 2.0 has a
+Beginner’s Course
+with 8 video lessons that cover setup and workflows. A 22-minute tour video is also included. You can log into our customer community to view it.
+Since 2.0 was only an incremental upgrade from 1.0, the
+Ultimate Brain 1.0 Beginner’s Tutorial
+is also a good resource for learning how to use it.
+Copy link to heading
+Ultimate Brain 1.0
+Ultimate Brain 1.0 – the first version of the template – was released on
+April 5, 2022.
+Version 1.0 features a 3-column home page, just like version 2.0. However, you’ll notice that every Heading block has a colorful background, and all pages use emojis for icons.
+You can see a full tour of the original Ultimate Brain in this video:
+The
+Ultimate Brain 1.0 Beginner’s Tutorial
+is a detail set of Notion pages that features videos, written guides, and demo content for the template.

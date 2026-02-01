@@ -1,0 +1,35 @@
+If you’re thinking of making a significant change to your current copy of Ultimate Brain, it’s a very good idea to
+back up
+your copy beforehand.
+This is extremely easy to do:
+Navigate to your main
+Ultimate Brain
+home page.
+Click the
+•••
+button in the top-right corner of the page.
+Click
+Duplicate
+.
+Once done, the duplication process can take a while – especially if you have a lot of content. When it’s finished, the duplicate will have a
+(1)
+at the end of the title, and it’ll be placed directly below your main copy.
+By default, both copies will likely be in the
+Private
+section of your workspace’s sidebar. If you’ve shared Ultimate Brain directly with someone else, they may be in the
+Shared
+section instead. If you’ve deliberately moved it to a Teamspace, both copies will be there. Check out my guide to
+Page Sections
+to learn more.
+Treat the duplicate as your backup. You’ll want to continue using your original copy, but the duplicate will be there in case you accidentally make changes to the original copy that you don’t like, and can’t easily fix.
+Copy link to heading
+Do I Always Need to Back Up?
+If you’re in doubt, it’s probably a good idea to make a backup.
+However, there are many types of changes that are small enough to not warrant one. If you’re simply
+unlocking a database
+in order to add new options to a Select property, or to add a new property to a database, then you probably don’t need to make a backup.
+On the flip side, if you’re planning on trying to deeply modify a database, to delete properties, or to create new relations to other databases, then you may want to make a backup.
+I can’t make assumptions about your level of expertise and confidence in Notion. If you’re very comfortable, and you readily understand what terms like “rollup”, “permissions cascade”, and “linked database” mean, then you can probably make all sorts of changes without doing a backup.
+If not, then do yourself a favor and make a backup! While my support team does their best to answer all questions, we
+can’t
+engage in extended, meticulous support sessions in order to help you recover a bunch of lost data or rebuild a complex structure. Please be careful when making changes, and make backups if you don’t feel 100% confident about what you’re doing.

@@ -1,0 +1,59 @@
+Many of Ultimate Brain’s
+databases
+come with calendar views, which means you can view pages from them in
+Notion Calendar
+.
+This native calendar app allows you to see both Google Calendar events and Notion database pages together in a single calendar UI.
+Note:
+Notion Calendar is a stand-alone app, so you’ll need to
+install it on your computer or phone
+before you can use it.
+Here’s a full video showing how to add a database or database view to Notion Calendar:
+Copy link to heading
+Integrate Your Workspace
+Before you can see one of your databases pages in Notion Calendar, you’ll need to integrate your Notion workspace with the Notion Calendar app.
+Open the Notion Calendar settings with the
+⌘/Ctrl + ,
+keyboard shortcut, or by bringing up the command bar (
+⌘/Ctrl + K
+) and searching for
+Go to Settings.
+Under
+Integrations →
+Notion
+, find the
+Add Notion Workspace
+section and click
+Connect.
+Go through the authentication dialog, being sure to select your intended workspace, and authorize Notion Calendar.
+Copy link to heading
+Add a Database or View
+Once you’ve integrated your workspace with Notion Calendar, you can click the
+Open in Calendar
+button on any calendar view in your workspace.
+Note:
+If the Open in Calendar button is missing, be sure Notion Calendar is installed on your system and set up. Check out the
+Notion Calendar getting-started guide
+if you need help.
+Once done, you’ll see your workspace at the bottom of the sidebar, and you’ll be able to show your chosen database or view by clicking the
+Eye
+icon.
+Copy link to heading
+Displaying a Filtered Database View
+Most of the calendar views that are included in Ultimate Brain do not have any filters on them.
+If you’d like to show a filtered view of a database in Notion Calendar from Ultimate Brain, here’s how to do it.
+First, either add a filter to an existing calendar view or duplicate an existing calendar view and add a filter to the duplicate version.
+Finally, click the Open in Calendar button just as you would with any other calendar view.
+Note that you can only open Calendar-type database views in Notion Calendar. If you have a particular filtered view you want to use in Ultimate Brain that has a different layout type, such as List or Table, you can duplicate that view and then change the layout type of the duplicate to calendar:
+Click
+•••
+on the newly-duplicated view.
+Click
+Layout.
+Change the layout type to
+Calendar.
+Once done, you’ll see the Open in Calendar button. In Notion Calendar itself, the left sidebar will display “View:”, plus the name of the database. When you click that view, you’ll see the actual name of that view in the right sidebar.
+Copy link to heading
+Learn More About Notion Calendar
+I’ve created two full videos covering everything you might want to know about Notion Calendar. Here’s my initial tutorial video:
+And here are 10 cool tricks you can do with Notion Calendar:

@@ -1,0 +1,88 @@
+The
+Recipe Tags
+database stores tags that you can use to organize your Recipes. (
+Here’s how to find it in your template
+)
+Below you’ll find a reference guide for all database templates and properties in the Recipe Tags database. Properties are in alphabetical order.
+Copy link to heading
+Database Templates
+These are the database templates that can be found in this database. Refer to our guide on
+working with database templates
+if you’d like to edit them or create new ones.
+Copy link to heading
+Tag
+This template adds several useful views of the
+Recipes
+database to the page, showing recipes that are related to this Recipe Tag.
+Copy link to heading
+Properties
+Copy link to heading
+Name
+Type:
+Title
+The name of the recipe tag.
+Copy link to heading
+Recipe Count
+Type:
+Formula
+The number of Recipes that have this Recipe Tag applied.
+lets(
+recipeCount,
+prop(
+"Recipes"
+).length(),
+plurality,
+if
+(
+recipeCount ==
+1
+,
+""
+,
+"s"
+),
+(
+recipeCount.format() +
+" recipe"
++
+plurality
+).style(
+"c"
+,
+"b"
+,
+"blue"
+,
+"blue_background"
+)
+)
+Code language:
+JavaScript
+(
+javascript
+)
+Copy link to heading
+Recipes
+Type:
+Relation
+Recipes that have this Recipe Tag applied.
+This Relation property connects to the Tags property in the Recipes database.
+Copy link to heading
+Type
+Type:
+Status
+This Recipe Tag’s type. Use this to create categories of tags, such as Style, Course, Equipment, etc.
+To add or change options, unlock the Recipes database.
+Name
+Description
+Group: To-do
+Group: In progress
+Style
+N/A
+Course
+N/A
+Tag
+N/A
+Equipment
+N/A
+Group: Complete

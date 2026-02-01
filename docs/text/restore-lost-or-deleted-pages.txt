@@ -1,0 +1,36 @@
+If you’re missing a page in your copy of Ultimate Brain that used to be there, one of two things has happened:
+The page was accidentally moved to the Trash
+The page was accidentally moved to a new location
+In both cases, it’s usually very easy to recover the page and get it back in its original location.
+Watch this video to see how to fix both scenarios:
+Copy link to heading
+Restoring a Page from the Trash
+In Notion, pages aren’t irrevocably deleted by default. Instead, they’re moved to the Trash.
+On most Notion plans, pages remain in the Trash for
+30 days
+(
+Enterprise plans can customize this retention period
+).
+Within that time window, you can access the
+Trash
+menu item from the sidebar, then find the page that was moved to the Trash and click the
+Restore
+icon.
+Once a page is automatically deleted from the Trash, you won’t be able to recover it.
+A couple of other notes:
+First, restoring a page from the Trash will also restore any child pages that were moved into the Trash along with it.
+Second, when you restore a page that was moved to the trash, it will go to the bottom of whatever block that contained it, rather than to its original position.
+Copy link to heading
+Moving a Page to its Original Location
+It can be easy to accidentally click and drag a page into a different page without noticing that you’ve done so. In these instances, it may not be easy to find the page you’re looking for just by clicking around.
+To solve this problem, you can bring up the search dialog with
+⌘
++ K
+(MacOS) or
+Ctrl + K
+(Windows), then search for the name of the page. If the page was simply moved to a new location instead of being sent to the trash, you’ll be able to find it this way.
+Once you’ve located the page, you can either:
+Navigate to the page that contains it (its parent page) and then drag the page into its original location within the Sidebar
+Use the
+••• → Move To
+action on the page itself to choose a new location for it.

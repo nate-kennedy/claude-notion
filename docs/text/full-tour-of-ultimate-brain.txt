@@ -1,0 +1,38 @@
+In this video, you’ll get a full tour of everything Ultimate Brain 3.0 has to offer.
+If you’re new to Ultimate Brain, I recommend following our guide on
+Getting Started the Simple Way
+first!
+Here’s a list of timestamps that break the video up into chapters. As we continue to flesh out our docs, I’ll also add links to these chapters that will take you to other pages with more detail.
+00:00 – Intro
+00:47 – Docs
+01:42 – What is Ultimate Brain?
+02:11 – Home Page and Side Peek Focus
+03:57 – Home Page – Task Manager
+06:34 – Home Page – Notes
+11:58 – Home Page – Projects
+14:46 – Home Page – Tags and PARA
+20:13 – Home Page – Database Component Library
+22:08 – Databases and Components
+23:03 –
+Unlocking Databases to Make Changes
+24:56 – Sidebar and Navigation Bar
+26:40 – Quick Capture
+31:58 – Tasks
+37:11 –
+Recurring Tasks
+40:59 – Notes
+46:18 – Projects
+47:28 – Tags
+52:38 – Goals
+55:43 – Archive
+58:09 – People (CRM)
+01:05:47 – Books
+01:12:12 – Recipes
+01:18:24 – My Day (Daily Planning)
+01:24:02 – My Week
+01:26:24 – My Year
+01:27:12 – Process (GTD)
+01:30:59 – Creator’s Companion Integration
+01:34:50 – Using
+Flylighter
+to Capture Web Clips

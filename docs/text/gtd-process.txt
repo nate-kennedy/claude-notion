@@ -1,0 +1,33 @@
+If you’re a fan of David Allen’s
+Getting Things Done
+method (and book), you’re in luck! Ultimate Brain comes with the best GTD dashboard for Notion.
+It’s called the
+Process
+page, and it makes both the Task and Notes databases fully compatible with the GTD process.
+In the 33-minute video above, I’ll give you an overview of GTD (in case you’re new to it), explain the decision-making process for new items that hit your inbox, and explain how to use the Process page to practice GTD.
+Copy link to accordion section
+Video Timestamps
+00:00 – Introduction
+01:17 – What is GTD?
+02:39 – Overview of GTD Lists and Folders
+04:06 – The Inbox
+04:58 – Reference Materials
+05:48 – Someday List and Snooze Lists
+07:00 – Next Actions and Projects
+07:25 – Delegated List and Calendar
+08:58 – The Decision-Making Process Flowchart
+09:21 – Is This Actionable? (First Question)
+12:37 – Is the Next Action Clear and Obvious?
+14:19 – The Two-Minute Rule
+15:28 – Calendar vs. Next Actions List
+18:21 – Accessing the Process Page in Ultimate Brain
+19:34 – The Actual Process Page Overview
+20:54 – Task Processing in GTD vs. Traditional Task Management
+22:53 – Note Processing Section
+23:00 – How to Process Notes and Web Clips
+25:00 – Task Processing Section
+25:14 – Task Intake vs. Task Inbox Differences
+27:00 – Moving Tasks Between GTD Lists
+The
+Ultimate Brain Full Tour video
+contains a much quicker, 3-minute overview of this page. Check it out if you’re in a hurry, but still want a video guide!

@@ -1,0 +1,28 @@
+Readwise
+is a popular app for capturing highlights from Kindle books, articles on the web, and other sources. It also has integrations with many other tools and can
+export highlights
+to a lot of them,
+including Notion
+.
+With its Notion integration, Readwise creates a standalone database to which it exports your highlights. It’s possible to manually integrate this database into Ultimate Brain, and in the video below, I’ll show you how to do just that.
+In this tutorial, we’ll create a relation between the
+Tags
+database in Ultimate Brain and the Library database that Readwise creates in your Notion workspace.
+Then we’ll edit the
+Resource template
+in the Tags database, embedding a
+linked database view
+of the Readwise library database. This will allow you to apply Area or Resource tags to specific entries in your Readwise database, such as books or articles.
+Copy link to heading
+Capturing Web Clips More Efficiently
+One significant limitation with Readwise right now is that you can’t apply specific Notion properties to your captured items. For instance, Readwise doesn’t provide you any way of pre-applying a specific Area or Resource tag to an article or a book.
+If you’d like to do this for articles on the web, try out
+Flylighter
+, our powerful Notion web clipper:
+Flylighter – Capture Anything to Notion. Fast.
+Flylighter is an ultra-fast web clipper for Notion. Capture articles, highlights, notes, YouTube timestamps, and more to your second brain – all at the speed of thought.
+flylighter.com
+Flylighter has a powerful free plan, and it’s laser-focused on helping you capture anything from the web to Notion as quickly as possible. It also provides you with a ton of flexibility for setting or even
+auto-filling
+property values.
+And since it’s free, it makes a great companion to Readwise, which is still a fantastic tool for capturing highlights from Kindle books and other sources.

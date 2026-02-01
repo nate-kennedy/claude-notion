@@ -1,0 +1,52 @@
+Hi there! Welcome to our help site for Ultimate Brain. Here you can find a bunch of help docs we wrote to help you get started with, use, and modify Ultimate Brain.
+You can find docs for Creator’s Companion
+here
+. For Ultimate Brain + Creator’s Companion customers, both sites apply.
+We also provide a customer forum where you can both
+ask questions to our customer support
+and
+participate with other community members
+. You can find our community here ->
+https://community.thomasjfrank.com/
+When you purchase any of our templates, you automatically receive an invitation to our community. If you’ve never logged in, search your email inbox for your purchase confirmation where you’ll find a login link.
+If you logged in before but can’t remember your password, you can reset your password by
+clicking on this link
+and clicking “Forgot password”. If you can’t find your login at all, you can
+email our support team
+to request a new invitation link. Please include either your purchase confirmation or order number in the email, or send the email from the address you used for your purchase.
+Once you’re in the community, here are some useful pointers to make your support experience as smooth as possible:
+You can find the UB template link here ->
+https://community.thomasjfrank.com/c/tutorials-ultimate-brain/start-here-full-tour-of-ultimate-brain
+Before asking a question, please read through our help docs here right on this very site. This is the fastest way to get a question answered, and we’re constantly adding new docs to our site.
+Search the forum – we’ve answered over 10 000 questions so far, and all are searchable and accessible in our Circle community. There’s a high likelihood a question like yours has already been answered.
+If nothing useful comes up – feel free to ask. Just create a new post in the relevant support space, describe your problem in as much detail as possible and attach any screenshots if relevant.
+If you have a new question,
+please create a new ticket (post) instead of commenting under an older post
+, either posted by you, or a different user. It’s much harder for us to keep track of comments, and we might occasionally miss them.
+We close tickets after five days from our reply after no follow-ups from the customer. In case you do have a follow up after you original ticket has been closed, just post it again with your follow up.
+We strive to provide an initial answer for all questions coming in within 24 hours during the working week. We’re able to uphold that standard 95% of the time, but occasionally, either during peaks or staff holidays, response times may be longer.
+We’re happy to help with all things regarding our templates, Notion quirks, access problems, and related issues.
+Some things we might not be able to help with:
+Notion bugs
+– we’re not Notion, so we can’t file and fix Notion bugs. It’s best to report those directly to Notion themselves,
+here’s how
+.
+UB modifications
+– while we’re occasionally happy to help users modify our templates, in general we can’t help with modifying your copy of the template beyond some small tweaks. Modification-related inquiries often turn into multi-hour tickets, which are beyond the scope of what we can offer as part of this support forum. If you’d like to get some hands-on expert help, reach out to the
+Notion consulting agency we partner with
+.
+Automation questions
+– beyond our paid templates, we create
+free automations that interact with Notion
+, and often work nicely with our templates. These automations are free-of-charge educational resources that don’t come with customer support, only self-serve guides. While we’re happy to take in bug reports for those automations, we can’t help you set them up as part of this support forum.
+Closing notes:
+Our Circle forum is English-only. Don’t worry if your English isn’t very good (
+it’s actually my second language – Alex
+), but please refrain from posting questions in any other language.
+You have to abide by our
+Code of Conduct
+to use this forum. We will ban anyone breaching our code without warning.
+Thank you so much for purchasing Ultimate Brain and being a part of our community! Do check out our other Circle spaces beyond just this Support space – lots of fun stuff happening there!
+–
+Alex
+and the Thomas Frank team

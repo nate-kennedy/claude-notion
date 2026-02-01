@@ -1,0 +1,992 @@
+This changelog page documents all major and minor changes to Ultimate Brain 3.0.
+Copy link to heading
+2025-01-23: Time Tracking, Daily Planning Updates, and More!
+This update introduces a few major new features in Ultimate Brain, including:
+Native Time Tracking
+– track how long your tasks take to complete, and even track
+multiple
+work sessions for each task.
+Recurring Tasks Upgrade
+– you can now create schedules like “The 3rd Thursday of Each Month” with the new “Nth Weekday of Month” Recur Unit option.
+Daily Planning Properties
+– improve your daily planning with new
+Energy, Location, and Process/Immersive
+properties and views in
+My Day → Execute.
+Track Tasks in Areas
+– the Area template in the Tags database now has a new Tasks section, which shows all tasks within Projects related to an Area.
+Sub-Task Automations
+– Auto-close sub-tasks when parent tasks are finished, keep parent and sub-task Project relations in sync, etc.
+Native Sub-Tasks
+– Ultimate Brain now uses Notion’s native Sub-Tasks feature.
+Additionally, we’ve made a few small tweaks in response to customer feedback, and fixed a couple of small bugs.
+Here’s a video tour of all the changes we’ve made:
+If you added Ultimate Brain to your Notion workspace prior to this update, you can use the upgrade guides below to update your copy manually. This release includes multiple updates, so you’re free to pick and choose the ones you want to add to your template.
+It’s also possible to
+migrate to a new copy of the template
+– though for this release, I don’t recommend it unless you
+really
+want native Sub-Tasks. All the other updates are quite easy to perform manually, and will take less time than doing a full migration.
+All features in this update were created in response to customer requests and feedback we’ve received in our community. If you don’t care to perform these updates to your template, don’t worry about it!
+Copy link to accordion section
+Native Time Tracking – Upgrade Guide
+Time Commitment:
+Medium
+Upgrade Possible on Notion’s Free Plan:
+⚠️ (see below)
+We’ve added an all-new, native time-tracking feature to Ultimate Brain. In the
+Execute
+section of
+My Day
+, we added new
+Start
+and
+End
+buttons which can start and end
+work sessions
+related to a task.
+This feature allows you to track
+multiple
+work sessions across a single task, and the new Time Tracking property section will show you the total time tracked across all of them. You can also see the total time tracked across all tasks in each Project page as well.
+Upgrade Guide:
+You can also follow our
+time-tracking guide
+to if you need a text guide on performing this update.
+Most
+of this update can be performed if your workspace is on Notion’s Free plan. However, it does include a single database automation that automatically ends active time-tracking sessions when a task is marked Done. You can skip this part if you’re on the Free plan, or upgrade to a paid plan in order to build it. If you do want to build it, follow the video below after you’ve already done everything in the first video:
+Copy link to accordion section
+Recurring Tasks Update – Upgrade Guide
+Time Commitment:
+Low
+Upgrade Possible on Notion’s Free Plan:
+✅
+We’ve upgraded our recurring tasks feature so that it can now handle a new type of schedule:
+Every
+nth
+weekday of each month.
+For example, “Every 3rd Thursday of the Month”. The term
+weekday
+here includes weekend days (otherwise we’d use “workday”, as Excel does).
+To keep things as simple as possible, there are no new properties needed for this capability. Instead, we’ve added a single new option to the
+Recur Unit
+property: “Nth Weekday of Month”.
+We’ve also renamed the “Days (Only if Set to 1 Day(s))” property to “Days”.
+Upgrade Guide:
+To perform this update,
+unlock your Tasks database first
+.
+Rename the Days (Only if Set to 1 Day(s)) property to
+Days
+.
+Add a “Nth Weekday of Month” option to the
+Recur Unit
+property.
+Update the
+Localization Key
+to include a translated or alternate name for the “Nth Weekday of Month” option. If you haven’t renamed or translated your properties, you can ignore this or just paste in the new default formula for Localization Key from below.
+[
+/* Rewrite these weekday and recur unit options in your own language, so your second brain can work even better with your first. Make sure to set up the same options in the "Recur Unit" and "Days" properties afterward, so you can select them. Feel free to remove the original names afterward! */
+/* ["lunes", "3ª", "mercredi", "木曜日", "piątek", "lørdag", "Double Sunday"] */
+[
+"Monday"
+,
+"Tuesday"
+,
+"Wednesday"
+,
+"Thursday"
+,
+"Friday"
+,
+"Saturday"
+,
+"Sunday"
+],
+/* ["Day(s)", "Week(s)", "Month(s)", "Year(s)", "Month(s) on the Last Day", "Month(s) on the First Weekday", "Month(s) on the Last Weekday", "Nth Weekday of Month"] */
+[
+"Day(s)"
+,
+"Week(s)"
+,
+"Month(s)"
+,
+"Year(s)"
+,
+"Month(s) on the Last Day"
+,
+"Month(s) on the First Weekday"
+,
+"Month(s) on the Last Weekday"
+,
+"Nth Weekday of Month"
+],
+/* This final list is for Status option names. */
+[
+"To Do"
+,
+"Doing"
+,
+"Done"
+]
+]
+Code language:
+JavaScript
+(
+javascript
+)
+Update the
+Next Due
+formula with the code block below.
+If you’ve renamed or translated your property names, you’ll need to either rename them back to the defaults, paste this code in, and place them back, or use search and replace features to update the code block before pasting it into your own template.
+lets(
+version,
+"2.2.1"
+,
+dueProp, prop(
+"Due"
+),
+recurIntervalProp, prop(
+"Recur Interval"
+),
+recurUnitProp, prop(
+"Recur Unit"
+),
+localizationKeyProp, prop(
+"Localization Key"
+),
+daysProp, prop(
+"Days"
+),
+emptyDate, parseDate(
+""
+),
+if
+(!empty(recurIntervalProp) and !empty(dueProp),
+if
+(recurIntervalProp >
+0
+and recurIntervalProp == ceil(recurIntervalProp),
+lets(
+recurUnit,
+ifs(
+or(recurUnitProp == at(at(localizationKeyProp,
+1
+),
+0
+), recurUnitProp ==
+"Day(s)"
+),
+"days"
+,
+or(recurUnitProp == at(at(localizationKeyProp,
+1
+),
+1
+), recurUnitProp ==
+"Week(s)"
+),
+"weeks"
+,
+or(recurUnitProp == at(at(localizationKeyProp,
+1
+),
+2
+), recurUnitProp ==
+"Month(s)"
+),
+"months"
+,
+or(recurUnitProp == at(at(localizationKeyProp,
+1
+),
+3
+), recurUnitProp ==
+"Year(s)"
+),
+"years"
+,
+or(recurUnitProp == at(at(localizationKeyProp,
+1
+),
+4
+), recurUnitProp ==
+"Month(s) on the Last Day"
+),
+"monthsonthelastday"
+,
+or(recurUnitProp == at(at(localizationKeyProp,
+1
+),
+5
+), recurUnitProp ==
+"Month(s) on the First Weekday"
+),
+"monthsonthefirstweekday"
+,
+or(recurUnitProp == at(at(localizationKeyProp,
+1
+),
+6
+), recurUnitProp ==
+"Month(s) on the Last Weekday"
+),
+"monthsonthelastweekday"
+,
+or(and(!empty(at(at(localizationKeyProp,
+1
+),
+7
+)), recurUnitProp == at(at(localizationKeyProp,
+1
+),
+7
+)), recurUnitProp ==
+"Nth Weekday of Month"
+),
+"nthweekdayofmonth"
+,
+"days"
+),
+weekdays,
+match(
+[
+if
+(or(includes(daysProp, at(at(localizationKeyProp,
+0
+),
+1
+-
+1
+)), includes(daysProp,
+"Monday"
+)),
+1
+,
+false
+),
+if
+(or(includes(daysProp, at(at(localizationKeyProp,
+0
+),
+2
+-
+1
+)), includes(daysProp,
+"Tuesday"
+)),
+2
+,
+false
+),
+if
+(or(includes(daysProp, at(at(localizationKeyProp,
+0
+),
+3
+-
+1
+)), includes(daysProp,
+"Wednesday"
+)),
+3
+,
+false
+),
+if
+(or(includes(daysProp, at(at(localizationKeyProp,
+0
+),
+4
+-
+1
+)), includes(daysProp,
+"Thursday"
+)),
+4
+,
+false
+),
+if
+(or(includes(daysProp, at(at(localizationKeyProp,
+0
+),
+5
+-
+1
+)), includes(daysProp,
+"Friday"
+)),
+5
+,
+false
+),
+if
+(or(includes(daysProp, at(at(localizationKeyProp,
+0
+),
+6
+-
+1
+)), includes(daysProp,
+"Saturday"
+)),
+6
+,
+false
+),
+if
+(or(includes(daysProp, at(at(localizationKeyProp,
+0
+),
+7
+-
+1
+)), includes(daysProp,
+"Sunday"
+)),
+7
+,
+false
+)
+],
+"[1-7]"
+),
+dateDue, parseDate(formatDate(dueProp,
+"YYYY-MM-DD"
+)),
+timeNow, now(),
+dateNow, parseDate(formatDate(timeNow,
+"YYYY-MM-DD"
+)),
+hasRange, dateEnd(dueProp) > dateStart(dueProp),
+recurUnitLapseLength,
+if
+(
+includes([
+"days"
+,
+"weeks"
+,
+"months"
+,
+"years"
+], recurUnit),
+dateBetween(dateNow, dateDue, recurUnit) / recurIntervalProp,
+false
+),
+lastDayBaseDate,
+if
+(
+includes([
+"monthsonthelastday"
+,
+"monthsonthefirstweekday"
+,
+"monthsonthelastweekday"
+], recurUnit),
+if
+(
+year(dateNow) *
+12
++ month(dateNow) - (year(dateDue) *
+12
++ month(dateDue)) >
+0
+,
+dateSubtract(dateAdd(dateSubtract(dateAdd(dateDue, ceil((year(dateNow) *
+12
++ month(dateNow) - (year(dateDue) *
+12
++ month(dateDue))) / recurIntervalProp) * recurIntervalProp,
+"months"
+), date(dateAdd(dateDue, ceil((year(dateNow) *
+12
++ month(dateNow) - (year(dateDue) *
+12
++ month(dateDue))) / recurIntervalProp) * recurIntervalProp,
+"months"
+)) -
+1
+,
+"days"
+),
+1
+,
+"months"
+),
+1
+,
+"days"
+),
+dateSubtract(dateAdd(dateSubtract(dateAdd(dateDue, recurIntervalProp,
+"months"
+), date(dateAdd(dateDue, recurIntervalProp,
+"months"
+)) -
+1
+,
+"days"
+),
+1
+,
+"months"
+),
+1
+,
+"days"
+)
+),
+emptyDate
+),
+firstDayBaseDate,
+if
+(
+lastDayBaseDate != emptyDate,
+dateSubtract(lastDayBaseDate, date(lastDayBaseDate) -
+1
+,
+"days"
+),
+emptyDate
+),
+firstWeekdayBaseDate,
+if
+(
+lastDayBaseDate != emptyDate,
+if
+(
+test(day(firstDayBaseDate),
+"6|7"
+),
+dateAdd(firstDayBaseDate,
+8
+- day(firstDayBaseDate),
+"days"
+),
+firstDayBaseDate
+),
+emptyDate
+),
+lastWeekdayBaseDate,
+if
+(
+lastDayBaseDate != emptyDate,
+if
+(
+test(day(lastDayBaseDate),
+"6|7"
+),
+dateSubtract(lastDayBaseDate, day(lastDayBaseDate) -
+5
+,
+"days"
+),
+lastDayBaseDate
+),
+emptyDate
+),
+nextLastBaseDate,
+if
+(
+lastDayBaseDate != emptyDate,
+dateSubtract(dateAdd(dateSubtract(dateAdd(lastDayBaseDate, recurIntervalProp,
+"months"
+), date(dateAdd(lastDayBaseDate, recurIntervalProp,
+"months"
+)) -
+1
+,
+"days"
+),
+1
+,
+"months"
+),
+1
+,
+"days"
+),
+emptyDate
+),
+nextFirstBaseDate,
+if
+(
+lastDayBaseDate != emptyDate,
+dateSubtract(nextLastBaseDate, date(nextLastBaseDate) -
+1
+,
+"days"
+),
+emptyDate
+),
+nextFirstWeekday,
+if
+(
+lastDayBaseDate != emptyDate,
+if
+(
+test(day(nextFirstBaseDate),
+"6|7"
+),
+dateAdd(nextFirstBaseDate,
+8
+- day(nextFirstBaseDate),
+"days"
+),
+nextFirstBaseDate
+),
+emptyDate
+),
+nextLastWeekday,
+if
+(
+lastDayBaseDate != emptyDate,
+if
+(
+test(day(nextLastBaseDate),
+"6|7"
+),
+dateSubtract(nextLastBaseDate, day(nextLastBaseDate) -
+5
+,
+"days"
+),
+nextLastBaseDate
+),
+emptyDate
+),
+firstWeekdayOfMonthBaseDate,
+lets(
+baseMonthDate,
+if
+(
+timeNow > dueProp,
+timeNow,
+dueProp
+),
+weekday, toNumber(at(weekdays,
+0
+)),
+firstDayOfNextMonth, dateAdd(dateSubtract(baseMonthDate, date(baseMonthDate) -
+1
+,
+"days"
+),
+1
+,
+"months"
+),
+ifs(
+day(firstDayOfNextMonth) < weekday, dateAdd(firstDayOfNextMonth, weekday - day(firstDayOfNextMonth),
+"days"
+),
+day(firstDayOfNextMonth) > weekday, dateAdd(firstDayOfNextMonth, weekday - day(firstDayOfNextMonth) +
+7
+,
+"days"
+),
+firstDayOfNextMonth
+)
+),
+nthWeekdayOfMonthBaseDate, dateAdd(firstWeekdayOfMonthBaseDate, recurIntervalProp -
+1
+,
+"weeks"
+),
+nextDueStart,
+ifs(
+recurUnit ==
+"days"
+and length(weekdays) >
+0
+and recurIntervalProp ==
+1
+,
+if
+(
+dateNow >= dateDue,
+ifs(
+includes(weekdays, format(day(dateAdd(dateNow,
+1
+,
+"days"
+)))), dateAdd(dateNow,
+1
+,
+"days"
+),
+includes(weekdays, format(day(dateAdd(dateNow,
+2
+,
+"days"
+)))), dateAdd(dateNow,
+2
+,
+"days"
+),
+includes(weekdays, format(day(dateAdd(dateNow,
+3
+,
+"days"
+)))), dateAdd(dateNow,
+3
+,
+"days"
+),
+includes(weekdays, format(day(dateAdd(dateNow,
+4
+,
+"days"
+)))), dateAdd(dateNow,
+4
+,
+"days"
+),
+includes(weekdays, format(day(dateAdd(dateNow,
+5
+,
+"days"
+)))), dateAdd(dateNow,
+5
+,
+"days"
+),
+includes(weekdays, format(day(dateAdd(dateNow,
+6
+,
+"days"
+)))), dateAdd(dateNow,
+6
+,
+"days"
+),
+includes(weekdays, format(day(dateAdd(dateNow,
+7
+,
+"days"
+)))), dateAdd(dateNow,
+7
+,
+"days"
+),
+emptyDate
+),
+ifs(
+includes(weekdays, format(day(dateAdd(dateDue,
+1
+,
+"days"
+)))), dateAdd(dateDue,
+1
+,
+"days"
+),
+includes(weekdays, format(day(dateAdd(dateDue,
+2
+,
+"days"
+)))), dateAdd(dateDue,
+2
+,
+"days"
+),
+includes(weekdays, format(day(dateAdd(dateDue,
+3
+,
+"days"
+)))), dateAdd(dateDue,
+3
+,
+"days"
+),
+includes(weekdays, format(day(dateAdd(dateDue,
+4
+,
+"days"
+)))), dateAdd(dateDue,
+4
+,
+"days"
+),
+includes(weekdays, format(day(dateAdd(dateDue,
+5
+,
+"days"
+)))), dateAdd(dateDue,
+5
+,
+"days"
+),
+includes(weekdays, format(day(dateAdd(dateDue,
+6
+,
+"days"
+)))), dateAdd(dateDue,
+6
+,
+"days"
+),
+includes(weekdays, format(day(dateAdd(dateDue,
+7
+,
+"days"
+)))), dateAdd(dateDue,
+7
+,
+"days"
+),
+emptyDate
+)
+),
+recurUnit ==
+"nthweekdayofmonth"
+and length(weekdays) ==
+1
+and recurIntervalProp >=
+1
+and recurIntervalProp <=
+5
+,
+if
+(
+month(nthWeekdayOfMonthBaseDate) == month(firstWeekdayOfMonthBaseDate),
+nthWeekdayOfMonthBaseDate,
+dateSubtract(nthWeekdayOfMonthBaseDate,
+1
+,
+"week"
+)
+),
+recurUnit ==
+"monthsonthelastday"
+,
+if
+(
+dateNow >= lastDayBaseDate,
+nextLastBaseDate,
+lastDayBaseDate
+),
+recurUnit ==
+"monthsonthefirstweekday"
+,
+if
+(
+dateNow >= firstWeekdayBaseDate,
+nextFirstWeekday,
+firstWeekdayBaseDate
+),
+recurUnit ==
+"monthsonthelastweekday"
+,
+if
+(
+dateNow >= lastWeekdayBaseDate,
+nextLastWeekday,
+lastWeekdayBaseDate
+),
+includes([
+"days"
+,
+"weeks"
+,
+"months"
+,
+"years"
+], recurUnit),
+if
+(
+dateBetween(dateNow, dateDue,
+"days"
+) >=
+1
+,
+if
+(
+recurUnitLapseLength == ceil(recurUnitLapseLength),
+dateAdd(dateDue, (recurUnitLapseLength +
+1
+) * recurIntervalProp, recurUnit),
+dateAdd(dateDue, ceil(recurUnitLapseLength) * recurIntervalProp, recurUnit)
+),
+dateAdd(dateDue, recurIntervalProp, recurUnit)
+),
+emptyDate
+),
+recurRange, dateBetween(nextDueStart, dateDue,
+"days"
+),
+timeNextDueStart, dateAdd(dateStart(dueProp), recurRange,
+"days"
+),
+timeNextDueEnd, dateAdd(dateEnd(dueProp), recurRange,
+"days"
+),
+nextDue,
+if
+(
+hasRange,
+dateRange(timeNextDueStart, timeNextDueEnd),
+timeNextDueStart
+),
+nextDue
+),
+dueProp
+),
+emptyDate
+)
+)
+Code language:
+JavaScript
+(
+javascript
+)
+Copy link to accordion section
+Daily Planning Properties – Upgrade Guide
+Time Commitment:
+Low
+Upgrade Possible on Notion’s Free Plan:
+✅
+In the My Day → Execute section of Ultimate Brain, there are now three new views:
+Energy, Location, and P/I.
+After you’ve selected the tasks you’re going to complete today by checking the My Day checkbox, you can use these views to help prioritize and batch those tasks. Here’s a rundown:
+Energy
+: Group tasks by High Energy or Low Energy. While I typically recommend doing the most important task of the day first, this can help you be more productive if you know your
+biological prime time
+.
+Location:
+Group tasks by the location in which they need to be done. Included categories include Home, Work, and Errand. This can help you effectively
+batch tasks
+by location.
+P/I:
+This one stands for Process/Immersive. Author Dan Charnas shared these terms in his book
+Work Clean
+,
+and I love them. Process tasks are those where you need to get the ball rolling and unblock someone (or something else) – e.g. replying to an email or heating up a pan. Immersive tasks are those that require your full attention from start to finish. Doing Process tasks first will ensure you actually get more done, since you aren’t blocking other people (or systems) while you’re doing Immersive tasks.
+Each of these views makes it easy to drag tasks into their correct category. This is also the reason we’ve created three separate properties for these categories – the older
+Contexts
+property didn’t work as well for this purpose (and we’ve removed it).
+Upgrade Guide:
+To perform this update,
+unlock your Tasks database first
+.
+You can also update the views in the Process (GTD) → Do Next page:
+Copy link to accordion section
+Track Tasks in Areas – Upgrade Guide
+Time Commitment:
+Low
+Upgrade Possible on Notion’s Free Plan:
+⚠️ (see below)
+We’ve added a new
+Active Tasks
+view to the
+Area
+template in the Tags database. This allows you to see all open tasks within Projects that are related to the current Area.
+I’ll note that this update does
+not
+directly relate Tasks to Areas, though
+you can make that customization to your own copy
+if you like.
+Instead, it simply shows a view of the tasks database, grouped by the Projects that are related to the current Area.
+We’ve also shipped a new Automation in the Tags database:
+Create Ongoing Project for Areas
+. Once enabled, this automation will create a new
+ongoing Project
+whenever you create a new Area-type Tag page – and that project will be related to the Tag page.
+For example, if you create a page called “Work” and give it the Area type, Notion will create a “Work Ongoing” project and relate it to that page. You’ll then see that project as a group in the Active Tasks view.
+Upgrade guide:
+You can perform the bulk of this update on Notion’s Free plan. However, to create the automation shown near the end of the video, your workspace will need to be on a paid Notion plan. Free users can use and enable/disable automations that come with templates, but creating and editing automations requires a paid plan.
+To perform this update,
+unlock your Tags and Tasks databases first
+.
+Copy link to accordion section
+Sub-Task Automations – Upgrade Guide
+Time Commitment:
+Low
+Upgrade Possible on Notion’s Free Plan:
+❌
+We’ve added three new automations to the Tasks database that improve the way sub-tasks work. These automations bring some useful functionality from other to-do apps, such as Todoist and ClickUp, into Notion. They are:
+Task Done → Close All Open Sub-Tasks
+– When a task’s Status changes to Done, all of its open sub-tasks are set to Done as well (and are given Completed Dates).
+Sync Parent/Sub-Task Projects & People
+– Ensures each sub-task has the same Project, People, and Content relations as its parent task.
+Change Project → Remove Parent Task
+– If you change the Project on a sub-task, it will no longer be a sub-task.
+In new copies of Ultimate Brain, each of these automations is
+disabled
+by default. They must be enabled by users.
+If your workspace is on a paid Notion plan, you can create the automations yourself in the Tasks database.
+We’ve made this a separate upgrade from the Native Sub-Tasks upgrade listed below because – unlike that upgrade – this one is easy to perform, and is actually worth doing if you’re a heavy user of sub-tasks.
+Upgrade guide:
+Performing this upgrade involves creating new database automations, so you’ll need to be on a paid Notion plan to do it.
+To perform this update,
+unlock your Tasks database first
+.
+Copy link to accordion section
+Native Sub-Tasks – Upgrade Guide
+Time Commitment:
+High
+Upgrade Possible on Notion’s Free Plan:
+✅
+We’ve finally switched over to using Notion’s native Sub-Items feature for sub-tasks in Ultimate Brain.
+This change doesn’t really change the way Ultimate Brain works,
+and is not recommend for most people who already have a copy of the template.
+Ultimate Brain already had a very robust sub-tasks system, which was developed to side-step technical issues in Notion’s Sub-Items feature.
+We feel Notion has finally addressed enough of those issues to move forward with using Sub-Items, and doing so will help us to keep our tutorials and educational content from being confusing in the future (e.g. “Why don’t you use Sub-Items, Tom?”). We try our best to build our templates so that you can use our tutorials to learn exactly how they work!
+That said, actually making this change to an existing copy of Ultimate Brain requires
+extensive
+work. For most people, it’s not worth the trouble.
+I also don’t personally use sub-tasks – ever. If a task needs to be broken down, I believe it is a project.
+Upgrade guide:
+To perform this update,
+unlock your Tasks database first
+.
+Copy link to accordion section
+Tweaks and Bug Fixes – Upgrade Guide
+Time Commitment:
+Low
+Upgrade Possible on Notion’s Free Plan:
+⚠️ (see below)
+Finally, we’ve made a number of small tweaks and bug fixes to Ultimate Brain:
+My Day is now a pinned property in the Tasks database page layout
+The My Week → Plan My Week → Recurring view’s Status property’s view-by setting has been changed to Checkbox. The same was done for My Day → Plan → Recurring.
+In My Day → Wrap Up → Calendar, the filters were edited so that My Day is Unchecked.
+The following properties were
+deleted
+in the Tasks database: Next Due API, UTC, Recurring Tasks Divider, and Contexts (this one has been replaced by Energy, Location, and P/I in the Daily Planning update –
+see note below before deleting it.
+)
+The Set Completion Dates and Clear Completion Dates automations are now enabled by default.
+The Clear Completion Date automation now triggers if a task is set to In Progress, and only triggers for tasks in the Complete view of the Tasks database.
+A new
+Shopping List
+property is created in the Tasks database (see second video below)
+Upgrade guide:
+Important:
+Don’t delete the
+Contexts
+property unless you’re on a paid Notion plan. If you do, also edit the
+Recurring Tasks (Advanced)
+automation in the Tasks database, removing the deleted Contexts property from the Add Page action. Once you delete the Contexts property, the automation will be disabled until this change is made.
+You can avoid this issue by simply not deleting the Contexts property.
+Nearly all of these changes can be made to your existing copy if your workspace is on Notion’s Free plan. However, making the small change to the
+Clear Completion Date
+automation requires being on a paid Notion plan.
+To perform this update,
+unlock your Tasks database first
+.
+After deleting the Contexts property, watch the video below to create a new Shopping List property that will drive the shopping list in the Recipes dashboard:
+Copy link to heading
+2024-12-06: Tags Renamed to Labels in Tasks Database
+In the
+Tasks database
+, we renamed a multi-select property called “Tags” to “Labels”.
+This was done to prevent confusion with other Relation properties in other databases that connect to the
+Tags
+database.
+Here’s an upgrade guide:
+Copy link to heading
+2024-11-28: Ultimate Brain 3.0 Public Launch!
+Today mark’s the full, public launch of Ultimate Brain 3.0. You can see everything that’s new in our detailed
+What’s New
+page.
+Alternatively, you can watch the video below!

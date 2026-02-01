@@ -1,0 +1,1601 @@
+<!doctype html>
+<html lang="en-US" data-view-transitions="disabled" data-disable-smooth-scroll="true" data-theme="light">
+<head>
+	
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-2JPFK48M10"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-2JPFK48M10');
+	</script>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<script>
+	(function() {
+		var preference = 'system';
+		try {
+			var storedPreference = localStorage.getItem('tjf-theme-preference');
+			if (storedPreference) {
+				preference = storedPreference;
+			}
+		} catch (e) {
+			// localStorage may be unavailable (private mode, etc.)
+		}
+		
+		// Apply theme based on preference
+		// For system preference, set data-theme based on actual system preference
+		// This ensures all existing dark mode CSS continues to work
+		if (preference === 'system') {
+			var systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+			document.documentElement.setAttribute('data-theme', systemPrefersDark ? 'dark' : 'light');
+		} else {
+			document.documentElement.setAttribute('data-theme', preference);
+		}
+	})();
+	</script>
+
+	<style>:root { --tabler-icon-info-circle: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%3E%3Cpath%20d%3D%22M3%2012a9%209%200%201%200%2018%200a9%209%200%200%200-18%200m9-3h.01%22%2F%3E%3Cpath%20d%3D%22M11%2012h1v4h1%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E); --tabler-icon-external-link: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%3E%3Cpath%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22M17%207L7%2017M8%207h9v9%22%2F%3E%3C%2Fsvg%3E); }</style>
+	<!-- Favicons -->
+	<link id="favicon-svg" rel="icon" type="image/svg+xml" href="https://thomasjfrank.com/wp-content/themes/tjf-2023/images/favicons/favicon.svg">
+	<link id="favicon-ico" rel="icon" type="image/x-icon" href="https://thomasjfrank.com/wp-content/themes/tjf-2023/images/favicons/favicon.ico">
+	<link id="apple-touch-icon-180" rel="apple-touch-icon" sizes="180x180" href="https://thomasjfrank.com/wp-content/themes/tjf-2023/images/favicons/apple-touch-icon.png">
+	<link id="apple-touch-icon-120" rel="apple-touch-icon" sizes="120x120" href="https://thomasjfrank.com/wp-content/themes/tjf-2023/images/favicons/apple-touch-icon-120x120.png">
+	<link id="apple-touch-icon-152" rel="apple-touch-icon" sizes="152x152" href="https://thomasjfrank.com/wp-content/themes/tjf-2023/images/favicons/apple-touch-icon-152x152.png">
+	<link id="apple-touch-icon-167" rel="apple-touch-icon" sizes="167x167" href="https://thomasjfrank.com/wp-content/themes/tjf-2023/images/favicons/apple-touch-icon.png-167x167.png">
+	<link rel="manifest" href="https://thomasjfrank.com/wp-content/themes/tjf-2023/images/favicons/manifest.json">
+	<meta name="theme-color" content="#ffffff">
+	<script>
+	(function() {
+		// Update favicons based on system theme preference (not site theme)
+		function updateFavicons() {
+			var isDark = false;
+			if (window.matchMedia) {
+				isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+			}
+			var faviconDir = 'https://thomasjfrank.com/wp-content/themes/tjf-2023/images/favicons/';
+			
+			// Update SVG favicon
+			var faviconSvg = document.getElementById('favicon-svg');
+			if (faviconSvg) {
+				faviconSvg.href = faviconDir + (isDark ? 'favicon-dark.svg' : 'favicon.svg');
+			}
+			
+			// Update ICO favicon
+			var faviconIco = document.getElementById('favicon-ico');
+			if (faviconIco) {
+				faviconIco.href = faviconDir + (isDark ? 'favicon-dark.ico' : 'favicon.ico');
+			}
+			
+			// Update Apple touch icons (only initials, not face photo)
+			var appleIcon180 = document.getElementById('apple-touch-icon-180');
+			if (appleIcon180) {
+				appleIcon180.href = faviconDir + (isDark ? 'apple-touch-icon-dark.png' : 'apple-touch-icon.png');
+			}
+			
+			var appleIcon120 = document.getElementById('apple-touch-icon-120');
+			if (appleIcon120) {
+				appleIcon120.href = faviconDir + (isDark ? 'apple-touch-icon-dark-120x120.png' : 'apple-touch-icon-120x120.png');
+			}
+			
+			var appleIcon152 = document.getElementById('apple-touch-icon-152');
+			if (appleIcon152) {
+				appleIcon152.href = faviconDir + (isDark ? 'apple-touch-icon-dark-152x152.png' : 'apple-touch-icon-152x152.png');
+			}
+			
+			var appleIcon167 = document.getElementById('apple-touch-icon-167');
+			if (appleIcon167) {
+				appleIcon167.href = faviconDir + (isDark ? 'apple-touch-icon-dark-167x167.png' : 'apple-touch-icon.png-167x167.png');
+			}
+		}
+		
+		// Update favicons on initial load
+		if (document.readyState === 'loading') {
+			document.addEventListener('DOMContentLoaded', updateFavicons);
+		} else {
+			updateFavicons();
+		}
+		
+		// Listen for system preference changes
+		if (window.matchMedia) {
+			var mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+			mediaQuery.addEventListener('change', updateFavicons);
+		}
+	})();
+	</script>
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/c5394bcfae056679a5bc09f3/script.js"></script>
+	<!-- This site is optimized with the Yoast SEO plugin v26.7 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>How to Add Ultimate Brain to Notion - Ultimate Brain Docs</title>
+	<link rel="canonical" href="https://thomasjfrank.com/docs/ultimate-brain/add-ultimate-brain-to-notion/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="How to Add Ultimate Brain to Notion - Ultimate Brain Docs" />
+	<meta property="og:description" content="Follow this quick guide to add a copy of Ultimate Brain to your Notion workspace! Ultimate Brain is a Notion template, which means you duplicate it into you workspace. When you do, you get a perfect, 1:1 copy of the template that you can then use and change to your liking. Depending on how you [&hellip;]" />
+	<meta property="og:url" content="https://thomasjfrank.com/docs/ultimate-brain/add-ultimate-brain-to-notion/" />
+	<meta property="og:site_name" content="Thomas Frank" />
+	<meta property="article:publisher" content="https://www.facebook.com/thomas" />
+	<meta property="article:modified_time" content="2024-12-21T01:06:42+00:00" />
+	<meta property="og:image" content="https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.32.29@2x-1400x676.jpg" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@tomfrankly" />
+	<meta name="twitter:label1" content="Est. reading time" />
+	<meta name="twitter:data1" content="4 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://thomasjfrank.com/docs/ultimate-brain/add-ultimate-brain-to-notion/","url":"https://thomasjfrank.com/docs/ultimate-brain/add-ultimate-brain-to-notion/","name":"How to Add Ultimate Brain to Notion - Ultimate Brain Docs","isPartOf":{"@id":"https://thomasjfrank.com/#website"},"primaryImageOfPage":{"@id":"https://thomasjfrank.com/docs/ultimate-brain/add-ultimate-brain-to-notion/#primaryimage"},"image":{"@id":"https://thomasjfrank.com/docs/ultimate-brain/add-ultimate-brain-to-notion/#primaryimage"},"thumbnailUrl":"https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.32.29@2x-1400x676.jpg","datePublished":"2024-11-05T23:41:56+00:00","dateModified":"2024-12-21T01:06:42+00:00","breadcrumb":{"@id":"https://thomasjfrank.com/docs/ultimate-brain/add-ultimate-brain-to-notion/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://thomasjfrank.com/docs/ultimate-brain/add-ultimate-brain-to-notion/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://thomasjfrank.com/docs/ultimate-brain/add-ultimate-brain-to-notion/#primaryimage","url":"https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.32.29@2x.jpg","contentUrl":"https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.32.29@2x.jpg","width":3409,"height":1646,"caption":"Screenshot"},{"@type":"BreadcrumbList","@id":"https://thomasjfrank.com/docs/ultimate-brain/add-ultimate-brain-to-notion/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://thomasjfrank.com/"},{"@type":"ListItem","position":2,"name":"Add Ultimate Brain to Notion"}]},{"@type":"WebSite","@id":"https://thomasjfrank.com/#website","url":"https://thomasjfrank.com/","name":"Thomas Frank","description":"Notion, Automation, and Productivity","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://thomasjfrank.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+<link rel="alternate" type="application/rss+xml" title="Thomas Frank &raquo; Feed" href="https://thomasjfrank.com/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://thomasjfrank.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fthomasjfrank.com%2Fdocs%2Fultimate-brain%2Fadd-ultimate-brain-to-notion%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://thomasjfrank.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fthomasjfrank.com%2Fdocs%2Fultimate-brain%2Fadd-ultimate-brain-to-notion%2F&#038;format=xml" />
+<style id='wp-img-auto-sizes-contain-inline-css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://thomasjfrank.com/wp-includes/css/dist/block-library/style.min.css?ver=6.9' media='all' />
+<style id='classic-theme-styles-inline-css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<style id='mamaduka-bookmark-card-style-inline-css'>
+.wp-block-mamaduka-bookmark-card{background:#fff;border:1px solid #e2e8f0;border-radius:8px;box-shadow:0 1px 2px 0 rgba(0,0,0,.05);font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5;margin:0;overflow:hidden}.bookmark-card{color:currentColor;display:flex;flex-direction:column;position:relative;text-decoration:none!important}.bookmark-card:hover{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity));text-decoration:none!important}.bookmark-card .bookmark-card__image img{display:block;height:100%;-o-object-fit:cover;object-fit:cover;width:100%}.bookmark-card__content{padding:16px}.bookmark-card__title{--text-opacity:1;color:#1a202c;color:rgba(26,32,44,var(--text-opacity));font-size:18px;font-weight:600;line-height:1.3;margin-bottom:4px}.bookmark-card__description{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity));font-size:16px;margin-bottom:8px}.bookmark_card__meta{display:flex;font-size:14px;line-height:16px}.bookmark_card__meta-icon{height:16px;margin-right:8px;width:16px}.bookmark_card__meta-publisher{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.is-style-horizontal .bookmark-card__description{-webkit-box-orient:vertical;-webkit-line-clamp:2;display:-webkit-box;overflow:hidden}@media(min-width:600px){.is-style-horizontal .bookmark-card{flex-direction:row-reverse}.is-style-horizontal .bookmark-card__image{flex:0 0 160px}.is-style-horizontal .bookmark-card__content{display:flex;flex:3 1 0;flex-direction:column;overflow:hidden}.is-style-horizontal .bookmark-card__title{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.is-style-horizontal .bookmark_card__meta{margin-top:auto}.is-style-horizontal.has-media-on-the-left .bookmark-card{flex-direction:row}}
+
+/*# sourceURL=https://thomasjfrank.com/wp-content/plugins/bookmark-card/build/style-index.css */
+</style>
+<style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-term-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-term-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<link rel='stylesheet' id='pb-accordion-blocks-style-css' href='https://thomasjfrank.com/wp-content/plugins/accordion-blocks/build/index.css?ver=1.5.0' media='all' />
+<link rel='stylesheet' id='simple-youtube-responsive-css' href='https://thomasjfrank.com/wp-content/plugins/simple-youtube-responsive/css/yt-responsive.css?ver=3.2.5' media='all' />
+<link rel='stylesheet' id='lasso-live-css' href='https://thomasjfrank.com/wp-content/plugins/lasso/admin/assets/css/lasso-live.min.css?ver=1767994589' media='all' />
+<link rel='stylesheet' id='lasso-table-frontend-css' href='https://thomasjfrank.com/wp-content/plugins/lasso/admin/assets/css/lasso-table-frontend.min.css?ver=1767994589' media='all' />
+<link rel='stylesheet' id='algolia-satellite-css' href='https://thomasjfrank.com/wp-content/plugins/search-with-typesense/assets/vendor/css/algolia-satellite.min.css?ver=1.7.3' media='' />
+<link rel='stylesheet' id='cm-typesense-frontend-style-css' href='https://thomasjfrank.com/wp-content/plugins/search-with-typesense/assets/frontend/style.css?ver=1.7.3' media='' />
+<link rel='stylesheet' id='tjf-style-css' href='https://thomasjfrank.com/wp-content/themes/tjf-2023/css/style.css?ver=1769723521' media='all' />
+<link rel='stylesheet' id='elementor-icons-css' href='https://thomasjfrank.com/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.45.0' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css' href='https://thomasjfrank.com/wp-content/uploads/elementor/css/custom-frontend.min.css?ver=1768515440' media='all' />
+<link rel='stylesheet' id='elementor-post-3102-css' href='https://thomasjfrank.com/wp-content/uploads/elementor/css/post-3102.css?ver=1768515440' media='all' />
+<link rel='stylesheet' id='font-awesome-5-all-css' href='https://thomasjfrank.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css?ver=3.34.1' media='all' />
+<link rel='stylesheet' id='font-awesome-4-shim-css' href='https://thomasjfrank.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=3.34.1' media='all' />
+<link rel='stylesheet' id='widget-heading-css' href='https://thomasjfrank.com/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=3.34.1' media='all' />
+<link rel='stylesheet' id='widget-form-css' href='https://thomasjfrank.com/wp-content/plugins/elementor-pro/assets/css/widget-form.min.css?ver=3.34.0' media='all' />
+<link rel='stylesheet' id='e-animation-slideInRight-css' href='https://thomasjfrank.com/wp-content/plugins/elementor/assets/lib/animations/styles/slideInRight.min.css?ver=3.34.1' media='all' />
+<link rel='stylesheet' id='e-popup-css' href='https://thomasjfrank.com/wp-content/plugins/elementor-pro/assets/css/conditionals/popup.min.css?ver=3.34.0' media='all' />
+<link rel='stylesheet' id='elementor-post-4506-css' href='https://thomasjfrank.com/wp-content/uploads/elementor/css/post-4506.css?ver=1768515440' media='all' />
+<link rel='stylesheet' id='elementor-post-3715-css' href='https://thomasjfrank.com/wp-content/uploads/elementor/css/post-3715.css?ver=1768515440' media='all' />
+<link rel='stylesheet' id='syntax-highlighting-code-block-theme-light-css' href='https://thomasjfrank.com/wp-content/plugins/syntax-highlighting-code-block/vendor/scrivo/highlight-php/styles/github.css?ver=1754363652' media='all' />
+<style id='syntax-highlighting-code-block-theme-light-inline-css'>
+/*
+
+Atom One Dark by Daniel Gamage
+Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
+
+base:    #282c34
+mono-1:  #abb2bf
+mono-2:  #818896
+mono-3:  #5c6370
+hue-1:   #56b6c2
+hue-2:   #61aeee
+hue-3:   #c678dd
+hue-4:   #98c379
+hue-5:   #e06c75
+hue-5-2: #be5046
+hue-6:   #d19a66
+hue-6-2: #e6c07b
+
+*/
+
+html[data-theme="dark"] .site-main .entry-content .hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #abb2bf;
+  background: #282c34;
+}
+
+html[data-theme="dark"] .site-main .entry-content .hljs-comment, html[data-theme="dark"] .site-main .entry-content .hljs-quote {
+  color: #5c6370;
+  font-style: italic;
+}
+
+html[data-theme="dark"] .site-main .entry-content .hljs-doctag, html[data-theme="dark"] .site-main .entry-content .hljs-keyword, html[data-theme="dark"] .site-main .entry-content .hljs-formula {
+  color: #c678dd;
+}
+
+html[data-theme="dark"] .site-main .entry-content .hljs-section, html[data-theme="dark"] .site-main .entry-content .hljs-name, html[data-theme="dark"] .site-main .entry-content .hljs-selector-tag, html[data-theme="dark"] .site-main .entry-content .hljs-deletion, html[data-theme="dark"] .site-main .entry-content .hljs-subst {
+  color: #e06c75;
+}
+
+html[data-theme="dark"] .site-main .entry-content .hljs-literal {
+  color: #56b6c2;
+}
+
+html[data-theme="dark"] .site-main .entry-content .hljs-string, html[data-theme="dark"] .site-main .entry-content .hljs-regexp, html[data-theme="dark"] .site-main .entry-content .hljs-addition, html[data-theme="dark"] .site-main .entry-content .hljs-attribute, html[data-theme="dark"] .site-main .entry-content .hljs-meta-string {
+  color: #98c379;
+}
+
+html[data-theme="dark"] .site-main .entry-content .hljs-built_in, html[data-theme="dark"] .site-main .entry-content .hljs-class .hljs-title {
+  color: #e6c07b;
+}
+
+html[data-theme="dark"] .site-main .entry-content .hljs-attr, html[data-theme="dark"] .site-main .entry-content .hljs-variable, html[data-theme="dark"] .site-main .entry-content .hljs-template-variable, html[data-theme="dark"] .site-main .entry-content .hljs-type, html[data-theme="dark"] .site-main .entry-content .hljs-selector-class, html[data-theme="dark"] .site-main .entry-content .hljs-selector-attr, html[data-theme="dark"] .site-main .entry-content .hljs-selector-pseudo, html[data-theme="dark"] .site-main .entry-content .hljs-number {
+  color: #d19a66;
+}
+
+html[data-theme="dark"] .site-main .entry-content .hljs-symbol, html[data-theme="dark"] .site-main .entry-content .hljs-bullet, html[data-theme="dark"] .site-main .entry-content .hljs-link, html[data-theme="dark"] .site-main .entry-content .hljs-meta, html[data-theme="dark"] .site-main .entry-content .hljs-selector-id, html[data-theme="dark"] .site-main .entry-content .hljs-title {
+  color: #61aeee;
+}
+
+html[data-theme="dark"] .site-main .entry-content .hljs-emphasis {
+  font-style: italic;
+}
+
+html[data-theme="dark"] .site-main .entry-content .hljs-strong {
+  font-weight: bold;
+}
+
+html[data-theme="dark"] .site-main .entry-content .hljs-link {
+  text-decoration: underline;
+}
+
+/*# sourceURL=syntax-highlighting-code-block-theme-light-inline-css */
+</style>
+<link rel='stylesheet' id='syntax-highlighting-code-block-css' href='https://thomasjfrank.com/wp-content/plugins/syntax-highlighting-code-block/style.css?ver=1754363652' media='all' />
+<link rel='stylesheet' id='elementor-gf-local-robotoslab-css' href='https://thomasjfrank.com/wp-content/uploads/elementor/google-fonts/css/robotoslab.css?ver=1763397691' media='all' />
+<link rel='stylesheet' id='elementor-gf-local-roboto-css' href='https://thomasjfrank.com/wp-content/uploads/elementor/google-fonts/css/roboto.css?ver=1763397697' media='all' />
+<link rel='stylesheet' id='elementor-icons-shared-0-css' href='https://thomasjfrank.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3' media='all' />
+<link rel='stylesheet' id='elementor-icons-fa-solid-css' href='https://thomasjfrank.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.3' media='all' />
+<script src="https://thomasjfrank.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script src="https://thomasjfrank.com/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.34.1" id="font-awesome-4-shim-js"></script>
+<style type="text/css">
+			:root{
+				--lasso-main: #4f46e5 !important;
+				--lasso-title: black !important;
+				--lasso-button: #b13a3a !important;
+				--lasso-secondary-button: #22baa0 !important;
+				--lasso-button-text: white !important;
+				--lasso-background: white !important;
+				--lasso-pros: #22baa0 !important;
+				--lasso-cons: #e06470 !important;
+			}
+			
+			
+		</style>
+			<script type="text/javascript">
+				// Notice how this gets configured before we load Font Awesome
+				let lassoFontAwesomeJS = "" == 1
+				// console.log("lassoFontAwesomeJS", lassoFontAwesomeJS)
+				window.FontAwesomeConfig = { autoReplaceSvg: lassoFontAwesomeJS }
+			</script>
+		<meta name="generator" content="Elementor 3.34.1; features: additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap">
+			<style>
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+					background-image: none !important;
+				}
+				@media screen and (max-height: 1024px) {
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+				@media screen and (max-height: 640px) {
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+			</style>
+			<link rel="icon" href="https://thomasjfrank.com/wp-content/uploads/2025/11/cropped-favicon-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://thomasjfrank.com/wp-content/uploads/2025/11/cropped-favicon-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://thomasjfrank.com/wp-content/uploads/2025/11/cropped-favicon-180x180.png" />
+<meta name="msapplication-TileImage" content="https://thomasjfrank.com/wp-content/uploads/2025/11/cropped-favicon-270x270.png" />
+</head>
+
+
+<body class="wp-singular ub_doc-template-default single single-ub_doc postid-9564 wp-theme-tjf-2023 three-column lasso-v347 elementor-default elementor-kit-3102">
+
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
+
+	
+<section id="banner">
+	<a href="https://thomasjfrank.com/brain" style="text-wrap-mode: wrap">Get $30 off <b>Ultimate Brain 3.0</b> with code SPRING30</a></section>
+
+<header id="masthead" class="site-header" style="position: sticky; top: 0;">
+	<a href="https://thomasjfrank.com/" class="home-link home-link--avatar"><img class="thomas" src="https://thomasjfrank.com/wp-content/themes/tjf-2023/images/thomas.png" alt="Thomas Frank"></a>
+	<a href="https://thomasjfrank.com/" class="home-link home-link--logo" aria-label="Thomas Frank home">
+		<picture class="logo logo--light" aria-hidden="true">
+			<source srcset="https://thomasjfrank.com/wp-content/themes/tjf-2023/images/site_logo_light.svg" type="image/svg+xml">
+			<source srcset="https://thomasjfrank.com/wp-content/themes/tjf-2023/images/site_logo_light.webp" type="image/webp">
+			<img src="https://thomasjfrank.com/wp-content/themes/tjf-2023/images/site_logo_light.png" alt="" loading="lazy">
+		</picture>
+		<picture class="logo logo--dark" aria-hidden="true">
+			<source srcset="https://thomasjfrank.com/wp-content/themes/tjf-2023/images/site_logo_dark.svg" type="image/svg+xml">
+			<source srcset="https://thomasjfrank.com/wp-content/themes/tjf-2023/images/site_logo_dark.webp" type="image/webp">
+			<img src="https://thomasjfrank.com/wp-content/themes/tjf-2023/images/site_logo_dark.png" alt="" loading="lazy">
+		</picture>
+	</a>
+	<nav id="main-menu" class="topnavBar"><div class="dropdownBackground"><span class="arrow"></span>	<div class="dropdown" id="dropdown-learn-notion" role="group" aria-label="Learn Notion" aria-hidden="true" data-trigger-id="trigger-learn-notion">	<ul class="mm-learn-notion">
+		<!-- Column 1: Featured Fluent Notion Course -->
+		 <!-- Currently swapped out for Notion Fundamentals -->
+		<li class="mm-column-featured">
+			<h3 class="mm-column-heading">NOTION FUNDAMENTALS</h3>
+			<div class="mm-link mm-link-fluent-notion">
+				<a href="https://thomasjfrank.com/fundamentals/">
+					<div class="mm-image">
+						<img src="https://thomasjfrank.com/wp-content/themes/tjf-2023/images/Notion Fundamentals Course Thumbnail - Small.jpg" alt="Notion Fundamentals Course" />
+					</div>
+					<div class="mm-text">
+						<p>Learn Notion fast with my thorough, hands-on beginner's course.</p>
+					</div>
+					<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg>
+				</a>
+			</div>
+		</li>
+		
+		<!-- Column 2: Notion Guides -->
+		<li class="mm-column-links">
+			<h3 class="mm-column-heading">Notion Guides</h3>
+			<ul class="mm-link-list">
+				<li><a href="https://thomasjfrank.com/how-to-create-and-edit-notion-pages-notion-fundamentals/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2M9 9h1m-1 4h6m-6 4h6"/></g></svg><span>Notion Pages</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li><a href="https://thomasjfrank.com/notion-blocks-guide/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 16.008V7.99a1.98 1.98 0 0 0-1-1.717l-7-4.008a2.02 2.02 0 0 0-2 0L4 6.273c-.619.355-1 1.01-1 1.718v8.018c0 .709.381 1.363 1 1.717l7 4.008a2.02 2.02 0 0 0 2 0l7-4.008c.619-.355 1-1.01 1-1.718M12 22V12m0 0l8.73-5.04m-17.46 0L12 12"/></svg><span>Notion Blocks</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li><a href="https://thomasjfrank.com/notion-databases-the-ultimate-beginners-guide/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M4 6a8 3 0 1 0 16 0A8 3 0 1 0 4 6"/><path d="M4 6v6a8 3 0 0 0 16 0V6"/><path d="M4 12v6a8 3 0 0 0 16 0v-6"/></g></svg><span>Notion Databases</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li><a href="https://thomasjfrank.com/formulas/notion-formula-reference/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4a2 2 0 0 0-2 2v3a2 3 0 0 1-2 3a2 3 0 0 1 2 3v3a2 2 0 0 0 2 2M17 4a2 2 0 0 1 2 2v3a2 3 0 0 0 2 3a2 3 0 0 0-2 3v3a2 2 0 0 1-2 2"/></svg><span>Notion Formulas</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li><a href="https://thomasjfrank.com/notion-sharing-permissions-the-ultimate-guide/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M5 13a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2z"/><path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0-2 0m-3-5V7a4 4 0 1 1 8 0v4"/></g></svg><span>Notion Permissions</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li><a href="https://thomasjfrank.com/notion-automations/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M13 20.693c-.905.628-2.36.292-2.675-1.01a1.724 1.724 0 0 0-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066-2.573c-.94-1.543.826-3.31 2.37-2.37c1 .608 2.296.07 2.572-1.065c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.492.362 1.716 2.219.674 3.03"/><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0-6 0m8 10l5-3l-5-3z"/></g></svg><span>Notion Automation</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li><a href="https://thomasjfrank.com/notion-api-crash-course/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 7l5 5l-5 5m7 2h7"/></svg><span>Notion API</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+			</ul>
+		</li>
+		
+		<!-- Column 3: Solutions -->
+		<li class="mm-column-links">
+			<h3 class="mm-column-heading">Solutions</h3>
+			<ul class="mm-link-list">
+				<li><a href="https://thomasjfrank.com/notion-automated-recurring-tasks/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12V9a3 3 0 0 1 3-3h13m-3-3l3 3l-3 3m3 3v3a3 3 0 0 1-3 3H4m3 3l-3-3l3-3"/></svg><span>Recurring Tasks</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li><a href="https://thomasjfrank.com/how-to-transcribe-audio-to-text-with-chatgpt-and-notion/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M9 5a3 3 0 0 1 3-3h0a3 3 0 0 1 3 3v5a3 3 0 0 1-3 3h0a3 3 0 0 1-3-3z"/><path d="M5 10a7 7 0 0 0 14 0M8 21h8m-4-4v4"/></g></svg><span>Voice Notes to Notion</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li><a href="https://thomasjfrank.com/notion-chatgpt-voice-tasks/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 20l1.3-3.9C1.976 12.663 2.874 8.228 6.4 5.726c3.526-2.501 8.59-2.296 11.845.48c3.255 2.777 3.695 7.266 1.029 10.501S11.659 20.922 7.7 19z"/></svg><span>Voice Tasks to Notion</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li>
+					<div class="mm-link-separator"></div>
+				</li>
+				<li><a href="https://thomasjfrank.com/newsletter/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="m3 7l9 6l9-6"/></g></svg><span>Notion Newsletter</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li><a href="https://thomasjfrank.com/notion/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 6h11M9 12h11M9 18h11M5 6v.01M5 12v.01M5 18v.01"/></svg><span>All Notion Guides</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+			</ul>
+		</li>
+	</ul></div>	<div class="dropdown" id="dropdown-notion-templates" role="group" aria-label="Notion Templates" aria-hidden="true" data-trigger-id="trigger-notion-templates">	<ul class="mm-notion-templates">
+		<!-- Column 1: Featured Templates -->
+		<li class="mm-column-featured">
+			<div class="mm-link">
+				<a href="https://thomasjfrank.com/brain/">
+					<div class="mm-image">
+						<img src="https://thomasjfrank.com/wp-content/uploads/2022/04/Square-Marketing-Image-with-me-300x300.jpg" alt="Ultimate Brain for Notion - Square image" class="mm-image-photo" loading="lazy" srcset="https://thomasjfrank.com/wp-content/uploads/2022/04/Square-Marketing-Image-with-me-300x300.jpg 300w, https://thomasjfrank.com/wp-content/uploads/2022/04/Square-Marketing-Image-with-me-150x150.jpg 150w" sizes="(max-width: 300px) 100vw, 300px" width="300" height="300">
+					</div>
+					<div class="mm-text">
+						<span>Ultimate Brain<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></span>
+						<p>Run your entire life in Notion. Tasks, notes, PARA, and more.</p>
+					</div>
+				</a>
+			</div>
+			
+			<div class="mm-link">
+				<a href="https://thomasjfrank.com/creators-companion/">
+					<div class="mm-image">
+						<img src="https://thomasjfrank.com/wp-content/uploads/2022/08/Marketing-Video-Thumbnail-Square-300x300.jpg" alt="Creator's Companion for Notion - Square image" class="mm-image-photo" loading="lazy" srcset="https://thomasjfrank.com/wp-content/uploads/2022/08/Marketing-Video-Thumbnail-Square-300x300.jpg 300w, https://thomasjfrank.com/wp-content/uploads/2022/08/Marketing-Video-Thumbnail-Square-150x150.jpg 150w" sizes="(max-width: 300px) 100vw, 300px" width="300" height="300">
+					</div>
+					<div class="mm-text">
+						<span>Creator's Companion<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></span>
+						<p>The system I use to run my 3-million-subscriber YouTube channel.</p>
+					</div>
+				</a>
+			</div>
+		</li>
+		
+		<!-- Column 2: Free Templates -->
+		<li class="mm-column-links">
+			<h3 class="mm-column-heading">Free Templates</h3>
+			<ul class="mm-link-list">
+				<li><a href="https://thomasjfrank.com/templates/task-and-project-notion-template/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="m9 12l2 2l4-4"/></g></svg><span>Task Manager</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li><a href="https://thomasjfrank.com/templates/notion-note-taking-template/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m13 20l7-7m-7 7v-6a1 1 0 0 1 1-1h6V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/></svg><span>Notes Template</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li><a href="https://thomasjfrank.com/templates/habit-tracker-notion-template/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m12 20l-7.5-7.428A5 5 0 1 1 12 6.006a5 5 0 1 1 7.96 6.053M16 19h6m-3-3v6"/></svg><span>Habit Tracker</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li><a href="https://thomasjfrank.com/templates/expense-tracker-template-for-notion/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16.7 8A3 3 0 0 0 14 6h-4a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-4a3 3 0 0 1-2.7-2M12 3v3m0 12v3"/></svg><span>Expense Tracker</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li>
+					<div class="mm-link-separator"></div>
+				</li>
+				<li><a href="https://thomasjfrank.com/templates/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M9.225 18.412A1.6 1.6 0 0 1 8 19c-.468 0-.914-.214-1.225-.588l-4.361-5.248a1.844 1.844 0 0 1 0-2.328l4.361-5.248A1.6 1.6 0 0 1 8 5c.468 0 .914.214 1.225.588l4.361 5.248a1.844 1.844 0 0 1 0 2.328zM17 5l4.586 5.836a1.844 1.844 0 0 1 0 2.328L17 19"/><path d="m13 5l4.586 5.836a1.844 1.844 0 0 1 0 2.328L13 19"/></g></svg><span>All Free Templates</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+			</ul>
+		</li>
+		
+		<!-- Column 3: Template Docs -->
+		<li class="mm-column-links">
+			<h3 class="mm-column-heading">Template Docs</h3>
+			<ul class="mm-link-list">
+				<li><a href="https://thomasjfrank.com/docs/ultimate-brain/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M15.5 13a3.5 3.5 0 0 0-3.5 3.5v1a3.5 3.5 0 0 0 7 0v-1.8M8.5 13a3.5 3.5 0 0 1 3.5 3.5v1a3.5 3.5 0 0 1-7 0v-1.8"/><path d="M17.5 16a3.5 3.5 0 0 0 0-7H17"/><path d="M19 9.3V6.5a3.5 3.5 0 0 0-7 0M6.5 16a3.5 3.5 0 0 1 0-7H7"/><path d="M5 9.3V6.5a3.5 3.5 0 0 1 7 0v10"/></g></svg><span>Ultimate Brain</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li><a href="https://thomasjfrank.com/docs/creators-companion/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0-18 0"/><path d="M9 10a3 3 0 1 0 6 0a3 3 0 1 0-6 0m-2.832 8.849A4 4 0 0 1 10 16h4a4 4 0 0 1 3.834 2.855"/></g></svg><span>Creator's Companion</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li>
+					<div class="mm-link-separator"></div>
+				</li>
+				<li><a href="https://community.thomasjfrank.com/" target="_blank" rel="noopener noreferrer"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M15 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2v-2"/><path d="M21 12H8l3-3m0 6l-3-3"/></g></svg><span>Customer Login</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+			</ul>
+		</li>
+	</ul></div>	<div class="dropdown" id="dropdown-blog" role="group" aria-label="Blog" aria-hidden="true" data-trigger-id="trigger-blog">	<ul class="mm-blog">
+		<!-- Column 1: Mega Guides -->
+		<li class="mm-column-links">
+			<h3 class="mm-column-heading">Mega Guides</h3>
+			<ul class="mm-link-list">
+				<li><a href="https://thomasjfrank.com/creator/how-to-be-a-youtuber-the-ultimate-guide/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 10l4.553-2.276A1 1 0 0 1 21 8.618v6.764a1 1 0 0 1-1.447.894L15 14zM3 8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span>Content Creation</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li><a href="https://thomasjfrank.com/productivity/how-to-easily-organize-your-life-with-the-para-method/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.5 21H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v6M16 3v4M8 3v4m-4 4h16m-5 8l2 2l4-4"/></svg><span>Productivity</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+			</ul>
+		</li>
+		
+		<!-- Column 2: Articles by Type -->
+		<li class="mm-column-links">
+			<h3 class="mm-column-heading">Articles by Type</h3>
+			<ul class="mm-link-list">
+				<li><a href="https://thomasjfrank.com/articles/?category=notion"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M11 17.5V11h.5l4 6h.5v-6.5"/><path d="m19.077 20.071l-11.53.887a1 1 0 0 1-.876-.397L4.2 17.267a1 1 0 0 1-.2-.6V5.926a1 1 0 0 1 .923-.997l11.389-.876a2 2 0 0 1 1.262.33l1.535 1.023A2 2 0 0 1 20 7.07v12.004a1 1 0 0 1-.923.997M4.5 5.5L7 8"/><path d="M20 7L7 8v12.5"/></g></svg><span>Notion</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li><a href="https://thomasjfrank.com/articles/?category=automation"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066-2.573c-.94-1.543.826-3.31 2.37-2.37c1 .608 2.296.07 2.572-1.065"/><path d="M10 9v6l5-3z"/></g></svg><span>AI & Automation</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li><a href="https://thomasjfrank.com/articles/?category=productivity"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="m9 12l2 2l4-4"/></g></svg><span>Productivity</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li>
+					<div class="mm-link-separator"></div>
+				</li>
+				<li><a href="https://thomasjfrank.com/articles/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm4 2h10M7 12h10M7 16h10"/></svg><span>All Articles</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+			</ul>
+		</li>
+	</ul></div></div><ul id="mega-menu">		<li>			<a href="https://thomasjfrank.com/about/" class="nav-trigger">About</a></li>		<li>			<button type="button" id="trigger-learn-notion" class="nav-trigger mm-parent" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-learn-notion">Learn Notion<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-parent-chevron" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9l6 6l6-6"/></svg></button>	<ul class="mm-learn-notion">
+		<!-- Column 1: Featured Fluent Notion Course -->
+		 <!-- Currently swapped out for Notion Fundamentals -->
+		<li class="mm-column-featured">
+			<h3 class="mm-column-heading">NOTION FUNDAMENTALS</h3>
+			<div class="mm-link mm-link-fluent-notion">
+				<a href="https://thomasjfrank.com/fundamentals/">
+					<div class="mm-image">
+						<img src="https://thomasjfrank.com/wp-content/themes/tjf-2023/images/Notion Fundamentals Course Thumbnail - Small.jpg" alt="Notion Fundamentals Course" />
+					</div>
+					<div class="mm-text">
+						<p>Learn Notion fast with my thorough, hands-on beginner's course.</p>
+					</div>
+					<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg>
+				</a>
+			</div>
+		</li>
+		
+		<!-- Column 2: Notion Guides -->
+		<li class="mm-column-links">
+			<h3 class="mm-column-heading">Notion Guides</h3>
+			<ul class="mm-link-list">
+				<li><a href="https://thomasjfrank.com/how-to-create-and-edit-notion-pages-notion-fundamentals/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2M9 9h1m-1 4h6m-6 4h6"/></g></svg><span>Notion Pages</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li><a href="https://thomasjfrank.com/notion-blocks-guide/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 16.008V7.99a1.98 1.98 0 0 0-1-1.717l-7-4.008a2.02 2.02 0 0 0-2 0L4 6.273c-.619.355-1 1.01-1 1.718v8.018c0 .709.381 1.363 1 1.717l7 4.008a2.02 2.02 0 0 0 2 0l7-4.008c.619-.355 1-1.01 1-1.718M12 22V12m0 0l8.73-5.04m-17.46 0L12 12"/></svg><span>Notion Blocks</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li><a href="https://thomasjfrank.com/notion-databases-the-ultimate-beginners-guide/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M4 6a8 3 0 1 0 16 0A8 3 0 1 0 4 6"/><path d="M4 6v6a8 3 0 0 0 16 0V6"/><path d="M4 12v6a8 3 0 0 0 16 0v-6"/></g></svg><span>Notion Databases</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li><a href="https://thomasjfrank.com/formulas/notion-formula-reference/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4a2 2 0 0 0-2 2v3a2 3 0 0 1-2 3a2 3 0 0 1 2 3v3a2 2 0 0 0 2 2M17 4a2 2 0 0 1 2 2v3a2 3 0 0 0 2 3a2 3 0 0 0-2 3v3a2 2 0 0 1-2 2"/></svg><span>Notion Formulas</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li><a href="https://thomasjfrank.com/notion-sharing-permissions-the-ultimate-guide/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M5 13a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2z"/><path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0-2 0m-3-5V7a4 4 0 1 1 8 0v4"/></g></svg><span>Notion Permissions</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li><a href="https://thomasjfrank.com/notion-automations/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M13 20.693c-.905.628-2.36.292-2.675-1.01a1.724 1.724 0 0 0-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066-2.573c-.94-1.543.826-3.31 2.37-2.37c1 .608 2.296.07 2.572-1.065c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.492.362 1.716 2.219.674 3.03"/><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0-6 0m8 10l5-3l-5-3z"/></g></svg><span>Notion Automation</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li><a href="https://thomasjfrank.com/notion-api-crash-course/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 7l5 5l-5 5m7 2h7"/></svg><span>Notion API</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+			</ul>
+		</li>
+		
+		<!-- Column 3: Solutions -->
+		<li class="mm-column-links">
+			<h3 class="mm-column-heading">Solutions</h3>
+			<ul class="mm-link-list">
+				<li><a href="https://thomasjfrank.com/notion-automated-recurring-tasks/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12V9a3 3 0 0 1 3-3h13m-3-3l3 3l-3 3m3 3v3a3 3 0 0 1-3 3H4m3 3l-3-3l3-3"/></svg><span>Recurring Tasks</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li><a href="https://thomasjfrank.com/how-to-transcribe-audio-to-text-with-chatgpt-and-notion/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M9 5a3 3 0 0 1 3-3h0a3 3 0 0 1 3 3v5a3 3 0 0 1-3 3h0a3 3 0 0 1-3-3z"/><path d="M5 10a7 7 0 0 0 14 0M8 21h8m-4-4v4"/></g></svg><span>Voice Notes to Notion</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li><a href="https://thomasjfrank.com/notion-chatgpt-voice-tasks/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 20l1.3-3.9C1.976 12.663 2.874 8.228 6.4 5.726c3.526-2.501 8.59-2.296 11.845.48c3.255 2.777 3.695 7.266 1.029 10.501S11.659 20.922 7.7 19z"/></svg><span>Voice Tasks to Notion</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li>
+					<div class="mm-link-separator"></div>
+				</li>
+				<li><a href="https://thomasjfrank.com/newsletter/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="m3 7l9 6l9-6"/></g></svg><span>Notion Newsletter</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li><a href="https://thomasjfrank.com/notion/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 6h11M9 12h11M9 18h11M5 6v.01M5 12v.01M5 18v.01"/></svg><span>All Notion Guides</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+			</ul>
+		</li>
+	</ul></li>		<li>			<button type="button" id="trigger-notion-templates" class="nav-trigger mm-parent" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-notion-templates">Notion Templates<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-parent-chevron" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9l6 6l6-6"/></svg></button>	<ul class="mm-notion-templates">
+		<!-- Column 1: Featured Templates -->
+		<li class="mm-column-featured">
+			<div class="mm-link">
+				<a href="https://thomasjfrank.com/brain/">
+					<div class="mm-image">
+						<img src="https://thomasjfrank.com/wp-content/uploads/2022/04/Square-Marketing-Image-with-me-300x300.jpg" alt="Ultimate Brain for Notion - Square image" class="mm-image-photo" loading="lazy" srcset="https://thomasjfrank.com/wp-content/uploads/2022/04/Square-Marketing-Image-with-me-300x300.jpg 300w, https://thomasjfrank.com/wp-content/uploads/2022/04/Square-Marketing-Image-with-me-150x150.jpg 150w" sizes="(max-width: 300px) 100vw, 300px" width="300" height="300">
+					</div>
+					<div class="mm-text">
+						<span>Ultimate Brain<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></span>
+						<p>Run your entire life in Notion. Tasks, notes, PARA, and more.</p>
+					</div>
+				</a>
+			</div>
+			
+			<div class="mm-link">
+				<a href="https://thomasjfrank.com/creators-companion/">
+					<div class="mm-image">
+						<img src="https://thomasjfrank.com/wp-content/uploads/2022/08/Marketing-Video-Thumbnail-Square-300x300.jpg" alt="Creator's Companion for Notion - Square image" class="mm-image-photo" loading="lazy" srcset="https://thomasjfrank.com/wp-content/uploads/2022/08/Marketing-Video-Thumbnail-Square-300x300.jpg 300w, https://thomasjfrank.com/wp-content/uploads/2022/08/Marketing-Video-Thumbnail-Square-150x150.jpg 150w" sizes="(max-width: 300px) 100vw, 300px" width="300" height="300">
+					</div>
+					<div class="mm-text">
+						<span>Creator's Companion<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></span>
+						<p>The system I use to run my 3-million-subscriber YouTube channel.</p>
+					</div>
+				</a>
+			</div>
+		</li>
+		
+		<!-- Column 2: Free Templates -->
+		<li class="mm-column-links">
+			<h3 class="mm-column-heading">Free Templates</h3>
+			<ul class="mm-link-list">
+				<li><a href="https://thomasjfrank.com/templates/task-and-project-notion-template/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="m9 12l2 2l4-4"/></g></svg><span>Task Manager</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li><a href="https://thomasjfrank.com/templates/notion-note-taking-template/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m13 20l7-7m-7 7v-6a1 1 0 0 1 1-1h6V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/></svg><span>Notes Template</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li><a href="https://thomasjfrank.com/templates/habit-tracker-notion-template/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m12 20l-7.5-7.428A5 5 0 1 1 12 6.006a5 5 0 1 1 7.96 6.053M16 19h6m-3-3v6"/></svg><span>Habit Tracker</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li><a href="https://thomasjfrank.com/templates/expense-tracker-template-for-notion/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16.7 8A3 3 0 0 0 14 6h-4a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-4a3 3 0 0 1-2.7-2M12 3v3m0 12v3"/></svg><span>Expense Tracker</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li>
+					<div class="mm-link-separator"></div>
+				</li>
+				<li><a href="https://thomasjfrank.com/templates/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M9.225 18.412A1.6 1.6 0 0 1 8 19c-.468 0-.914-.214-1.225-.588l-4.361-5.248a1.844 1.844 0 0 1 0-2.328l4.361-5.248A1.6 1.6 0 0 1 8 5c.468 0 .914.214 1.225.588l4.361 5.248a1.844 1.844 0 0 1 0 2.328zM17 5l4.586 5.836a1.844 1.844 0 0 1 0 2.328L17 19"/><path d="m13 5l4.586 5.836a1.844 1.844 0 0 1 0 2.328L13 19"/></g></svg><span>All Free Templates</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+			</ul>
+		</li>
+		
+		<!-- Column 3: Template Docs -->
+		<li class="mm-column-links">
+			<h3 class="mm-column-heading">Template Docs</h3>
+			<ul class="mm-link-list">
+				<li><a href="https://thomasjfrank.com/docs/ultimate-brain/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M15.5 13a3.5 3.5 0 0 0-3.5 3.5v1a3.5 3.5 0 0 0 7 0v-1.8M8.5 13a3.5 3.5 0 0 1 3.5 3.5v1a3.5 3.5 0 0 1-7 0v-1.8"/><path d="M17.5 16a3.5 3.5 0 0 0 0-7H17"/><path d="M19 9.3V6.5a3.5 3.5 0 0 0-7 0M6.5 16a3.5 3.5 0 0 1 0-7H7"/><path d="M5 9.3V6.5a3.5 3.5 0 0 1 7 0v10"/></g></svg><span>Ultimate Brain</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li><a href="https://thomasjfrank.com/docs/creators-companion/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0-18 0"/><path d="M9 10a3 3 0 1 0 6 0a3 3 0 1 0-6 0m-2.832 8.849A4 4 0 0 1 10 16h4a4 4 0 0 1 3.834 2.855"/></g></svg><span>Creator's Companion</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li>
+					<div class="mm-link-separator"></div>
+				</li>
+				<li><a href="https://community.thomasjfrank.com/" target="_blank" rel="noopener noreferrer"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M15 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2v-2"/><path d="M21 12H8l3-3m0 6l-3-3"/></g></svg><span>Customer Login</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+			</ul>
+		</li>
+	</ul></li>		<li>			<a href="https://thomasjfrank.com/courses/" class="nav-trigger">Courses</a></li>		<li>			<button type="button" id="trigger-blog" class="nav-trigger mm-parent" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-blog">Blog<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-parent-chevron" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9l6 6l6-6"/></svg></button>	<ul class="mm-blog">
+		<!-- Column 1: Mega Guides -->
+		<li class="mm-column-links">
+			<h3 class="mm-column-heading">Mega Guides</h3>
+			<ul class="mm-link-list">
+				<li><a href="https://thomasjfrank.com/creator/how-to-be-a-youtuber-the-ultimate-guide/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 10l4.553-2.276A1 1 0 0 1 21 8.618v6.764a1 1 0 0 1-1.447.894L15 14zM3 8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span>Content Creation</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li><a href="https://thomasjfrank.com/productivity/how-to-easily-organize-your-life-with-the-para-method/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.5 21H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v6M16 3v4M8 3v4m-4 4h16m-5 8l2 2l4-4"/></svg><span>Productivity</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+			</ul>
+		</li>
+		
+		<!-- Column 2: Articles by Type -->
+		<li class="mm-column-links">
+			<h3 class="mm-column-heading">Articles by Type</h3>
+			<ul class="mm-link-list">
+				<li><a href="https://thomasjfrank.com/articles/?category=notion"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M11 17.5V11h.5l4 6h.5v-6.5"/><path d="m19.077 20.071l-11.53.887a1 1 0 0 1-.876-.397L4.2 17.267a1 1 0 0 1-.2-.6V5.926a1 1 0 0 1 .923-.997l11.389-.876a2 2 0 0 1 1.262.33l1.535 1.023A2 2 0 0 1 20 7.07v12.004a1 1 0 0 1-.923.997M4.5 5.5L7 8"/><path d="M20 7L7 8v12.5"/></g></svg><span>Notion</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li><a href="https://thomasjfrank.com/articles/?category=automation"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066-2.573c-.94-1.543.826-3.31 2.37-2.37c1 .608 2.296.07 2.572-1.065"/><path d="M10 9v6l5-3z"/></g></svg><span>AI & Automation</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li><a href="https://thomasjfrank.com/articles/?category=productivity"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="m9 12l2 2l4-4"/></g></svg><span>Productivity</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+				<li>
+					<div class="mm-link-separator"></div>
+				</li>
+				<li><a href="https://thomasjfrank.com/articles/"><span class="link-text"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mm-link-icon" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm4 2h10M7 12h10M7 16h10"/></svg><span>All Articles</span></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-arrow" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-6 6l6-6m-6-6l6 6"/></svg></a></li>
+			</ul>
+		</li>
+	</ul></li>	<li class="mobile-menu-actions">
+		<div class="mobile-theme-options" role="group" aria-label="Theme options">
+			<button type="button" class="mobile-theme-option" data-theme-select="system" aria-label="System theme" aria-pressed="false">
+				<span class="mobile-theme-option__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 16H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v7M7 20h5m-3-4v4m8.001-1a2 2 0 1 0 4 0a2 2 0 1 0-4 0m2-3.5V17m0 4v1.5m3.031-5.25l-1.299.75m-3.463 2l-1.3.75m0-3.5l1.3.75m3.463 2l1.3.75"/></svg></span>
+			</button>
+			<button type="button" class="mobile-theme-option" data-theme-select="light" aria-label="Light theme" aria-pressed="false">
+				<span class="mobile-theme-option__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12a4 4 0 1 0 8 0a4 4 0 1 0-8 0m-5 0h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7l-.7.7m0 11.4l.7.7m-12.1-.7l-.7.7"/></svg></span>
+			</button>
+			<button type="button" class="mobile-theme-option" data-theme-select="dark" aria-label="Dark theme" aria-pressed="false">
+				<span class="mobile-theme-option__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z"/></svg></span>
+			</button>
+		</div>
+	</li></ul></nav>	<div class="mobile-header-buttons">
+		
+			<button type="button" class="search-button" id="search-button-mobile" aria-expanded="false" aria-controls="search-modal">
+		<div class="search-button-icon">
+			<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0-14 0m18 11l-6-6"/></svg>
+		</div>
+		<div class="search-button-placeholder">Search</div>
+	</button>
+			<button id="mega-menu-button">
+		<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+	</button>	</div>
+	<div class="header-actions">
+			<button type="button" class="search-button" id="search-button-desktop" aria-expanded="false" aria-controls="search-modal">
+		<div class="search-button-icon">
+			<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0-14 0m18 11l-6-6"/></svg>
+		</div>
+		<div class="search-button-placeholder">Search</div>
+	</button>		<div class="theme-toggle-wrapper">
+			<button type="button" class="theme-toggle" aria-label="Toggle theme" aria-controls="theme-toggle-dropdown" aria-expanded="false" aria-haspopup="true" data-theme-toggle>
+			<span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12a4 4 0 1 0 8 0a4 4 0 1 0-8 0m-5 0h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7l-.7.7m0 11.4l.7.7m-12.1-.7l-.7.7"/></svg></span>
+			<span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z"/></svg></span>
+		</button>
+			<div id="theme-toggle-dropdown" class="theme-toggle-dropdown" role="menu" aria-label="Theme options">
+				<button type="button" class="theme-toggle-option" role="menuitemradio" data-theme-preference="system" aria-checked="false">
+					<span class="theme-toggle-option__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 16H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v7M7 20h5m-3-4v4m8.001-1a2 2 0 1 0 4 0a2 2 0 1 0-4 0m2-3.5V17m0 4v1.5m3.031-5.25l-1.299.75m-3.463 2l-1.3.75m0-3.5l1.3.75m3.463 2l1.3.75"/></svg></span>
+					<span class="theme-toggle-option__label">System</span>
+					<span class="theme-toggle-option__check" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 12l5 5L20 7"/></svg></span>
+				</button>
+				<button type="button" class="theme-toggle-option" role="menuitemradio" data-theme-preference="light" aria-checked="false">
+					<span class="theme-toggle-option__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12a4 4 0 1 0 8 0a4 4 0 1 0-8 0m-5 0h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7l-.7.7m0 11.4l.7.7m-12.1-.7l-.7.7"/></svg></span>
+					<span class="theme-toggle-option__label">Light</span>
+					<span class="theme-toggle-option__check" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 12l5 5L20 7"/></svg></span>
+				</button>
+				<button type="button" class="theme-toggle-option" role="menuitemradio" data-theme-preference="dark" aria-checked="false">
+					<span class="theme-toggle-option__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z"/></svg></span>
+					<span class="theme-toggle-option__label">Dark</span>
+					<span class="theme-toggle-option__check" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 12l5 5L20 7"/></svg></span>
+				</button>
+			</div>
+		</div>
+	</div>
+</header>
+
+<section class="mobile-nav-bar">		<button class="doc-open">
+			<div class="doc-open-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M19 4v16H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M19 16H7a2 2 0 0 0-2 2M9 8h6"/></g></svg></div>
+			<div class="doc-open-content">
+				<span>Ultimate Brain Documentation</span>
+				<span>Add Ultimate Brain to Notion</span>
+			</div>
+		</button><button class="toc-open"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 6h11m-8 6h8m-5 6h5M5 6v.01M8 12v.01M11 18v.01"/></svg></button></section>
+<script>
+(function() {
+	function initThemeToggle() {
+		var root = document.documentElement;
+		var desktopToggles = document.querySelectorAll('[data-theme-toggle]');
+		var dropdown = document.getElementById('theme-toggle-dropdown');
+		var isDropdownOpen = false;
+
+		function getSystemPreference() {
+			return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+		}
+
+		function getStoredPreference() {
+			try {
+				return localStorage.getItem('tjf-theme-preference') || 'system';
+			} catch (err) {
+				return 'system';
+			}
+		}
+
+		function getEffectiveTheme() {
+			var preference = getStoredPreference();
+			return preference === 'system' ? getSystemPreference() : preference;
+		}
+
+		function updateIcon() {
+			var effectiveTheme = getEffectiveTheme();
+			desktopToggles.forEach(function(toggle) {
+				toggle.setAttribute('data-effective-theme', effectiveTheme);
+			});
+		}
+
+		function updateSelectedUI(preference) {
+			if (dropdown) {
+				var dropdownOptions = dropdown.querySelectorAll('[data-theme-preference]');
+				dropdownOptions.forEach(function(option) {
+					var optionPreference = option.getAttribute('data-theme-preference');
+					var isSelected = optionPreference === preference;
+					option.setAttribute('aria-checked', isSelected);
+					option.classList.toggle('is-selected', isSelected);
+				});
+			}
+
+			var mobileButtons = document.querySelectorAll('[data-theme-select]');
+			mobileButtons.forEach(function(button) {
+				var isSelected = button.getAttribute('data-theme-select') === preference;
+				button.classList.toggle('is-selected', isSelected);
+				button.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
+			});
+		}
+
+		function applyThemePreference(preference) {
+			if (preference === 'system') {
+				var systemPrefersDark = getSystemPreference() === 'dark';
+				root.setAttribute('data-theme', systemPrefersDark ? 'dark' : 'light');
+			} else {
+				root.setAttribute('data-theme', preference);
+			}
+
+			try {
+				localStorage.setItem('tjf-theme-preference', preference);
+			} catch (err) {
+				// localStorage unavailable
+			}
+
+			updateIcon();
+			updateSelectedUI(preference);
+		}
+
+		var preference = getStoredPreference();
+		applyThemePreference(preference);
+
+		document.addEventListener('mobileMenuInjected', function() {
+			updateSelectedUI(getStoredPreference());
+			updateIcon();
+		});
+
+		if (window.matchMedia) {
+			var mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+			mediaQuery.addEventListener('change', function() {
+				if (getStoredPreference() === 'system') {
+					applyThemePreference('system');
+				}
+			});
+		}
+
+		function positionDropdown(triggerToggle) {
+			if (!dropdown || desktopToggles.length === 0) return;
+			var toggle = triggerToggle || Array.from(desktopToggles)[0];
+			if (!toggle) return;
+			
+			// Position absolutely relative to the theme-toggle-wrapper (which has position: relative)
+			dropdown.style.position = 'absolute';
+			// Position below the button with 4px spacing
+			dropdown.style.top = 'calc(100% + 23px)';
+			dropdown.style.right = '0px'; // Slight offset from right edge
+			dropdown.style.left = 'auto';
+			dropdown.style.bottom = 'auto';
+		}
+
+		function openDropdown(triggerToggle) {
+			if (!dropdown || desktopToggles.length === 0) return;
+			isDropdownOpen = true;
+			dropdown.classList.add('is-open');
+			desktopToggles.forEach(function(toggle) {
+				toggle.setAttribute('aria-expanded', toggle === triggerToggle ? 'true' : 'false');
+			});
+			positionDropdown(triggerToggle);
+		}
+
+		function closeDropdown() {
+			if (!dropdown || desktopToggles.length === 0) return;
+			isDropdownOpen = false;
+			dropdown.classList.remove('is-open');
+			desktopToggles.forEach(function(toggle) {
+				toggle.setAttribute('aria-expanded', 'false');
+			});
+		}
+
+		document.addEventListener('click', function(event) {
+			var toggle = event.target.closest('[data-theme-toggle]');
+			if (!toggle) return;
+			if (!dropdown) return;
+			event.stopPropagation();
+			if (isDropdownOpen && toggle.getAttribute('aria-expanded') === 'true') {
+				closeDropdown();
+			} else {
+				openDropdown(toggle);
+			}
+		});
+
+		document.addEventListener('click', function(event) {
+			if (!dropdown) return;
+			var option = event.target.closest('[data-theme-preference]');
+			if (!option || !dropdown.contains(option)) return;
+			event.stopPropagation();
+			var preference = option.getAttribute('data-theme-preference');
+			applyThemePreference(preference);
+			closeDropdown();
+		});
+
+		document.addEventListener('click', function(event) {
+			var mobileButton = event.target.closest('[data-theme-select]');
+			if (!mobileButton) return;
+			var preference = mobileButton.getAttribute('data-theme-select');
+			applyThemePreference(preference);
+		});
+
+		document.addEventListener('click', function(event) {
+			if (!isDropdownOpen || !dropdown) return;
+			if (dropdown.contains(event.target)) return;
+			var clickedToggle = Array.from(desktopToggles).some(function(toggle) {
+				return toggle.contains(event.target);
+			});
+			if (clickedToggle) return;
+			closeDropdown();
+		});
+
+		document.addEventListener('keydown', function(event) {
+			if (event.key === 'Escape' && isDropdownOpen) {
+				closeDropdown();
+				var firstToggle = desktopToggles.length ? desktopToggles[0] : null;
+				if (firstToggle) firstToggle.focus();
+			}
+		});
+
+	}
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', initThemeToggle);
+	} else {
+		initThemeToggle();
+	}
+})();
+</script>
+
+
+<div class="main-content-box">
+	<aside class="documentation-menu">
+				<nav class="toc">
+			<div class="toc-header">
+				<span>On This Page</span>
+				<button class="toc-close" type="button" aria-label="Close mobile table of contents menu"><span class="screen-reader-text">Close mobile table of contents menu</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+			</div>
+			<ul>
+				<li><a href="#notion-marketplace-purchases">Notion Marketplace Purchases</a></li><li><a href="#lemon-squeezy-amp-gumroad-purchases">Lemon Squeezy &amp; Gumroad Purchases</a></li><li><a href="#cant-find-your-template">Can't Find Your Template?</a></li>
+			</ul>
+			<a class="return-link" href="#"><span>&raquo;</span> Back to Top</a>
+		</nav><!-- #mobile-toc-navigation -->		<nav class="doc">
+	<div class="doc-header">
+		<span>Ultimate Brain Documentation</span>
+		<button class="doc-close" type="button" aria-label="Close mobile documentation menu"><span class="screen-reader-text">Close mobile documentation menu</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+	</div>
+	<ul><li><span>Getting Started</span><ul><li class="active-component"><a href="https://thomasjfrank.com/docs/ultimate-brain/add-ultimate-brain-to-notion/">Add Ultimate Brain to Notion</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/start-using-ultimate-brain-the-simple-way/">Start Using Ultimate Brain (The Simple Way)</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/full-tour-of-ultimate-brain/">Full Tour of Ultimate Brain</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/support-start/">How to Get Support for Ultimate Brain and our other Notion templates</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/whats-new-in-ultimate-brain-3-0/">What’s New in Ultimate Brain 3.0</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/customizing-ultimate-brain/">Customizing Ultimate Brain</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/teams/">How to Use Ultimate Brain with a Team</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/ultimate-brain-faqs/">Ultimate Brain FAQs</a></li></ul></li><li><span>Productivity Guides</span><ul><li><a href="https://thomasjfrank.com/docs/ultimate-brain/managing-tasks/">Managing Tasks and Projects</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/web-clips-highlights/">Capturing Web Clips &amp; Highlights</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/daily-planning/">Planning Your Day</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/gtd-process/">GTD in Ultimate Brain</a></li></ul></li><li><span>Automations</span><ul><li><a href="https://thomasjfrank.com/docs/ultimate-brain/recurring-tasks/">Recurring Tasks</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/take-notes-with-your-voice/">Take Notes With Your Voice</a></li></ul></li><li><span>Customization</span><ul><li><a href="https://thomasjfrank.com/docs/ultimate-brain/unlocking-databases/">Unlocking Databases</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/backing-up-ultimate-brain/">Backing Up Ultimate Brain</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/working-with-database-templates/">Editing Database Templates</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/adding-new-database-properties/">Adding New Database Properties</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/notion-calendar-integration/">Notion Calendar Integration</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/see-your-tasks-in-notion-home/">See Tasks in Notion Home</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/readwise-integration-with-ultimate-brain/">Readwise Integration</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/how-to-add-time-tracking-to-ultimate-brain/">Time Tracking</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/relate-tasks-to-area-tags/">Relate Tasks to Area Tags and/or Notes</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/integrating-custom-databases-into-ultimate-brain/">Adding Custom Databases</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/multi-column-layouts/">Multi-Column Layouts</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/adding-tabbed-layouts/">Tabbed Layouts</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/database-customizations/">Database Customizations</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/how-to-create-a-project-template-with-a-pre-defined-set-of-tasks/">How to Create a Project Template with a Pre-Defined set of Tasks</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/visual-customizations/">Visual Customizations</a></li></ul></li><li><span>Troubleshooting</span><ul><li><a href="https://thomasjfrank.com/docs/ultimate-brain/restore-lost-or-deleted-pages/">Restore Lost or Deleted Pages</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/notion-bugs/">Notion Bugs</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/how-to-get-an-invoice-for-your-template/">Get a Purchase Invoice</a></li></ul></li><li><span>Reference</span><ul><li><a href="https://thomasjfrank.com/docs/ultimate-brain/changelog/">Changelog</a></li><li class="parent-component" id="menu-item-databases"><a href="https://thomasjfrank.com/docs/ultimate-brain/databases/">Databases</a><a class="documentation-menu-arrow" href="#" aria-label="Toggle Databases sub-navigation" aria-expanded="false"><span class="screen-reader-text">Toggle Databases sub-navigation</span><i aria-hidden="true" class="fas fa-angle-down"></i></a><ul data-subcomponents="14"><li><a href="https://thomasjfrank.com/docs/ultimate-brain/databases/tasks/">Tasks</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/databases/projects/">Projects</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/databases/work-sessions/">Work Sessions</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/databases/notes/">Notes</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/databases/people/">People</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/databases/books/">Books</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/databases/tags/">Tags</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/databases/reading-log/">Reading Log</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/databases/genres/">Genres</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/databases/recipes/">Recipes</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/databases/recipe-tags/">Recipe Tags</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/databases/milestones/">Milestones</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/databases/goals/">Goals</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/databases/meal-planner/">Meal Planner</a></li></ul></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/previous-versions/">Previous Versions</a></li></ul></li><li><span>Migration</span><ul><li><a href="https://thomasjfrank.com/docs/ultimate-brain/transfer-guide/">Migrating from an Older Ultimate Brain Version</a></li><li><a href="https://thomasjfrank.com/docs/ultimate-brain/migrating-from-an-older-ultimate-brain-creators-companion-to-version-3-0/">Migrating from an Older Ultimate Brain + Creator’s Companion to Version 3.0</a></li></ul></li></ul></nav>		<script>
+			if(window.innerWidth>=1025){if(document.body.classList.contains('single-formula_component')||document.body.classList.contains('single-creator_advice')){var doc_menu_scroll=(document.body.classList.contains('single-formula_component'))?sessionStorage.fc_doc_menu_scroll:(document.body.classList.contains('single-creator_advice'))?sessionStorage.ca_doc_menu_scroll:'';if(doc_menu_scroll){var doc_menu=document.querySelector('aside.documentation-menu');var default_open_component=document.querySelector('li.parent-component.open');var default_open_submenu=document.querySelector('li.parent-component.open > ul');if(default_open_component){default_open_component.classList.remove('open')}if(default_open_submenu){default_open_submenu.removeAttribute('style')}var open_doc_menu_items=sessionStorage.open_doc_menu_items;if(open_doc_menu_items){open_doc_menu_items=JSON.parse(open_doc_menu_items);open_doc_menu_items.forEach(open_doc_menu_item=>{var open_item_parent=document.querySelector('li.parent-component#'+open_doc_menu_item);var open_item_list=document.querySelector('li.parent-component#'+open_doc_menu_item+' > ul');open_item_parent.classList.add('open');open_item_list.style.maxHeight='max-height: calc('+open_item_list.dataset.subcomponents+' * var(--subcomponent-height))'})}doc_menu.scrollTop=parseInt(doc_menu_scroll,10)}}}window.onbeforeunload=()=>{sessionStorage.removeItem('fc_doc_menu_scroll');sessionStorage.removeItem('ca_doc_menu_scroll');sessionStorage.removeItem('open_doc_menu_items');if(window.innerWidth>=1025){if(document.body.classList.contains('single-formula_component')||document.body.classList.contains('single-creator_advice')){var doc_menu=document.querySelector('aside.documentation-menu');var doc_type=(document.body.classList.contains('single-formula_component'))?'fc':'ca';var open_menu_items=document.querySelectorAll('li.parent-component.open');var open_menu_item_ids=[];open_menu_items.forEach(menu_item=>{open_menu_item_ids.push(menu_item.id)});sessionStorage.setItem(doc_type+'_doc_menu_scroll',parseInt(doc_menu.scrollTop,10));sessionStorage.setItem('open_doc_menu_items',JSON.stringify(open_menu_item_ids))}}};		</script>
+	</aside>
+	<main id="primary" class="site-main">
+		<header class="entry-header">
+    <h1 class="entry-title">Add Ultimate Brain to Notion</h1>            <div class="affiliate-disclaimer-row"><p class="affiliate-disclaimer"><span class="affiliate-disclaimer-long">This article may contain affiliate links.</span><span class="affiliate-disclaimer-short">This article may contain affiliate links.</span></p><div class="content-tools" data-content-tools><button type="button" class="content-tools__primary" data-tool-action="copy-markdown"><i class="fas fa-copy" aria-hidden="true"></i><span>Copy</span></button><button type="button" class="content-tools__toggle" aria-haspopup="true" aria-expanded="false" aria-controls="content-tools-menu-1"><span class="screen-reader-text">Show copy options</span><i class="fas fa-chevron-down" aria-hidden="true"></i></button><div class="content-tools__menu" id="content-tools-menu-1" role="menu"><button type="button" class="content-tools__menu-item" data-tool-action="copy-markdown" role="menuitem"><span class="content-tools__icon"><i class="fas fa-copy" aria-hidden="true"></i></span><span class="content-tools__menu-label">Copy as Markdown</span><span class="content-tools__menu-hint">Copy article as Markdown</span></button><button type="button" class="content-tools__menu-item" data-tool-action="view-markdown" role="menuitem"><span class="content-tools__icon"><i class="fas fa-file-alt" aria-hidden="true"></i></span><span class="content-tools__menu-label">View as Markdown</span><span class="content-tools__menu-hint">Open Markdown in new tab</span></button><a href="#" class="content-tools__menu-item" data-tool-action="ask-chatgpt" role="menuitem"><span class="content-tools__icon"><svg width="250" height="250" viewBox="0 0 250 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_openai_1)">
+<path d="M232.078 102.32C237.75 85.2968 235.797 66.6484 226.727 51.164C213.086 27.414 185.664 15.1953 158.883 20.9453C146.969 7.52338 129.852 -0.109436 111.906 -6.11465e-05C84.5314 -0.0625611 60.2423 17.5624 51.8205 43.6093C34.2345 47.2109 19.0548 58.2187 10.172 73.8203C-3.57015 97.5078 -0.437342 127.367 17.922 147.68C12.2502 164.703 14.2033 183.351 23.2736 198.836C36.9142 222.586 64.3361 234.805 91.1173 229.055C103.024 242.477 120.149 250.109 138.094 249.992C165.485 250.062 189.781 232.422 198.203 206.352C215.789 202.75 230.969 191.742 239.852 176.141C253.578 152.453 250.438 122.617 232.086 102.305L232.078 102.32ZM138.11 233.656C127.149 233.672 116.531 229.836 108.117 222.812C108.5 222.609 109.164 222.242 109.594 221.977L159.375 193.226C161.922 191.781 163.485 189.07 163.469 186.141V115.961L184.508 128.109C184.735 128.219 184.883 128.437 184.914 128.687V186.805C184.883 212.648 163.953 233.601 138.11 233.656ZM37.4533 190.664C31.9611 181.18 29.9845 170.062 31.8673 159.273C32.2345 159.492 32.883 159.891 33.3439 160.156L83.1252 188.906C85.6486 190.383 88.7736 190.383 91.3048 188.906L152.078 153.812V178.109C152.094 178.359 151.977 178.601 151.781 178.758L101.461 207.812C79.047 220.719 50.422 213.047 37.4611 190.664H37.4533ZM24.3517 81.9999C29.8205 72.4999 38.4533 65.2343 48.7345 61.4609C48.7345 61.8906 48.7111 62.6484 48.7111 63.1796V120.687C48.6955 123.609 50.258 126.32 52.797 127.766L113.57 162.851L92.5314 175C92.3205 175.141 92.0548 175.164 91.8205 175.062L41.4923 145.984C19.1252 133.031 11.4533 104.414 24.3439 82.0078L24.3517 81.9999ZM197.211 122.226L136.438 87.1328L157.477 74.9921C157.688 74.8515 157.953 74.8281 158.188 74.9296L208.516 103.984C230.922 116.93 238.602 145.594 225.656 168C220.18 177.484 211.555 184.75 201.281 188.531V129.305C201.305 126.383 199.75 123.68 197.219 122.226H197.211ZM218.149 90.7109C217.781 90.4843 217.133 90.0937 216.672 89.8281L166.891 61.0781C164.367 59.6015 161.242 59.6015 158.711 61.0781L97.9377 96.1718V71.8749C97.922 71.6249 98.0392 71.3828 98.2345 71.2265L148.555 42.1952C170.969 29.2656 199.625 36.9609 212.547 59.3828C218.008 68.8515 219.985 79.9374 218.133 90.7109H218.149ZM86.5002 134.016L65.4533 121.867C65.2267 121.758 65.0783 121.539 65.047 121.289V63.1718C65.0627 37.2968 86.0549 16.3281 111.93 16.3437C122.875 16.3437 133.469 20.1874 141.883 27.1874C141.5 27.3906 140.844 27.7578 140.406 28.0234L90.6252 56.7734C88.0783 58.2187 86.5158 60.9218 86.5314 63.8515L86.5002 134V134.016ZM97.9298 109.375L125 93.7421L152.07 109.367V140.625L125 156.25L97.9298 140.625V109.375Z" fill="#707070"/>
+</g>
+<defs>
+<clipPath id="clip0_openai_1">
+<rect width="250" height="250" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+</span><span class="content-tools__menu-label">Ask ChatGPT</span><span class="content-tools__menu-hint">Send this page to ChatGPT</span></a><a href="#" class="content-tools__menu-item" data-tool-action="ask-claude" role="menuitem"><span class="content-tools__icon"><svg width="250" height="250" viewBox="0 0 250 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_claude_1)">
+<path d="M48.7416 166.712L97.6342 139.279L98.4564 136.896L97.6342 135.571H95.2517L87.0805 135.067L59.1443 134.312L34.9161 133.306L11.443 132.047L5.53692 130.789L0 123.49L0.570476 119.849L5.53692 116.51L12.651 117.131L28.3725 118.205L51.9631 119.832L69.0772 120.839L94.4295 123.473H98.4564L99.0268 121.846L97.651 120.839L96.5772 119.832L72.1644 103.289L45.7383 85.8055L31.896 75.7384L24.4128 70.6377L20.6376 65.8558L19.0101 55.4196L25.8054 47.9364L34.9329 48.5572L37.2651 49.178L46.5101 56.2921L66.2584 71.5773L92.047 90.5706L95.8222 93.7082L97.3322 92.6344L97.5168 91.8793L95.8222 89.0438L81.7953 63.6914L66.8289 37.9028L60.1678 27.2149L58.406 20.8055C57.7852 18.1713 57.3322 15.9565 57.3322 13.2552L65.0671 2.75181L69.3456 1.37598L79.6644 2.75181L84.0101 6.52699L90.4195 21.1914L100.805 44.2787L116.913 75.6713L121.628 84.9833L124.144 93.6075L125.084 96.2418H126.711V94.7317L128.037 77.0471L130.487 55.3357L132.869 27.3995L133.691 19.5304L137.584 10.1008L145.319 5.00014L151.359 7.88604L156.326 15.0001L155.638 19.5974L152.685 38.7921L146.896 68.8592L143.121 88.9934H145.319L147.836 86.4767L158.02 72.9532L175.134 51.5605L182.685 43.0706L191.493 33.6914L197.148 29.2283H207.836L215.705 40.923L212.181 53.0035L201.174 66.9632L192.047 78.7921L178.96 96.4096L170.789 110.504L171.544 111.628L173.49 111.443L203.054 105.151L219.027 102.265L238.087 98.9934L246.711 103.02L247.651 107.114L244.262 115.487L223.876 120.52L199.966 125.302L164.362 133.725L163.926 134.044L164.43 134.665L180.47 136.175L187.332 136.544H204.128L235.403 138.876L243.574 144.279L248.473 150.889L247.651 155.923L235.067 162.332L218.087 158.306L178.456 148.876L164.866 145.487H162.987V146.611L174.312 157.685L195.067 176.426L221.057 200.587L222.383 206.561L219.044 211.275L215.52 210.772L192.685 193.591L183.876 185.856L163.926 169.061H162.601V170.822L167.198 177.55L191.477 214.044L192.735 225.235L190.973 228.876L184.681 231.074L177.768 229.816L163.557 209.866L148.893 187.399L137.064 167.265L135.621 168.087L128.641 243.272L125.369 247.114L117.819 250L111.527 245.218L108.188 237.483L111.527 222.198L115.554 202.248L118.826 186.393L121.779 166.695L123.54 160.151L123.423 159.715L121.98 159.899L107.131 180.285L84.547 210.806L66.6778 229.933L62.3993 231.628L54.9832 227.785L55.6711 220.923L59.8154 214.816L84.547 183.356L99.4631 163.859L109.094 152.601L109.027 150.973H108.456L42.7685 193.624L31.0738 195.134L26.0403 190.42L26.6611 182.685L29.0436 180.168L48.7919 166.577L48.7248 166.644L48.7416 166.712Z" fill="#707070"/>
+</g>
+<defs>
+<clipPath id="clip0_claude_1">
+<rect width="250" height="250" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+</span><span class="content-tools__menu-label">Ask Claude</span><span class="content-tools__menu-hint">Send this page to Claude</span></a></div></div></div></header><!-- .entry-header -->
+				
+<article id="post-9564" class="post-9564 ub_doc type-ub_doc status-publish hentry">
+	<div class="entry-content">
+		<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<div class="lazy-youtube-embed"><div class="featured-video-wrapper"><img src="https://img.youtube.com/vi/4pC5_F_hJSA/maxresdefault.jpg" alt="YouTube video thumbnail" class="featured-video-thumbnail" loading="lazy" /><div class="featured-video-play-button" role="button" aria-label="Play Video" tabindex="0"><i aria-hidden="true" class="eicon-play"></i></div><iframe class="featured-video-iframe" src="" data-src="https://www.youtube.com/embed/4pC5_F_hJSA?feature=oembed&#038;autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display: none;"></iframe></div></div>
+</div></figure>
+
+
+
+<p>Follow this quick guide to add a copy of Ultimate Brain to your Notion workspace!</p>
+
+
+
+<p>Ultimate Brain is a <strong>Notion template, </strong>which means you <em>duplicate </em>it into you workspace. When you do, you get a perfect, 1:1 copy of the template that you can then use and change to your liking.</p>
+
+
+
+<p>Depending on how you purchased your template, there&#8217;s one of two ways that you can use this duplication process to add it to your workspace. Choose the section that fits the method you used to buy the template.</p>
+
+
+
+<p class="callout"><strong>Note: </strong>Unlike a SaaS app, or traditional software, Notion templates are not attached in any way to the original versions. This means that there&#8217;s no way for us to send automatic updates to your copy –&nbsp;once you duplicate it, it&#8217;s yours. That said, we do publish how-to guide for upgrades when possible!</p>
+
+
+
+<a href="#notion-marketplace-purchases" class="section-link-h2" aria-label="Copy link to heading"><span class="screen-reader-text">Copy link to heading</span><i aria-hidden="true" class="fas fa-anchor"></i></a><h2 id="notion-marketplace-purchases" class="section-link-header wp-block-heading" >Notion Marketplace Purchases<button type="button" class="btn btn-ghost btn-icon btn-sm section-copy-h2" aria-label="Copy link to heading" data-heading-id="notion-marketplace-purchases"><i aria-hidden="true" class="fas fa-anchor"></i></button></h2>
+
+
+
+<p>If you bought Ultimate Brain through Notion&#8217;s Marketplace, then you were likely prompted to choose a destination for the template right after you purchased.</p>
+
+
+
+<p>Templates purchased through Notion&#8217;s Marketplace can be installed in the workspace where they were purchased, and you&#8217;re given the choice of adding your template either to your <strong>Private </strong>section, or to a <strong>Teamspace</strong>.</p>
+
+
+
+<p>Keep in mind that adding your template to a Teamspace will automatically make it accessible to anyone in that Teamspace, based on the <a href="https://thomasjfrank.com/notion-sharing-permissions-the-ultimate-guide/#teamspaces">Teamspace&#8217;s permission settings</a>.</p>
+
+
+
+<p>If you&#8217;d like to create a fresh, new copy of your template:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Head to the <strong>Templates </strong>section near the bottom of your sidebar, either in Notion&#8217;s desktop app or in a desktop web browser.</li>
+
+
+
+<li>Click the <strong>Purchased </strong>link in the top-right corner of the page.</li>
+
+
+
+<li>Click on your purchased template to navigate to its Marketplace page.</li>
+
+
+
+<li>Since you&#8217;ve already purchased it, you&#8217;ll have the option of adding a new copy within your workspace.</li>
+</ul>
+
+
+
+<figure class="wp-block-video"><video height="1080" style="aspect-ratio: 1588 / 1080;" width="1588" controls muted preload="auto" src="https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.38.25_1730850018.mp4" playsinline></video></figure>
+
+
+
+<a href="#lemon-squeezy-amp-gumroad-purchases" class="section-link-h2" aria-label="Copy link to heading"><span class="screen-reader-text">Copy link to heading</span><i aria-hidden="true" class="fas fa-anchor"></i></a><h2 id="lemon-squeezy-amp-gumroad-purchases" class="section-link-header wp-block-heading" >Lemon Squeezy &amp; Gumroad Purchases<button type="button" class="btn btn-ghost btn-icon btn-sm section-copy-h2" aria-label="Copy link to heading" data-heading-id="lemon-squeezy-amp-gumroad-purchases"><i aria-hidden="true" class="fas fa-anchor"></i></button></h2>
+
+
+
+<p>If you bought your template through Lemon Squeezy or Gumroad, you should have a direct link to your template that you can visit in a desktop web browser. You can also find this link in the the <a href="https://community.thomasjfrank.com/c/tutorials-ultimate-brain/start-here-full-tour-of-ultimate-brain" target="_blank" rel="noreferrer noopener">Getting Started post</a>, which is in the Tutorials space in our customer community.</p>
+
+
+
+<p class="callout">Not sure if you purchased via one of these methods? If you didn&#8217;t buy your template directly from Notion&#8217;s Marketplace, then it&#8217;s almost certain that you went through one of them.</p>
+
+
+
+<p>When you visit this link in a desktop web browser, you&#8217;ll see a <strong>Start With This Template </strong>button at the top of the screen.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><a href="https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.32.29@2x.jpg"><img fetchpriority="high" decoding="async" width="1400" height="676" src="https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.32.29@2x-1400x676.jpg" alt="&quot;Start with this template&quot; button" class="wp-image-9570" srcset="https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.32.29@2x-1400x676.jpg 1400w, https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.32.29@2x-300x145.jpg 300w, https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.32.29@2x-768x371.jpg 768w, https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.32.29@2x-50x24.jpg 50w, https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.32.29@2x-1600x773.jpg 1600w, https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.32.29@2x-1536x742.jpg 1536w, https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.32.29@2x-2048x989.jpg 2048w" sizes="(max-width: 1400px) 100vw, 1400px" /></a></figure>
+</div>
+
+
+<p>Click this button, then choose a workspace (making sure you&#8217;re logged into the Notion account that contains the workspace you&#8217;d like to use).</p>
+
+
+
+<p class="callout"><strong>Important: </strong>If you have issues with duplication, please check to see if you have an active <strong>ad blocker </strong>in your browser. If you do, disable it – or at least whitelist the <code>thomasfrank.notion.site</code> and <code>notion.so</code> domains. Ad blockers have been known to cause issues with template duplication in certain cases.</p>
+
+
+
+<p>Note: Some versions of our templates – particularly legacy versions and beta versions –&nbsp;may have a small <strong>&#8220;double square&#8221; </strong>icon, or even a <strong>Duplicate </strong>link, rather than the Start With This Template button. This difference is due to these templates not being listed directly in Notion&#8217;s Marketplace.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><a href="https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.31.31@2x.jpg"><img decoding="async" width="1400" height="673" src="https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.31.31@2x-1400x673.jpg" alt="&quot;Double-squares&quot; template duplication button" class="wp-image-9569" srcset="https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.31.31@2x-1400x673.jpg 1400w, https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.31.31@2x-300x144.jpg 300w, https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.31.31@2x-768x369.jpg 768w, https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.31.31@2x-50x24.jpg 50w, https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.31.31@2x-1600x769.jpg 1600w, https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.31.31@2x-1536x738.jpg 1536w, https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.31.31@2x-2048x985.jpg 2048w" sizes="(max-width: 1400px) 100vw, 1400px" /></a></figure>
+</div>
+
+
+<p>You can click whichever button/link you see, and then continue with the duplication process all the same.</p>
+
+
+
+<a href="#cant-find-your-template" class="section-link-h2" aria-label="Copy link to heading"><span class="screen-reader-text">Copy link to heading</span><i aria-hidden="true" class="fas fa-anchor"></i></a><h2 id="cant-find-your-template" class="section-link-header wp-block-heading" >Can&#8217;t Find Your Template?<button type="button" class="btn btn-ghost btn-icon btn-sm section-copy-h2" aria-label="Copy link to heading" data-heading-id="cant-find-your-template"><i aria-hidden="true" class="fas fa-anchor"></i></button></h2>
+
+
+
+<p>If you&#8217;ve duplicated your template into your workspace, but can&#8217;t find it, there are a few potential causes.</p>
+
+
+
+<p>First, if you have a lot of pages in your <strong>Private </strong>section or in a <strong>Teamspace </strong>(wherever you added the template), it may be tucked in the &#8220;More&#8230;&#8221; link at the bottom of that section/Teamspace.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><a href="https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.25.54@2x.jpg"><img decoding="async" width="1280" height="1024" src="https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.25.54@2x-1280x1024.jpg" alt="Template shown in the hidden &quot;More...&quot; area of the Private section in the Notion sidebar." class="wp-image-9567" srcset="https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.25.54@2x-1280x1024.jpg 1280w, https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.25.54@2x-300x240.jpg 300w, https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.25.54@2x-768x615.jpg 768w, https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.25.54@2x-50x40.jpg 50w, https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.25.54@2x-1600x1280.jpg 1600w, https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.25.54@2x-1536x1229.jpg 1536w, https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.25.54@2x-2048x1639.jpg 2048w" sizes="(max-width: 1280px) 100vw, 1280px" /></a></figure>
+</div>
+
+
+<p>Also keep in in mind that Teamspaces themselves can be hidden in the Sidebar. If you have a lot of Teamspaces, check the &#8220;More&#8230;&#8221; link beneath the bottom Teamspace to see if the one you&#8217;re looking for has been hidden.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><a href="https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.27.31@2x.jpg"><img loading="lazy" decoding="async" width="1363" height="1024" src="https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.27.31@2x-1363x1024.jpg" alt="Hidden Teamspaces showing in the More... part of the Teamspaces section of the sidebar." class="wp-image-9568" srcset="https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.27.31@2x-1363x1024.jpg 1363w, https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.27.31@2x-300x225.jpg 300w, https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.27.31@2x-768x577.jpg 768w, https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.27.31@2x-50x38.jpg 50w, https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.27.31@2x-1600x1202.jpg 1600w, https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.27.31@2x-1536x1154.jpg 1536w, https://thomasjfrank.com/wp-content/uploads/2024/11/CleanShot-2024-11-05-at-17.27.31@2x.jpg 1978w" sizes="(max-width: 1363px) 100vw, 1363px" /></a></figure>
+</div>
+
+
+<p>Finally, you can always hit <kbd><strong>⌘</strong>/Ctrl + P</kbd> to bring up the Search window, and then search for your template by name that way.</p>	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+
+	</footer><!-- .entry-footer -->
+</article><!-- #post-9564 -->
+<nav id="neighbor-nav">			<a href="https://thomasjfrank.com/docs/ultimate-brain/start-using-ultimate-brain-the-simple-way/" class="nn-next">
+				<span class="nn-arrow"><i aria-hidden="true" class="fas fa-arrow-right"></i></span>
+				<span class="nn-label">Next</span>
+				<span class="nn-title nn-long-title">Start Using Ultimate Brain (The Simple Way)</span>
+			</a></nav>	</main><!-- #main -->
+	<aside class="table-of-contents">
+				<nav class="toc">
+			<div class="toc-header">
+				<span>On This Page</span>
+				<button class="toc-close" type="button" aria-label="Close mobile table of contents menu"><span class="screen-reader-text">Close mobile table of contents menu</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+			</div>
+			<ul>
+				<li><a href="#notion-marketplace-purchases">Notion Marketplace Purchases</a></li><li><a href="#lemon-squeezy-amp-gumroad-purchases">Lemon Squeezy &amp; Gumroad Purchases</a></li><li><a href="#cant-find-your-template">Can't Find Your Template?</a></li>
+			</ul>
+			<a class="return-link" href="#"><span>&raquo;</span> Back to Top</a>
+		</nav><!-- #mobile-toc-navigation -->	</aside>
+</div>
+
+
+	<footer id="colophon" class="site-footer">
+		<nav class="footer-links">
+			<section>
+				<a href="https://thomasjfrank.com/"><strong>ThomasJFrank.com</strong></a>
+				<a href="https://thomasjfrank.com/about/">About Me</a>
+				<a href="https://thomasjfrank.com/articles/">Articles</a>
+				<a href="https://thomasjfrank.com/notes/">Book Notes</a>
+				<a href="https://thomasjfrank.com/courses/">Courses</a>
+			</section>
+			<section>
+				<a href="https://thomasjfrank.com/fundamentals/"><strong>Learn Notion</strong></a>
+				<a href="https://thomasjfrank.com/notion-databases-the-ultimate-beginners-guide/">Notion Databases</a>
+				<a href="https://learn.thomasjfrank.com/notion-formula-reference/" target="_blank" rel="noopener">Notion Formulas</a>
+				<a href="https://thomasjfrank.com/notion-automations/">Notion Automations</a>
+			</section>
+			<section>
+				<a href="https://thomasjfrank.com/templates/"><strong>Notion Templates</strong></a>
+				<a href="https://thomasjfrank.com/brain/">Notion Second Brain</a>
+				<a href="https://thomasjfrank.com/creators-companion/">Content Creation HQ</a>
+				<a href="https://thomasjfrank.com/templates/task-and-project-notion-template/">Task Manager</a>
+				<a href="https://thomasjfrank.com/templates/habit-tracker-notion-template/">Habit Tracker</a>
+				<a href="https://community.thomasjfrank.com/" target="_blank" rel="noopener">Customer Login</a>
+			</section>
+			<section>
+				<span><strong>Template Docs</strong></span>
+				<a href="https://thomasjfrank.com/docs/ultimate-brain/">Ultimate Brain</a>
+				<a href="https://thomasjfrank.com/docs/creators-companion/">Creator's Companion</a>
+			</section>
+		</nav>
+		<section>
+			<div class="boring-links">&copy; Thomas Frank 2026 &mdash; <a href="https://thomasjfrank.com/privacy/" rel="noopener">Privacy Policy</a> | <a href="https://thomasjfrank.com/terms/" rel="noopener">Terms</a> | <a href="#" class="cky-banner-element" style="white-space: nowrap;">Cookie Preferences</a></div>
+			<div class="social-links">
+				<ul>
+					<li>
+						<a href="https://www.youtube.com/thomasfrank" target="_blank" rel="noopener" aria-label="YouTube">
+							<i aria-hidden="true" class="fab fa-youtube"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.twitter.com/tomfrankly" target="_blank" rel="noopener" aria-label="Twitter">
+							<i aria-hidden="true" class="fab fa-twitter"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.instagram.com/tomfrankly" target="_blank" rel="noopener" aria-label="Instagram">
+							<i aria-hidden="true" class="fab fa-instagram"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://open.spotify.com/artist/2Qch08zdpJ5rMPkHqNU7Be?si=oMJpxv7CQGSQj4hVxiZqag" target="_blank" rel="noopener" aria-label="Spotify">
+							<i aria-hidden="true" class="fab fa-spotify"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.facebook.com/thomas" target="_blank" rel="noopener" aria-label="Facebook">
+							<i aria-hidden="true" class="fab fa-facebook-square"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+	<div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-labelledby="search-modal-title" aria-hidden="true">
+		<div class="search-box" id="search-box">
+			<h2 id="search-modal-title" class="screen-reader-text">Search</h2>
+			
+<div class="cmswt-InstantSearch ais-InstantSearch cm_swt_instant_search_1 multi-source"
+     data-id="cm_swt_instant_search_1"
+     data-config="{&quot;filter&quot;:&quot;hide&quot;,&quot;post_types&quot;:[&quot;ub_doc&quot;,&quot;formula_component&quot;,&quot;cc_doc&quot;,&quot;all&quot;],&quot;per_page&quot;:&quot;4&quot;,&quot;pagination&quot;:&quot;show&quot;,&quot;sortby&quot;:&quot;hide&quot;,&quot;columns&quot;:&quot;1&quot;,&quot;placeholder&quot;:&quot;Search&quot;,&quot;query_by&quot;:&quot;post_title,post_content&quot;,&quot;sticky_first&quot;:&quot;no&quot;,&quot;custom_class&quot;:&quot;&quot;,&quot;search_query&quot;:&quot;&quot;,&quot;unique_id&quot;:&quot;cm_swt_instant_search_1&quot;,&quot;collections&quot;:[&quot;ub_doc&quot;,&quot;formula_component&quot;,&quot;cc_doc&quot;,&quot;all&quot;]}"
+     data-facets="{&quot;ub_doc&quot;:[&quot;category&quot;],&quot;formula_component&quot;:[&quot;category&quot;],&quot;cc_doc&quot;:[&quot;category&quot;],&quot;all&quot;:[&quot;category&quot;]}"
+     data-placeholder="Search"
+     data-query_by="post_title,post_content"
+     data-sticky_first="no"
+     data-additional_search_params="{&quot;sort_by&quot;:&quot;_text_match(buckets: 10):desc,weighted_score:desc&quot;,&quot;query_by_weights&quot;:&quot;3,1&quot;}"
+     data-search_query=""
+>
+	<div class="cmswt-Header">
+    <div class="cmswt-SearchBox" data-settings="[]">
+		<button class="search-close" id="search-close" type="button"><span class="screen-reader-text">Close search window</span><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6L6 18M6 6l12 12"/></svg></button>
+		<script>
+			// Use touchend instead of touchstart to avoid passive listener warnings
+			jQuery('#search-close').on('click touchend', function(event) {		
+				event.preventDefault();
+				event.stopPropagation();
+				searchClose();
+			});
+		</script>
+	</div>
+    <div class="cmswt-SubHeader">
+		<div class="cmswt-CollectionMenu ">
+    <div class="cmswt-CollectionMenu-current">
+        <span class="cmswt-CollectionMenu-currentLabel">UB Docs</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cmswt-CollectionMenu-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+        </svg>
+    </div>
+	    <ul class="cmswt-IndexSwitcher">
+		            <li class="cmswt-IndexSwitcher-item active">
+                <a href="#"
+                   class="cmswt-IndexSwitcher-link"
+                   data-instance_id="cm_swt_instant_search_1"
+                   data-collection="ub_doc">
+					UB Docs                </a>
+            </li>
+			            <li class="cmswt-IndexSwitcher-item ">
+                <a href="#"
+                   class="cmswt-IndexSwitcher-link"
+                   data-instance_id="cm_swt_instant_search_1"
+                   data-collection="formula_component">
+					Notion Formulas                </a>
+            </li>
+			            <li class="cmswt-IndexSwitcher-item ">
+                <a href="#"
+                   class="cmswt-IndexSwitcher-link"
+                   data-instance_id="cm_swt_instant_search_1"
+                   data-collection="cc_doc">
+					CC Docs                </a>
+            </li>
+			            <li class="cmswt-IndexSwitcher-item ">
+                <a href="#"
+                   class="cmswt-IndexSwitcher-link"
+                   data-instance_id="cm_swt_instant_search_1"
+                   data-collection="all">
+					All                </a>
+            </li>
+			    </ul>
+	</div>
+<div class="cmswt-Sort">
+	        <div class="cmswt-SortBy cmswt-SortBy-ub_doc"
+             data-settings="{&quot;items&quot;:[{&quot;label&quot;:&quot;Recent&quot;,&quot;value&quot;:&quot;ub_doc&quot;},{&quot;label&quot;:&quot;Oldest&quot;,&quot;value&quot;:&quot;ub_doc\/sort\/sort_by_date:asc&quot;}]}"
+        ></div>
+
+	        <div class="cmswt-SortBy cmswt-SortBy-formula_component"
+             data-settings="{&quot;items&quot;:[{&quot;label&quot;:&quot;Recent&quot;,&quot;value&quot;:&quot;formula_component&quot;},{&quot;label&quot;:&quot;Oldest&quot;,&quot;value&quot;:&quot;formula_component\/sort\/sort_by_date:asc&quot;}]}"
+        ></div>
+
+	        <div class="cmswt-SortBy cmswt-SortBy-cc_doc"
+             data-settings="{&quot;items&quot;:[{&quot;label&quot;:&quot;Recent&quot;,&quot;value&quot;:&quot;cc_doc&quot;},{&quot;label&quot;:&quot;Oldest&quot;,&quot;value&quot;:&quot;cc_doc\/sort\/sort_by_date:asc&quot;}]}"
+        ></div>
+
+	        <div class="cmswt-SortBy cmswt-SortBy-all"
+             data-settings="{&quot;items&quot;:[{&quot;label&quot;:&quot;Recent&quot;,&quot;value&quot;:&quot;all&quot;},{&quot;label&quot;:&quot;Oldest&quot;,&quot;value&quot;:&quot;all\/sort\/sort_by_date:asc&quot;}]}"
+        ></div>
+
+	</div>    </div>
+</div><div class="cmswt-MainPanel">
+    <div class="cmswt-Results">
+		            <div class="cmswt-Result cmswt-Result-ub_doc">
+				<div class="cmswt-Result-hits cmswt-Result-hits_ub_doc"></div><div class="cmswt-Pagination cmswt-Pagination-ub_doc"></div>            </div>
+		            <div class="cmswt-Result cmswt-Result-formula_component">
+				<div class="cmswt-Result-hits cmswt-Result-hits_formula_component"></div><div class="cmswt-Pagination cmswt-Pagination-formula_component"></div>            </div>
+		            <div class="cmswt-Result cmswt-Result-cc_doc">
+				<div class="cmswt-Result-hits cmswt-Result-hits_cc_doc"></div><div class="cmswt-Pagination cmswt-Pagination-cc_doc"></div>            </div>
+		            <div class="cmswt-Result cmswt-Result-all">
+				<div class="cmswt-Result-hits cmswt-Result-hits_all"></div><div class="cmswt-Pagination cmswt-Pagination-all"></div>            </div>
+		    </div>
+</div></div>
+			
+			<div class="search-keyboard-hints">
+				<div class="hint-item">
+					<span class="kbd-key">↑</span>
+					<span class="kbd-key">↓</span>
+					<span>to navigate</span>
+				</div>
+				<div class="hint-item">
+					<span class="kbd-key">←</span>
+					<span class="kbd-key">→</span>
+					<span>for pages</span>
+				</div>
+				<div class="hint-item">
+					<span class="kbd-key">↵</span>
+					<span>to select</span>
+				</div>
+				<div class="hint-item">
+					<span class="kbd-key">esc</span>
+					<span>to close</span>
+				</div>
+			</div>
+		</div>
+	</div>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/tjf-2023/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+			<!-- Google tag (gtag.js) -->
+			<script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-18687026-4" defer></script>
+			<script type="text/javascript" defer>
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+
+				// ? multiple tracking ids
+									gtag('config', 'UA-18687026-4', {
+						'send_page_view': Boolean(),
+						'anonymize_ip': Boolean()
+					});
+							</script>
+						<script type="text/javascript">
+				(function () {
+					if (window.LS_AFF_IS_LOADED || window.__LS_SEQ_LOADER__) {
+						return;
+					}
+					window.__LS_SEQ_LOADER__ = true;
+
+					var lsSources = [
+						"https:\/\/js.codedrink.com\/snippet.min.js?ver=347.20260129",
+						"https:\/\/thomasjfrank.com\/?ef9ee25c0282a994eee7a1e94f221c89=1&ver=347.20260129"					];
+
+					var lsScriptLoadTimeoutMs = 2500;
+					var lsIndex = 0, lsTimeoutMs = lsScriptLoadTimeoutMs;
+
+					function lsLoadNext() {
+						if (window.LS_AFF_IS_LOADED || lsIndex >= lsSources.length) {
+							return;
+						}
+
+						var lsUrl = lsSources[lsIndex++];
+						var lsScript = document.createElement('script');
+						lsScript.src = lsUrl;
+						lsScript.onerror = function () {
+							try { s.remove(); } catch (_) {}
+							if (!window.LS_AFF_IS_LOADED) lsLoadNext();
+						};
+						var lsTimer = setTimeout(function () {
+							if (!window.LS_AFF_IS_LOADED) {
+								try { s.remove(); } catch (_) {}
+								lsLoadNext();
+							}
+						}, lsTimeoutMs);
+						lsScript.onload = (function (orig) {
+							return function () {
+								clearTimeout(lsTimer);
+								if (orig) orig();
+							};
+						})(lsScript.onload);
+						(document.head || document.documentElement).appendChild(lsScript);
+					}
+
+					lsLoadNext();
+				})();
+			</script>
+			<script type="text/javascript">
+				(function(){
+					var lsInitialized = false;
+					function lsDoInit(detail){
+						if (lsInitialized) return;
+						lsInitialized = true;
+						try {
+							(detail && detail.init ? detail : (window.LSAFFEvents || {})).init({
+								'lsid': 'ls-p3unj5mhupt6beu4mb3nhe3tvn',
+								'pid': '9564',
+								'ipa': '',
+								'performance': '1',
+								'matching': '1',
+								'mobile_deep_linking': '1',
+								'international_click': '1',
+							});
+						} catch (err) {}
+					}
+
+					var lsPollCount = 0;
+					var lsPollTimer = null;
+					function lsStartPolling(){
+						if (lsPollTimer) return;
+						lsPollTimer = setInterval(function(){
+							if (lsInitialized) { clearInterval(lsPollTimer); return; }
+							if (window.LSAFFEvents && typeof window.LSAFFEvents.init === 'function') {
+								lsDoInit(window.LSAFFEvents);
+								clearInterval(lsPollTimer);
+								return;
+							}
+							lsPollCount++;
+							if (lsPollCount > 50) { // ~5s at 100ms
+								clearInterval(lsPollTimer);
+							}
+						}, 100);
+					}
+
+					if (window.LSAFFEvents && typeof window.LSAFFEvents.init === 'function') {
+						lsDoInit(window.LSAFFEvents);
+					} else {
+						document.addEventListener('LSAFFEventLoaded', function(e){
+							lsDoInit(e.detail);
+						}, { once: true });
+						lsStartPolling();
+					}
+				})();
+			</script>
+			<script type="text/html" id="tmpl-cmswt-Result-itemTemplate--default">
+    <div class="hit-content">
+        <# if(data._highlightResult.permalink !== undefined ) { #>
+        <a href="{{{data._highlightResult.permalink.value}}}" rel="nofollow noopener"><h5 class="title"><# 
+            function decodeHtml(str) {
+                if (!str) return '';
+                var textarea = document.createElement('textarea');
+                textarea.innerHTML = str;
+                return textarea.value;
+            }
+            var decodedTitle = decodeHtml(data.formatted.post_title || '');
+        #>{{{decodedTitle}}}</h5>
+        <div class="hit-meta">
+			<span class="search-result-link">{{{data._highlightResult.permalink.value}}}</span>
+            <div class="hit-description"><# 
+                function addSnippetEllipses(content) {
+                    if (!content) return '';
+                    
+                    // Remove HTML tags temporarily to check text boundaries
+                    var tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = content;
+                    var textOnly = tempDiv.textContent || tempDiv.innerText || '';
+                    
+                    // Trim whitespace
+                    var trimmedText = textOnly.trim();
+                    if (!trimmedText) return content;
+                    
+                    var needsLeadingEllipsis = false;
+                    var needsTrailingEllipsis = false;
+                    
+                    // Check if snippet starts mid-sentence (starts with lowercase letter)
+                    // Find the first letter in the text
+                    var firstLetterMatch = trimmedText.match(/[a-zA-Z]/);
+                    if (firstLetterMatch) {
+                        var firstLetter = firstLetterMatch[0];
+                        // If first letter is lowercase, it's likely mid-sentence
+                        needsLeadingEllipsis = firstLetter === firstLetter.toLowerCase();
+                    }
+                    
+                    // Check if snippet ends mid-sentence (doesn't end with sentence-ending punctuation)
+                    var lastChar = trimmedText.charAt(trimmedText.length - 1);
+                    var sentenceEnders = ['.', '!', '?', '。', '！', '？'];
+                    needsTrailingEllipsis = sentenceEnders.indexOf(lastChar) === -1;
+                    
+                    // Add ellipses
+                    var result = content;
+                    if (needsLeadingEllipsis) {
+                        result = '… ' + result;
+                    }
+                    if (needsTrailingEllipsis) {
+                        result = result + ' …';
+                    }
+                    
+                    return result;
+                }
+                
+                var decodedContent = decodeHtml(data.formatted.post_content || '');
+                var contentWithEllipses = addSnippetEllipses(decodedContent);
+            #>{{{contentWithEllipses}}}</div>
+        </div>
+		</a>
+        <# } #>
+    </div>
+</script><script type="text/html" id="tmpl-cmswt-NoSearchResults-default">
+    <div class="cmswt-noSearchResults cmswt-NoSearchResults-default">
+		No results found    </div>
+</script><script type="text/html" id="tmpl-cm-autocomplete">
+    <div class="aa-ItemWrapper">
+        <div class="aa-ItemContent">
+            <div class="aa-ItemIcon aa-ItemIcon--alignTop">
+                <# if ( data.document.post_thumbnail !== '' && data.document.post_thumbnail !== undefined ) { #>
+                <img
+                        src="{{{data.document.post_thumbnail}}}"
+                        alt="{{data.document.post_title}}"
+                        width="40"
+                        height="40"
+                />
+                <# } else { #>
+                <img
+                        src="https://thomasjfrank.com/wp-content/plugins/search-with-typesense/assets/placeholder.jpg"
+                        alt="{{data.document.post_title}}"
+                        width="40"
+                        height="40"
+                />
+                <# } #>
+
+            </div>
+            <div class="aa-ItemContentBody">
+                <div class="aa-ItemContentTitle">
+                    {{{data.formatted.post_title}}}
+                </div>
+                <div class="aa-ItemContentDescription">
+                    {{data.formatted.sliced_content}}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</script><script type="text/html" id="tmpl-cm-autocomplete-header">
+    <h5>{{{data.name}}}</h5>
+</script><script type="text/html" id="tmpl-cm-autocomplete-no-results-found">No Results Found</script>		<div data-elementor-type="popup" data-elementor-id="4506" class="elementor elementor-4506 elementor-location-popup" data-elementor-settings="{&quot;entrance_animation&quot;:&quot;slideInRight&quot;,&quot;entrance_animation_tablet&quot;:&quot;slideInRight&quot;,&quot;exit_animation&quot;:&quot;slideInRight&quot;,&quot;exit_animation_tablet&quot;:&quot;slideInRight&quot;,&quot;entrance_animation_duration&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;open_selector&quot;:&quot;a[href=\&quot;#ub-presales-popup\&quot;]&quot;,&quot;a11y_navigation&quot;:&quot;yes&quot;,&quot;triggers&quot;:[],&quot;timing&quot;:[]}" data-elementor-post-type="elementor_library">
+					<section class="elementor-section elementor-top-section elementor-element elementor-element-37add96c elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="37add96c" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7145cbb8" data-id="7145cbb8" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-6f9226f4 elementor-widget elementor-widget-heading" data-id="6f9226f4" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">🤔 Have an UB Question?</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-744c36bd elementor-widget elementor-widget-text-editor" data-id="744c36bd" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>Fill out the form below and I&#8217;ll answer as soon as I can! ~Thomas</p>								</div>
+				</div>
+				<div class="elementor-element elementor-element-da39900 elementor-button-align-stretch elementor-widget elementor-widget-form" data-id="da39900" data-element_type="widget" data-settings="{&quot;step_next_label&quot;:&quot;Next&quot;,&quot;step_previous_label&quot;:&quot;Previous&quot;,&quot;button_width&quot;:&quot;100&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}" data-widget_type="form.default">
+				<div class="elementor-widget-container">
+							<form class="elementor-form" method="post" name="New Form" aria-label="New Form">
+			<input type="hidden" name="post_id" value="4506"/>
+			<input type="hidden" name="form_id" value="da39900"/>
+			<input type="hidden" name="referer_title" value="You searched for winteremains - Thomas Frank" />
+
+			
+			<div class="elementor-form-fields-wrapper elementor-labels-">
+								<div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-100 elementor-field-required">
+												<label for="form-field-name" class="elementor-field-label elementor-screen-only">
+								Name							</label>
+														<input size="1" type="text" name="form_fields[name]" id="form-field-name" class="elementor-field elementor-size-sm  elementor-field-textual" placeholder="Name" required="required">
+											</div>
+								<div class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-email elementor-col-100 elementor-field-required">
+												<label for="form-field-email" class="elementor-field-label elementor-screen-only">
+								Email							</label>
+														<input size="1" type="email" name="form_fields[email]" id="form-field-email" class="elementor-field elementor-size-sm  elementor-field-textual" placeholder="Email address" required="required">
+											</div>
+								<div class="elementor-field-type-textarea elementor-field-group elementor-column elementor-field-group-message elementor-col-100 elementor-field-required">
+												<label for="form-field-message" class="elementor-field-label elementor-screen-only">
+								Message							</label>
+						<textarea class="elementor-field-textual elementor-field  elementor-size-sm" name="form_fields[message]" id="form-field-message" rows="4" placeholder="What&#039;s Your Question?" required="required"></textarea>				</div>
+								<div class="elementor-field-type-recaptcha_v3 elementor-field-group elementor-column elementor-field-group-field_4da1f9c elementor-col-100 recaptcha_v3-inline">
+					<div class="elementor-field" id="form-field-field_4da1f9c"><div class="elementor-g-recaptcha" data-sitekey="6Lf45t0iAAAAAE68iPeUcOnr0hKPCMtBN3sG1AvZ" data-type="v3" data-action="Form" data-badge="inline" data-size="invisible"></div></div>				</div>
+								<div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons">
+					<button class="elementor-button elementor-size-sm" type="submit">
+						<span class="elementor-button-content-wrapper">
+															<span class="elementor-button-icon">
+									<i aria-hidden="true" class="fas fa-arrow-alt-circle-right"></i>																	</span>
+																						<span class="elementor-button-text">Send</span>
+													</span>
+					</button>
+				</div>
+			</div>
+		</form>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+				<div data-elementor-type="popup" data-elementor-id="3715" class="elementor elementor-3715 elementor-location-popup" data-elementor-settings="{&quot;entrance_animation&quot;:&quot;slideInRight&quot;,&quot;entrance_animation_tablet&quot;:&quot;slideInRight&quot;,&quot;exit_animation&quot;:&quot;slideInRight&quot;,&quot;exit_animation_tablet&quot;:&quot;slideInRight&quot;,&quot;entrance_animation_duration&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;open_selector&quot;:&quot;a[href=\&quot;#cc-presales-popup\&quot;]&quot;,&quot;a11y_navigation&quot;:&quot;yes&quot;,&quot;triggers&quot;:[],&quot;timing&quot;:[]}" data-elementor-post-type="elementor_library">
+					<section class="elementor-section elementor-top-section elementor-element elementor-element-5b57381 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5b57381" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d5ac9cb" data-id="d5ac9cb" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-8af5cb0 elementor-widget elementor-widget-heading" data-id="8af5cb0" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">🤔 Have a Question?</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-6538810 elementor-widget elementor-widget-text-editor" data-id="6538810" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>Fill out the form below and I&#8217;ll answer as soon as I can! ~Thomas</p>								</div>
+				</div>
+				<div class="elementor-element elementor-element-b07ec47 elementor-button-align-stretch elementor-widget elementor-widget-global elementor-global-3714 elementor-widget-form" data-id="b07ec47" data-element_type="widget" data-settings="{&quot;step_next_label&quot;:&quot;Next&quot;,&quot;step_previous_label&quot;:&quot;Previous&quot;,&quot;button_width&quot;:&quot;100&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}" data-widget_type="form.default">
+				<div class="elementor-widget-container">
+							<form class="elementor-form" method="post" name="New Form" aria-label="New Form">
+			<input type="hidden" name="post_id" value="3715"/>
+			<input type="hidden" name="form_id" value="b07ec47"/>
+			<input type="hidden" name="referer_title" value="How to Add Ultimate Brain to Notion - Ultimate Brain Docs" />
+
+							<input type="hidden" name="queried_id" value="9564"/>
+			
+			<div class="elementor-form-fields-wrapper elementor-labels-">
+								<div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-100 elementor-field-required">
+												<label for="form-field-name" class="elementor-field-label elementor-screen-only">
+								Name							</label>
+														<input size="1" type="text" name="form_fields[name]" id="form-field-name" class="elementor-field elementor-size-sm  elementor-field-textual" placeholder="Name" required="required">
+											</div>
+								<div class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-email elementor-col-100 elementor-field-required">
+												<label for="form-field-email" class="elementor-field-label elementor-screen-only">
+								Email							</label>
+														<input size="1" type="email" name="form_fields[email]" id="form-field-email" class="elementor-field elementor-size-sm  elementor-field-textual" placeholder="Email address" required="required">
+											</div>
+								<div class="elementor-field-type-textarea elementor-field-group elementor-column elementor-field-group-message elementor-col-100 elementor-field-required">
+												<label for="form-field-message" class="elementor-field-label elementor-screen-only">
+								Message							</label>
+						<textarea class="elementor-field-textual elementor-field  elementor-size-sm" name="form_fields[message]" id="form-field-message" rows="4" placeholder="What&#039;s Your Question?" required="required"></textarea>				</div>
+								<div class="elementor-field-type-recaptcha_v3 elementor-field-group elementor-column elementor-field-group-field_25e6624 elementor-col-100 recaptcha_v3-inline">
+					<div class="elementor-field" id="form-field-field_25e6624"><div class="elementor-g-recaptcha" data-sitekey="6Lf45t0iAAAAAE68iPeUcOnr0hKPCMtBN3sG1AvZ" data-type="v3" data-action="Form" data-badge="inline" data-size="invisible"></div></div>				</div>
+								<div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons">
+					<button class="elementor-button elementor-size-sm" type="submit">
+						<span class="elementor-button-content-wrapper">
+															<span class="elementor-button-icon">
+									<i aria-hidden="true" class="fas fa-arrow-alt-circle-right"></i>																	</span>
+																						<span class="elementor-button-text">Send</span>
+													</span>
+					</button>
+				</div>
+			</div>
+		</form>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+					<script>
+				const lazyloadRunObserver = () => {
+					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+						entries.forEach( ( entry ) => {
+							if ( entry.isIntersecting ) {
+								let lazyloadBackground = entry.target;
+								if( lazyloadBackground ) {
+									lazyloadBackground.classList.add( 'e-lazyloaded' );
+								}
+								lazyloadBackgroundObserver.unobserve( entry.target );
+							}
+						});
+					}, { rootMargin: '200px 0px 200px 0px' } );
+					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+						lazyloadBackgroundObserver.observe( lazyloadBackground );
+					} );
+				};
+				const events = [
+					'DOMContentLoaded',
+					'elementor/lazyload/observe',
+				];
+				events.forEach( ( event ) => {
+					document.addEventListener( event, lazyloadRunObserver );
+				} );
+			</script>
+			<script src="https://thomasjfrank.com/wp-content/plugins/outgoing-link-detection/resources/outgoing-link-detection.min.js?ver=1.0.0" id="outgoing-link-detection-scripts-js"></script>
+<script src="https://thomasjfrank.com/wp-content/plugins/accordion-blocks/js/accordion-blocks.min.js?ver=1.5.0" id="pb-accordion-blocks-frontend-script-js"></script>
+<script src="https://thomasjfrank.com/wp-content/plugins/simple-youtube-responsive/js/yt-responsive.min.js?ver=3.2.5" id="simple-youtube-responsive-js"></script>
+<script src="https://thomasjfrank.com/wp-content/themes/tjf-2023/js/tjf-mega-menu.min.js?ver=1.12.23" id="tjf-mega-menu-scripts-js"></script>
+<script src="https://cdn.jsdelivr.net/npm/turndown@7.1.2/dist/turndown.min.js?ver=7.1.2" id="turndown-js"></script>
+<script src="https://cdn.jsdelivr.net/npm/turndown-plugin-gfm@1.0.2/dist/turndown-plugin-gfm.min.js?ver=1.0.2" id="turndown-plugin-gfm-js"></script>
+<script src="https://thomasjfrank.com/wp-content/themes/tjf-2023/js/tjf-2023-scripts.min.js?ver=1.12.23" id="tjf-2023-scripts-js"></script>
+<script src="https://thomasjfrank.com/wp-includes/js/underscore.min.js?ver=1.13.7" id="underscore-js"></script>
+<script id="wp-util-js-extra">
+var _wpUtilSettings = {"ajax":{"url":"/wp-admin/admin-ajax.php"}};
+//# sourceURL=wp-util-js-extra
+</script>
+<script src="https://thomasjfrank.com/wp-includes/js/wp-util.min.js?ver=6.9" id="wp-util-js"></script>
+<script id="cm-typesense-instant-search-js-extra">
+var cm_typesense_instant_search_default_settings = {"debug":"","search_api_key":"nyfuft3u9lzrrjYx2HQOVg7AuEauhsOy","port":"443","node":"7o6gcria01zhbq8pp-1.a1.typesense.net","protocol":"https://","enabled_post_types":["post","page","formula_component","ub_doc","cc_doc","ut_doc","creator_advice","all","productivity_tip"],"available_post_types":{"post":{"label":"Posts","value":"post"},"page":{"label":"Pages","value":"page"},"category":{"label":"Category","value":"category","type":"taxonomy"},"formula_component":{"label":"Notion Formulas","value":"formula_component"},"creator_advice":{"label":"Creator Advice","value":"creator_advice"},"learn_notion":{"label":"Fluent Notion","value":"learn_notion"},"productivity_tip":{"label":"Productivity Tips","value":"productivity_tip"},"cc_doc":{"label":"CC Docs","value":"cc_doc"},"ub_doc":{"label":"UB Docs","value":"ub_doc"},"ut_doc":{"label":"UT Docs","value":"ut_doc"},"all":{"label":"All","value":"all"}},"search_config":{"post_type":{"post":{"label":"Post","max_suggestions":"3"}},"taxonomy":{"category":"Categories"}},"date_format":"F j, Y","localized_strings":{"load_more":"Load More","show_less":"Show less","show_more":"Show more"},"elementor_edit_mode":"false"};
+//# sourceURL=cm-typesense-instant-search-js-extra
+</script>
+<script src="https://thomasjfrank.com/wp-content/plugins/search-with-typesense/assets/frontend/instant-search.js?ver=1.7.3" id="cm-typesense-instant-search-js"></script>
+<script src="https://thomasjfrank.com/wp-content/themes/tjf-2023/js/scrollspy.min.js?ver=1.12.23" id="scrollspy-js"></script>
+<script src="https://thomasjfrank.com/wp-content/themes/tjf-2023/js/table-of-contents.min.js?ver=1.12.23" id="table-of-contents-js"></script>
+<script src="https://thomasjfrank.com/wp-content/themes/tjf-2023/js/section-links.min.js?ver=1.12.23" id="section-links-js"></script>
+<script src="https://thomasjfrank.com/wp-content/themes/tjf-2023/js/documentation-menu.min.js?ver=1.12.23" id="documentation-menu-js"></script>
+<script id="email-signup-form-js-extra">
+var emailSignupData = {"ajaxUrl":"https://thomasjfrank.com/wp-admin/admin-ajax.php","nonceAction":"get_email_signup_nonce"};
+//# sourceURL=email-signup-form-js-extra
+</script>
+<script src="https://thomasjfrank.com/wp-content/themes/tjf-2023/js/email-signup-form.min.js?ver=1.12.23" id="email-signup-form-js"></script>
+<script src="https://thomasjfrank.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.34.1" id="elementor-webpack-runtime-js"></script>
+<script src="https://thomasjfrank.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.34.1" id="elementor-frontend-modules-js"></script>
+<script src="https://thomasjfrank.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
+<script id="elementor-frontend-js-before">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1299,"default_value":1366,"direction":"max","is_enabled":true},"widescreen":{"label":"Widescreen","value":1300,"default_value":2400,"direction":"min","is_enabled":true}},"hasCustomBreakpoints":true},"version":"3.34.1","is_static":false,"experimentalFeatures":{"additional_custom_breakpoints":true,"theme_builder_v2":true,"home_screen":true,"global_classes_should_enforce_capabilities":true,"e_variables":true,"cloud-library":true,"e_opt_in_v4_page":true,"e_interactions":true,"import-export-customization":true,"e_pro_variables":true},"urls":{"assets":"https:\/\/thomasjfrank.com\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/thomasjfrank.com\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/thomasjfrank.com\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"230b240c63"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet","viewport_laptop","viewport_widescreen"],"viewport_widescreen":1300,"viewport_laptop":1299,"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":9564,"title":"How%20to%20Add%20Ultimate%20Brain%20to%20Notion%20-%20Ultimate%20Brain%20Docs","excerpt":"","featuredImage":false}};
+//# sourceURL=elementor-frontend-js-before
+</script>
+<script src="https://thomasjfrank.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.34.1" id="elementor-frontend-js"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=explicit&amp;ver=3.34.0" id="elementor-recaptcha_v3-api-js"></script>
+<script src="https://thomasjfrank.com/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.34.0" id="elementor-pro-webpack-runtime-js"></script>
+<script src="https://thomasjfrank.com/wp-includes/js/dist/hooks.min.js?ver=dd5603f07f9220ed27f1" id="wp-hooks-js"></script>
+<script src="https://thomasjfrank.com/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375" id="wp-i18n-js"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script id="elementor-pro-frontend-js-before">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/thomasjfrank.com\/wp-admin\/admin-ajax.php","nonce":"e17d73e96f","urls":{"assets":"https:\/\/thomasjfrank.com\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/thomasjfrank.com\/wp-json\/"},"settings":{"lazy_load_background_images":true},"popup":{"hasPopUps":true},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"},"x-twitter":{"title":"X"},"threads":{"title":"Threads"}},"facebook_sdk":{"lang":"en_US","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/thomasjfrank.com\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+//# sourceURL=elementor-pro-frontend-js-before
+</script>
+<script src="https://thomasjfrank.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.34.0" id="elementor-pro-frontend-js"></script>
+<script src="https://thomasjfrank.com/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.34.0" id="pro-elements-handlers-js"></script>
+
+</body>
+</html>
+<!--
+Performance optimized by Redis Object Cache. Learn more: https://wprediscache.com
+
+Retrieved 9620 objects (3 MB) from Redis using PhpRedis (v6.2.0).
+-->

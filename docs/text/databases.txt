@@ -1,0 +1,46 @@
+Ultimate Brain has several Notion databases at its core. These databases store all of the data you add to your copy of the template, and the pages throughout Ultimate Brain primarily show you useful linked views of these databases.
+All databases can be found at the
+Databases & Components
+page, which you’ll find at the bottom of the Ultimate Brain
+Home Page
+.
+This section of the docs contains a complete reference for each database. On each database’s page, you’ll find a technical reference for its properties and a list of pages where it is used.
+Copy link to heading
+Ultimate Brain Databases
+Database
+Description
+Tasks
+Stores all tasks and task details, such as due date, status, Project, sub-tasks, recurring task details, etc.
+Notes
+Stores all notes and note details, such as Tags, URL, type, Favorite status, file/image attachments, etc.
+Projects
+Stores all projects and project details, such as status, related Tasks and Notes, related Tag (e.g. Area), target deadline, etc.
+Work Sessions
+Stores all work sessions related to specific tasks. This database enables time-tracking in Ultimate Brain.
+Tags
+Stores all tags, which are used for PARA organization (Areas and Resources). Can also be used for more general categorization of Notes (using Entity-type Tags). Stores tag details, such as type, projects, goals, notes, etc.
+Goals
+Stores all goals and goal details, such as target deadline, related Projects, progress, and achieved dates.
+Milestones
+Stores milestones and milestone details, such as related Goal, target deadline, date completed, etc.
+People
+Stores all people records and details, such as title, company, website, social media links, relationships, related Meeting Notes, etc.
+Books
+Stores all books and book details, such as author, page count, ISBN, related Genre, custom Shelves, ownership status, etc.
+Reading Log
+Stores reading log entries, pages read, and related Books.
+Genres
+Stores genres and related books.
+Recipes
+Stores recipes and recipe details, such as servings, prep time, cook time, Recipe Tags, etc.
+Recipe Tags
+Stores recipe tags (e.g. Mexican, New American, Entree, Side Dish) and related Recipes.
+Meal Planner
+Stores meal plans and related Recipes.
+Copy link to heading
+Database Relation Diagrams
+In the diagram below, you can see a map of the databases in Ultimate Brain and its Relation properties.
+Bi-directional arrows indicate Relation properties that have the
+Show on Databases
+option enabled, creating a reciprocol property in the target database that pairs with the current Relation property.
+Uni-directional arrows indicate the opposite – a Relation property that points to another database. You’ll also notice that these arrows point directly to the database to which they connect, rather than an individual property.

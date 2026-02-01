@@ -1,0 +1,70 @@
+Sometimes Notion doesn’t behave as expected. If you’re dealing with an issue that doesn’t seem to be unique to your template, then there are a few fixes you can try.
+These can help to determine if the bug is local to your machine and current install of the app, or if Notion itself may be experiencing a bug.
+I recommend trying these fixes in this order.
+Try doing whatever you were originally trying to do on a different device, such as your phone.
+Close and reopen the Notion app on your computer. Alternatively, if you’re using Notion in the browser, close and reopen your browser.
+Try clearing the page cache in Notion. Click
+?
+in the bottom-left corner → More → Clear Page Cache.
+Try fully logging out of your Notion account, then logging back in.
+If nothing has worked so far,
+try resetting Notion using the official instructions
+. This will not delete any of your account data, but will reset your local cache and can fix a lot of issues.
+Here’s a visual explainer for how to clear the page cache (Method 3 in the list above):
+Finally, if none of these fixes has worked, I’d recommend
+emailing Notion’s support team
+and reporting the bug.
+When sending a report, it can be helpful to their support team for you to provide as much detail as possible. This can include:
+A detailed description of the bug and what you were trying to do when it happened
+The browser and OS where you’re using Notion (If you’re using the desktop app instead, note this)
+Your Notion version
+Screenshots of any errors in the Dev Console (see instructions below)
+An HAR file (
+see Notion’s docs on capturing these
+)
+You can find your Notion app’s current version by clicking the
+?
+icon in the bottom-left corner, then clicking
+More
+. At the bottom of the next menu, you’ll see Notion’s current version. Click it to copy that value to your clipboard.
+Copy link to heading
+Capturing Errors in the Developer Console
+If you do choose to reach out to the Notion team to report a bug, one of the most helpful pieces of information you can provide is a screenshot of any errors in the Developer Console.
+This is a lower-level tool built into all web browsers – as well as desktop web apps – that shows an ongoing log of all events, errors, and warnings which come up as a web app is running.
+When everything is working well, the Developer Console should look like this:
+However, if something is going wrong, you may find a red error message in the console, like this one:
+To open the Developer Console and check for any errors, follow these instructions.
+In a Web browser:
+Use the
+⌘ + ⌥ + J
+(MacOS) /
+Ctrl + Shift + J
+(Windows) keyboard shortcut. This will bring you directly to the Console.
+Alternatively, right-click in area that won’t bring up a special context menu, then click
+Inspect.
+This will likely bring you to the Elements tab of the Developer Tools; from there, navigate to the
+Console
+tab.
+In the Notion Desktop app
+:
+Use the
+⌘ + ⌥ + I
+(MacOS) /
+Ctrl + Shift + I
+(Windows) keyboard shortcut. This will bring you directly to the Console.
+Once you’re in the console, take a screenshot of any errors you see and send that screenshot along with your bug report. Here are instructions on how to take screenshots using built-in OS tools:
+Windows screenshot tool
+(
+⊞ Win + Shift + S
+by default)
+MacOS screenshot tool
+(
+⌘ + ⇧ + 4
+by default)
+Protip:
+You can take faster screenshots with apps like
+ShareX
+(free, cross-platform) or
+CleanShot X
+(paid, MacOS-only, the best)
+If there are a lot of errors, you can also right-click in the console and then click “Save As” to save the entire console output as a text file.
