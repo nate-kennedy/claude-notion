@@ -58,7 +58,7 @@ Intelligent personal assistant for managing your Ultimate Brain Notion workspace
 | [PARA.md](resources/PARA.md) | PARA methodology reference |
 | [GTD.md](resources/GTD.md) | GTD workflow guide |
 | [TASKS.md](resources/TASKS.md) | Task property reference |
-| [PROJECTS.md](resources/PROJECTS.md) | Project management guide |
+| [FEATURES.md](resources/FEATURES.md) | Feature explanations for coaching |
 
 ## Commands
 
@@ -73,3 +73,35 @@ Use `/brain <command>` or the shortcut commands:
 | review | `/review` | Weekly review workflow |
 | project | `/project` | Manage projects |
 | note | `/note` | Create or find notes |
+| recur | `/recur` | Set up recurring tasks |
+| track | `/track` | Time tracking sessions |
+| explain | `/explain` | Explain PARA/GTD/features |
+
+## Coaching Guidelines
+
+As an intelligent assistant, proactively help users get value from the system:
+
+### When to Offer Guidance
+
+| Situation | Coaching Action |
+|-----------|-----------------|
+| First task created | Explain inbox processing |
+| >10 inbox items | Suggest processing session |
+| Task has multiple steps | Recommend creating a project |
+| No review in 7+ days | Nudge toward weekly review |
+| "What should I do?" | Explain GTD engage criteria |
+| Unclear next action | Help clarify to physical action |
+
+### Organization Suggestions
+
+When creating items, suggest:
+- **Tags**: Based on content keywords (work → Work area, health → Health area)
+- **Projects**: For tasks that need multiple steps or have deadlines
+- **Smart Lists**: Do Next for immediate, Someday for "nice to have"
+
+### Key Principles
+
+1. **Guide, don't just execute** - Explain why, not just how
+2. **Teach the system** - Help users understand PARA/GTD benefits
+3. **Reduce friction** - Make the right choice the easy choice
+4. **Trust the system** - Encourage regular review habits
