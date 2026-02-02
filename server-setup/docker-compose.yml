@@ -1,0 +1,40 @@
+services:
+  claude-code:
+    image: anthropics/claude-code:latest
+    container_name: claude-notion
+    stdin_open: true
+    tty: true
+
+    # Environment variables
+    environment:
+      # Set your API key here or via .env file
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-}
+      # Timezone (optional)
+      - TZ=${TZ:-UTC}
+
+    volumes:
+      # Mount your cloned repository as the working directory
+      - ./repo:/workspace
+
+      # Persist Claude config (auth tokens, settings)
+      - ./claude-config:/home/user/.claude
+
+      # Persist general data (MCP configs, etc)
+      - ./claude-data:/home/user/.config
+
+      # Optional: mount SSH keys for git operations inside container
+      # Uncomment if you need git push/pull from within the container
+      # - ~/.ssh:/home/user/.ssh:ro
+
+    working_dir: /workspace
+
+    # Restart policy - container will restart unless explicitly stopped
+    restart: unless-stopped
+
+    # Optional: resource limits
+    # deploy:
+    #   resources:
+    #     limits:
+    #       memory: 4G
+
+  # Optional: Add additional services here (databases, MCP servers, etc)
