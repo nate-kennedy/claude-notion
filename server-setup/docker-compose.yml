@@ -1,6 +1,8 @@
 services:
   claude-code:
-    image: anthropics/claude-code:latest
+    build:
+      context: ./repo/server-setup
+      dockerfile: Dockerfile
     container_name: claude-notion
     stdin_open: true
     tty: true
@@ -17,14 +19,14 @@ services:
       - ./repo:/workspace
 
       # Persist Claude config (auth tokens, settings)
-      - ./claude-config:/home/user/.claude
+      - ./claude-config:/home/claude/.claude
 
       # Persist general data (MCP configs, etc)
-      - ./claude-data:/home/user/.config
+      - ./claude-data:/home/claude/.config
 
       # Optional: mount SSH keys for git operations inside container
       # Uncomment if you need git push/pull from within the container
-      # - ~/.ssh:/home/user/.ssh:ro
+      # - ~/.ssh:/home/claude/.ssh:ro
 
     working_dir: /workspace
 
