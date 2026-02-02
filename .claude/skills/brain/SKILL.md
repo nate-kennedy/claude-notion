@@ -78,6 +78,8 @@ Use `/brain <command>` or the shortcut commands:
 | explain | `/explain` | Explain PARA/GTD/features |
 | health | `/health` | System health check |
 | suggest | `/suggest` | Organization suggestions |
+| stats | `/stats` | Productivity statistics |
+| report | `/report` | Generate reports |
 
 ## Coaching Guidelines
 
