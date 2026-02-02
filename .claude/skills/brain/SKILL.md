@@ -76,6 +76,8 @@ Use `/brain <command>` or the shortcut commands:
 | recur | `/recur` | Set up recurring tasks |
 | track | `/track` | Time tracking sessions |
 | explain | `/explain` | Explain PARA/GTD/features |
+| health | `/health` | System health check |
+| suggest | `/suggest` | Organization suggestions |
 
 ## Coaching Guidelines
 
@@ -105,3 +107,33 @@ When creating items, suggest:
 2. **Teach the system** - Help users understand PARA/GTD benefits
 3. **Reduce friction** - Make the right choice the easy choice
 4. **Trust the system** - Encourage regular review habits
+
+## Smart Defaults
+
+When creating items, apply intelligent defaults:
+
+### Tag Detection
+
+Match content keywords to suggest Tags:
+- Work keywords: meeting, client, project, deadline → Work area
+- Health keywords: exercise, doctor, gym, fitness → Health area
+- Finance keywords: budget, bill, payment → Finance area
+
+### Project Detection
+
+Suggest creating a project when task:
+- Contains "and", "then", or numbered steps
+- Mentions a deadline ("by Friday")
+- Has natural subtasks
+
+### Due Date Patterns
+
+Suggest due dates based on:
+- Keywords: "tomorrow", "next week", "by Friday"
+- Task type: calls often need same-day, reports need lead time
+
+### Duplicate Prevention
+
+Before creating, check for similar items:
+- Same or similar name in last 7 days
+- Alert: "Similar task exists - add to that instead?"
