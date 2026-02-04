@@ -18,7 +18,7 @@ WORKDIR /home/claude
 RUN curl -fsSL https://claude.ai/install.sh | bash
 
 # Add claude to PATH
-ENV PATH="/home/claude/.claude/bin:${PATH}"
+ENV PATH="/home/claude/.local/bin:${PATH}"
 
 WORKDIR /workspace
 
